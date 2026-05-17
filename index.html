@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POSTÔ — A Postô produz. Você posta.</title>
+  <meta name="description" content="Conteúdo para Instagram produzido por IA. Com as suas fotos. Na sua voz. Pronto em 72 horas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:     #0f0e1a;
+      --bg2:    #141322;
+      --gold:   #c9a84c;
+      --gold-l: #e8c97a;
+      --gold-d: #7a6228;
+      --cream:  #f2ede1;
+      --soft:   #9e9baf;
+      --border: rgba(201,168,76,0.15);
+      --serif:  'Cormorant Garamond', Georgia, serif;
+      --sans:   'DM Sans', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--cream);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 48px;
+      background: linear-gradient(to bottom, rgba(15,14,26,0.95), transparent);
+      backdrop-filter: blur(4px);
+    }
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--cream);
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      color: var(--soft);
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--bg) !important;
+      background: var(--gold);
+      padding: 12px 28px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--gold-l) !important; color: var(--bg) !important; }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 24px 80px;
+      position: relative;
+    }
+    .hero-eyebrow {
+      font-size: 12px;
+      letter-spacing: 0.4em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 36px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.3s;
+    }
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(52px, 9vw, 120px);
+      font-weight: 600;
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+      max-width: 1000px;
+      margin: 0 auto 32px;
+      opacity: 0;
+      animation: fadeUp 0.9s ease forwards 0.5s;
+    }
+    .hero h1 em { font-style: italic; color: var(--gold-l); }
+    .hero-sub {
+      font-size: clamp(18px, 2vw, 24px);
+      color: var(--soft);
+      max-width: 580px;
+      margin: 0 auto 56px;
+      opacity: 0;
+      animation: fadeUp 0.9s ease forwards 0.7s;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.9s ease forwards 0.9s;
+    }
+    .hero-scroll {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      animation: fadeUp 1s ease forwards 1.4s;
+    }
+    .hero-scroll span {
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      color: var(--gold-d);
+      text-transform: uppercase;
+    }
+    .scroll-line {
+      width: 1px;
+      height: 48px;
+      background: linear-gradient(to bottom, var(--gold-d), transparent);
+      animation: scrollPulse 2s ease infinite;
+    }
+
+    /* BUTTONS */
+    .btn-primary {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--bg);
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 20px 56px;
+      transition: all 0.3s;
+    }
+    .btn-primary:hover {
+      background: var(--gold-l);
+      transform: translateY(-2px);
+      box-shadow: 0 16px 48px rgba(201,168,76,0.2);
+    }
+    .btn-ghost {
+      display: inline-block;
+      border: 1px solid var(--border);
+      color: var(--cream);
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 18px 44px;
+      transition: all 0.3s;
+    }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* SECTIONS */
+    section { padding: 120px 24px; }
+    .container { max-width: 960px; margin: 0 auto; }
+    .container-wide { max-width: 1200px; margin: 0 auto; }
+
+    .section-label {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 0.38em;
+      color: var(--gold-d);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(36px, 5vw, 66px);
+      font-weight: 600;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+    .section-title em { font-style: italic; color: var(--gold-l); }
+    .section-sub {
+      font-size: 18px;
+      color: var(--soft);
+      max-width: 600px;
+      line-height: 1.8;
+    }
+    .gold-line {
+      width: 60px;
+      height: 1px;
+      background: var(--gold);
+      margin: 32px 0;
+    }
+
+    /* COMO FUNCIONA */
+    .como {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .como-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .como-steps { display: flex; flex-direction: column; gap: 0; }
+    .como-step {
+      display: flex;
+      gap: 28px;
+      padding: 32px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .como-step:last-child { border-bottom: none; }
+    .step-n {
+      font-family: var(--serif);
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--gold-d);
+      opacity: 0.5;
+      line-height: 1;
+      flex-shrink: 0;
+      width: 48px;
+    }
+    .step-body h4 {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .step-body p { font-size: 15px; color: var(--soft); line-height: 1.75; }
+    .como-visual {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 48px;
+      text-align: center;
+    }
+    .como-visual-num {
+      font-family: var(--serif);
+      font-size: 96px;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      display: block;
+    }
+    .como-visual-label {
+      font-size: 14px;
+      color: var(--soft);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin: 8px 0 32px;
+      display: block;
+    }
+    .como-visual-items {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: left;
+    }
+    .como-vi {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      font-size: 14px;
+      color: var(--soft);
+    }
+    .como-vi::before {
+      content: '';
+      width: 16px;
+      height: 1px;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    /* PACOTES */
+    .pacotes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin-top: 64px;
+    }
+    .pacote {
+      background: var(--bg);
+      padding: 48px 36px;
+      display: flex;
+      flex-direction: column;
+      transition: background 0.3s;
+      position: relative;
+    }
+    .pacote:hover { background: var(--bg2); }
+    .pacote.destaque { background: var(--bg2); }
+    .pacote-badge {
+      position: absolute;
+      top: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: var(--bg);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 6px 20px;
+      white-space: nowrap;
+    }
+    .pacote-label {
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      color: var(--gold-d);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .pacote-nome {
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .pacote-tag {
+      font-size: 13px;
+      color: var(--soft);
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+    .pacote-preco {
+      font-family: var(--serif);
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--gold-l);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .pacote-prazo {
+      font-size: 12px;
+      color: var(--soft);
+      letter-spacing: 0.08em;
+      margin-bottom: 32px;
+    }
+    .pacote-divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border);
+      margin-bottom: 28px;
+    }
+    .pacote-items { display: flex; flex-direction: column; gap: 12px; flex: 1; }
+    .pacote-item {
+      display: flex;
+      gap: 14px;
+      font-size: 14px;
+      color: var(--soft);
+      line-height: 1.5;
+      align-items: flex-start;
+    }
+    .pacote-item::before {
+      content: '';
+      width: 14px;
+      height: 1px;
+      background: var(--gold);
+      flex-shrink: 0;
+      margin-top: 9px;
+    }
+    .pacote-cta {
+      display: block;
+      text-align: center;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--cream);
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 16px;
+      margin-top: 32px;
+      transition: all 0.3s;
+    }
+    .pacote-cta:hover { border-color: var(--gold); color: var(--gold); }
+    .pacote.destaque .pacote-cta {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--bg);
+    }
+    .pacote.destaque .pacote-cta:hover { background: var(--gold-l); border-color: var(--gold-l); }
+
+    /* DIFERENCIAL */
+    .dif {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .dif-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin-top: 64px;
+    }
+    .dif-item {
+      background: var(--bg2);
+      padding: 48px 36px;
+      transition: background 0.3s;
+    }
+    .dif-item:hover { background: #1a1830; }
+    .dif-num {
+      font-family: var(--serif);
+      font-size: 52px;
+      font-weight: 700;
+      color: var(--gold);
+      opacity: 0.2;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+    .dif-item h4 {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .dif-item p { font-size: 15px; color: var(--soft); line-height: 1.8; }
+
+    /* GARANTIA */
+    .garantia-box {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      border: 1px solid var(--border);
+      padding: 72px 64px;
+    }
+    .garantia-icon {
+      font-size: 32px;
+      margin-bottom: 24px;
+      display: block;
+    }
+    .garantia-box h3 {
+      font-family: var(--serif);
+      font-size: 36px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .garantia-box p { font-size: 17px; color: var(--soft); line-height: 1.85; }
+
+    /* CTA FINAL */
+    .cta-final {
+      text-align: center;
+      padding: 160px 24px;
+    }
+    .cta-final .section-title { max-width: 700px; margin: 0 auto 16px; }
+    .cta-preco {
+      font-family: var(--serif);
+      font-size: clamp(24px, 3vw, 32px);
+      color: var(--soft);
+      margin: 32px 0 48px;
+    }
+    .cta-preco strong {
+      font-weight: 700;
+      color: var(--gold-l);
+      font-size: 1.4em;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 64px 48px;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .footer-brand .logo {
+      font-family: var(--serif);
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--cream);
+      letter-spacing: 0.06em;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .footer-brand .slogan {
+      font-family: var(--serif);
+      font-size: 15px;
+      font-style: italic;
+      color: var(--gold);
+    }
+    .footer-col h5 {
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      color: var(--gold-d);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .footer-col a {
+      display: block;
+      font-size: 14px;
+      color: var(--soft);
+      text-decoration: none;
+      margin-bottom: 10px;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover { color: var(--gold); }
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 48px auto 0;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-bottom p { font-size: 12px; color: var(--gold-d); }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      nav { padding: 20px 24px; }
+      .nav-links { display: none; }
+      .como-inner { grid-template-columns: 1fr; gap: 48px; }
+      .pacotes-grid { grid-template-columns: 1fr; }
+      .dif-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">POSTÔ</a>
+  <ul class="nav-links">
+    <li><a href="#como-funciona">Como funciona</a></li>
+    <li><a href="#pacotes">Pacotes</a></li>
+    <li><a href="#diferenciais">Diferenciais</a></li>
+    <li><a href="#pacotes" class="nav-cta">Contratar</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="hero-eyebrow">Conteúdo para Instagram · Produzido por IA</span>
+
+  <h1>A Postô produz.<br><em>Você posta.</em></h1>
+
+  <p class="hero-sub">Com as suas fotos. Na sua voz. Com a sua identidade visual. Pronto em 72 horas no Google Drive.</p>
+
+  <div class="hero-actions">
+    <a href="#pacotes" class="btn-primary">Ver os pacotes →</a>
+    <a href="#como-funciona" class="btn-ghost">Como funciona</a>
+  </div>
+
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="como" id="como-funciona">
+  <div class="container">
+    <div class="como-inner">
+      <div class="reveal">
+        <span class="section-label">O processo</span>
+        <h2 class="section-title">Três passos.<br><em>Você só faz um.</em></h2>
+        <p class="section-sub" style="margin-bottom: 48px;">Você preenche o formulário. A POSTÔ cuida do resto — da identidade visual ao calendário editorial.</p>
+
+        <div class="como-steps">
+          <div class="como-step">
+            <div class="step-n">01</div>
+            <div class="step-body">
+              <h4>Você preenche o formulário</h4>
+              <p>20 minutos. 32 perguntas sobre quem você é, como você fala e o que você vende.</p>
+            </div>
+          </div>
+          <div class="como-step">
+            <div class="step-n">02</div>
+            <div class="step-body">
+              <h4>A POSTÔ produz tudo</h4>
+              <p>9 agentes de IA criam sua identidade visual, mapeiam sua voz, escrevem os textos e montam as artes.</p>
+            </div>
+          </div>
+          <div class="como-step">
+            <div class="step-n">03</div>
+            <div class="step-body">
+              <h4>Você recebe e posta</h4>
+              <p>Em 72 horas o Drive está pronto. Você abre, confere e publica. Sem criar nada.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="como-visual reveal">
+        <span class="como-visual-num">72h</span>
+        <span class="como-visual-label">do formulário ao Drive pronto</span>
+        <div class="como-visual-items">
+          <div class="como-vi">Posts de feed montados com sua foto</div>
+          <div class="como-vi">Stories prontos para publicar</div>
+          <div class="como-vi">Carrosséis completos</div>
+          <div class="como-vi">Roteiros de Reel na sua voz</div>
+          <div class="como-vi">Capas de Reel</div>
+          <div class="como-vi">Calendário editorial 30 dias</div>
+          <div class="como-vi">DNA Verbal — sua voz mapeada</div>
+          <div class="como-vi">Identidade visual criada do zero</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACOTES -->
+<section id="pacotes">
+  <div class="container-wide">
+    <div class="reveal" style="text-align:center;">
+      <span class="section-label">O produto</span>
+      <h2 class="section-title">Escolha o seu pacote</h2>
+      <p class="section-sub" style="margin: 0 auto;">Todos entregues em 72 horas. Todos com identidade visual, DNA Verbal e calendário editorial incluídos.</p>
+    </div>
+
+    <div class="pacotes-grid reveal">
+
+      <div class="pacote">
+        <span class="pacote-label">Postô Studio</span>
+        <h3 class="pacote-nome">Studio Essencial</h3>
+        <p class="pacote-tag">Para começar com presença profissional completa</p>
+        <div class="pacote-preco">R$497</div>
+        <span class="pacote-prazo">Entrega em 72h · sem contrato</span>
+        <div class="pacote-divider"></div>
+        <div class="pacote-items">
+          <div class="pacote-item">15 posts de feed montados</div>
+          <div class="pacote-item">15 stories prontos</div>
+          <div class="pacote-item">4 carrosséis completos</div>
+          <div class="pacote-item">8 roteiros de Reel</div>
+          <div class="pacote-item">4 capas de Reel</div>
+          <div class="pacote-item">Calendário editorial 30 dias</div>
+          <div class="pacote-item">DNA Verbal + Identidade visual</div>
+          <div class="pacote-item">Análise estratégica do nicho</div>
+        </div>
+        <a href="essencial.html" class="pacote-cta">Contratar Essencial →</a>
+      </div>
+
+      <div class="pacote destaque">
+        <div class="pacote-badge">Mais vendido</div>
+        <span class="pacote-label">Postô Studio</span>
+        <h3 class="pacote-nome">Studio Profissional</h3>
+        <p class="pacote-tag">Para quem quer volume e consistência</p>
+        <div class="pacote-preco">R$797</div>
+        <span class="pacote-prazo">Entrega em 72h · sem contrato</span>
+        <div class="pacote-divider"></div>
+        <div class="pacote-items">
+          <div class="pacote-item">20 posts de feed montados</div>
+          <div class="pacote-item">25 stories prontos</div>
+          <div class="pacote-item">8 carrosséis completos</div>
+          <div class="pacote-item">12 roteiros de Reel</div>
+          <div class="pacote-item">8 capas de Reel</div>
+          <div class="pacote-item">Calendário editorial 30 dias</div>
+          <div class="pacote-item">DNA Verbal + Identidade visual</div>
+          <div class="pacote-item">1 revisão incluída</div>
+          <div class="pacote-item">Relatório de Resultado D+25</div>
+        </div>
+        <a href="profissional.html" class="pacote-cta">Contratar Profissional →</a>
+      </div>
+
+      <div class="pacote">
+        <span class="pacote-label">Postô Studio</span>
+        <h3 class="pacote-nome">Studio Premium IA</h3>
+        <p class="pacote-tag">Para quem quer ser inimitável</p>
+        <div class="pacote-preco">R$1.297</div>
+        <span class="pacote-prazo">Entrega em 96h · sem contrato</span>
+        <div class="pacote-divider"></div>
+        <div class="pacote-items">
+          <div class="pacote-item">30 posts de feed montados</div>
+          <div class="pacote-item">35 stories prontos</div>
+          <div class="pacote-item">12 carrosséis completos</div>
+          <div class="pacote-item">15 roteiros de Reel</div>
+          <div class="pacote-item">12 capas de Reel</div>
+          <div class="pacote-item">15 fotos geradas por IA com seu rosto</div>
+          <div class="pacote-item">10 artes com as fotos IA</div>
+          <div class="pacote-item">2 revisões incluídas</div>
+          <div class="pacote-item">Relatório de Resultado D+25</div>
+        </div>
+        <a href="premium.html" class="pacote-cta">Contratar Premium IA →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section class="dif" id="diferenciais">
+  <div class="container-wide">
+    <div class="reveal" style="text-align:center;">
+      <span class="section-label">Por que a POSTÔ</span>
+      <h2 class="section-title">O que nenhuma agência<br><em>consegue entregar</em></h2>
+    </div>
+
+    <div class="dif-grid reveal">
+      <div class="dif-item">
+        <div class="dif-num">01</div>
+        <h4>DNA Verbal</h4>
+        <p>Antes de escrever qualquer frase, o sistema identifica o seu padrão de voz — o ritmo, as expressões que você usa, as palavras que você jamais diria. Nenhuma frase genérica passa.</p>
+      </div>
+      <div class="dif-item">
+        <div class="dif-num">02</div>
+        <h4>Identidade visual do zero</h4>
+        <p>Cores, fontes e estilo criados exclusivamente para o seu nicho pelo Agente de Branding. Nunca baseado no que você já tem — baseado no que você deveria ter.</p>
+      </div>
+      <div class="dif-item">
+        <div class="dif-num">03</div>
+        <h4>Fotos que não existem</h4>
+        <p>No Premium IA, o sistema gera 15 fotos com o seu rosto em cenários do seu nicho que você nunca fotografou. Um diferencial que ninguém no Brasil oferece.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTIA -->
+<section>
+  <div class="container">
+    <div class="garantia-box reveal">
+      <span class="garantia-icon">✦</span>
+      <h3>Garantia de identidade</h3>
+      <p>Se o conteúdo entregue não refletir a sua voz e identidade visual como descrito no briefing, a POSTÔ refaz sem custo adicional e sem burocracia. Você não corre nenhum risco.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="container reveal">
+    <span class="section-label">Comece agora</span>
+    <h2 class="section-title">Seu próximo mês de conteúdo<br><em>começa aqui.</em></h2>
+
+    <p class="cta-preco">
+      A partir de <strong>R$497</strong> · entrega em 72h · sem contrato
+    </p>
+
+    <div class="hero-actions">
+      <a href="#pacotes" class="btn-primary">Ver os pacotes →</a>
+      <a href="https://wa.me/55" class="btn-ghost">Falar com a POSTÔ</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo">POSTÔ</span>
+      <span class="slogan">A Postô produz. Você posta.</span>
+    </div>
+
+    <div class="footer-col">
+      <h5>Pacotes</h5>
+      <a href="essencial.html">Studio Essencial — R$497</a>
+      <a href="profissional.html">Studio Profissional — R$797</a>
+      <a href="premium.html">Studio Premium IA — R$1.297</a>
+    </div>
+
+    <div class="footer-col">
+      <h5>Contato</h5>
+      <a href="mailto:contato@postoproduz.com.br">contato@postoproduz.com.br</a>
+      <a href="https://instagram.com/postoproduz">@postoproduz</a>
+      <a href="https://wa.me/55">WhatsApp</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 POSTÔ · Todos os direitos reservados</p>
+    <p>postoproduz.com.br</p>
+  </div>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 100);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
