@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Edição Julho · Isley Lauar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--deep:#1A1A18;--deep-2:#151514;--surface:#F5F2ED;--surface-2:#FFFFFF;--accent:#D6C9B0;--accent-2:#2E2C28;
+--ink:#2E2C28;--ink-soft:#787268;--cream:#F3F1EA;--cream-soft:rgba(243,241,234,.62);--line:rgba(20,25,22,.12);
+--radius:18px;--shadow:0 1px 2px rgba(20,30,26,.04),0 8px 30px rgba(20,30,26,.07);
+--serif:'Cormorant Garamond', 'Cormorant Garamond', Georgia, serif;--sans:'DM Sans', 'DM Sans', -apple-system, sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--deep);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+.app{max-width:460px;margin:0 auto;background:var(--deep);min-height:100vh;position:relative;overflow:hidden}
+.hero{padding:54px 26px 40px;position:relative;background:radial-gradient(120% 90% at 80% 0%, #21211F 0%, var(--deep) 55%)}
+.hero .eyebrow{font-size:.66rem;letter-spacing:.34em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:22px}
+.hero .mark{width:30px;height:1px;background:var(--accent);opacity:.6;margin-bottom:22px}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:2.5rem;line-height:1.06;color:var(--cream)}
+.hero .role{margin-top:12px;font-size:.86rem;color:var(--cream-soft)}
+.hero .role b{color:var(--cream);font-weight:500}
+.hero .month{margin-top:26px;display:inline-flex;align-items:center;gap:10px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cream);border:1px solid rgba(255,255,255,.28);padding:9px 16px;border-radius:100px}
+.hero .month i{width:5px;height:5px;border-radius:50%;background:var(--accent)}
+.hero .welcome{margin-top:24px;font-family:var(--serif);font-style:italic;font-size:1.22rem;line-height:1.4;color:var(--cream);max-width:330px}
+.howto{background:var(--deep-2);padding:22px 26px;display:flex;flex-direction:column;gap:14px}
+.howto .step{display:flex;gap:13px}
+.howto .n{font-family:var(--serif);font-size:1.1rem;color:var(--accent);width:18px;flex-shrink:0;font-weight:600}
+.howto .t{font-size:.82rem;color:var(--cream-soft);line-height:1.45}
+.howto .t b{color:var(--cream);font-weight:600}
+.howto .dlpdf{margin-top:8px;display:flex;align-items:center;justify-content:center;gap:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.24);border-radius:12px;padding:14px;color:var(--cream);text-decoration:none;font-size:.82rem;font-weight:600}
+.howto .dlpdf svg{width:17px;height:17px;stroke:var(--accent)}
+.body{background:var(--surface);border-radius:26px 26px 0 0;padding:34px 0 0;margin-top:-12px;position:relative;z-index:2}
+.section-label{padding:0 26px;display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.section-label .bar{height:1px;flex:1;background:var(--line)}
+.section-label span{font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;white-space:nowrap}
+.agenda{padding:0 26px 6px}
+.agenda .row{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.agenda .row:last-child{border-bottom:none}
+.agenda .when{width:64px;flex-shrink:0}
+.agenda .when .d{font-family:var(--serif);font-size:1.5rem;font-weight:600;line-height:1}
+.agenda .when .m{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-top:3px}
+.agenda .what{flex:1}
+.agenda .what .tipo{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-2);font-weight:700;margin-bottom:3px}
+.agenda .what .ttl{font-size:.9rem;font-weight:500;line-height:1.3}
+.agenda .what .hr{font-size:.72rem;color:var(--ink-soft);margin-top:3px}
+.agenda-note{padding:14px 26px 0;color:var(--ink-soft);font-style:italic;font-family:var(--serif);font-size:.95rem}
+.feed{padding:30px 18px 10px;display:flex;flex-direction:column;gap:26px}
+.card{background:var(--surface-2);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.card-head{padding:18px 20px 0;display:flex;align-items:center;justify-content:space-between}
+.badge{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;padding:6px 11px;border-radius:100px}
+.badge.feed-b,.badge.story-b{background:rgba(0,0,0,.05);color:var(--accent-2)}
+.badge.carr-b{background:rgba(0,0,0,.05);color:var(--accent)}
+.badge.reel-b{background:rgba(0,0,0,.06);color:var(--deep)}
+.card-head .num{font-family:var(--serif);font-size:1rem;color:var(--ink-soft)}
+.card-title{padding:12px 20px 0;font-family:var(--serif);font-weight:600;font-size:1.42rem;line-height:1.18}
+.art-wrap{padding:16px 20px 4px}
+.art-frame{position:relative;border-radius:12px;overflow:hidden;box-shadow:0 6px 22px rgba(20,30,26,.16);background:var(--deep-2)}
+.art-45{aspect-ratio:4/5}
+.art-916{aspect-ratio:9/16;max-width:230px;margin:0 auto}
+.art-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.art-pend{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--cream-soft);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase}
+.save-hint{display:flex;align-items:center;gap:10px;justify-content:center;margin-top:11px;flex-wrap:wrap}
+.save-hint a{font-size:.72rem;color:var(--accent-2);font-weight:600;display:inline-flex;align-items:center;gap:6px;text-decoration:none;padding:6px}
+.save-hint svg{width:14px;height:14px}
+.save-hint span{font-size:.68rem;color:var(--ink-soft)}
+.slides-scroll{display:flex;gap:9px;overflow-x:auto;padding:12px 20px 2px;-webkit-overflow-scrolling:touch}
+.slides-scroll img{height:150px;border-radius:9px;box-shadow:0 4px 14px rgba(20,30,26,.14);display:block}
+.strip-note{padding:8px 20px 0;font-size:.7rem;color:var(--ink-soft)}
+.copy-block{padding:16px 20px 6px}
+.copy-block .cb-label{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);font-weight:700;margin-bottom:9px}
+.copy-text{font-size:.92rem;line-height:1.6;white-space:pre-line}
+.copy-text.roteiro{font-size:.86rem;line-height:1.7}
+.copy-btn{margin-top:13px;width:100%;display:flex;align-items:center;justify-content:center;gap:9px;background:var(--deep);color:var(--cream);border:none;border-radius:11px;padding:14px;font-family:var(--sans);font-size:.82rem;font-weight:600;cursor:pointer;transition:transform .12s ease}
+.copy-btn:active{transform:scale(.985)}
+.copy-btn.done{background:var(--accent-2)}
+.copy-btn svg{width:16px;height:16px;flex-shrink:0}
+.copy-block + .copy-block{padding-top:8px}
+.rl-meta{display:flex;flex-wrap:wrap;gap:8px;padding:14px 20px 2px}
+.rl-chip{font-size:.7rem;color:var(--ink-soft);background:var(--surface);border:1px solid var(--line);border-radius:100px;padding:6px 12px;line-height:1.3}
+.rl-chip b{color:var(--accent-2);font-weight:700;letter-spacing:.03em;margin-right:5px}
+.rl-tag{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);font-weight:700;margin-bottom:6px}
+.rl-gancho{margin:14px 20px 0;padding:14px 16px;background:var(--surface);border-left:3px solid var(--accent);border-radius:0 10px 10px 0}
+.rl-gancho p{font-family:var(--serif);font-size:1.06rem;line-height:1.35;color:var(--ink)}
+.rl-story{padding:16px 20px 4px}
+.rl-story-h{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:12px}
+.rl-cena{display:flex;gap:12px;padding:11px 0;border-top:1px solid var(--line)}
+.rl-cena:first-of-type{border-top:none;padding-top:2px}
+.rl-n{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--deep);color:var(--cream);font-family:var(--serif);font-weight:600;font-size:.92rem;display:flex;align-items:center;justify-content:center}
+.rl-cena-b{flex:1}
+.rl-cena-b p{font-size:.9rem;line-height:1.55}
+.rl-foto{margin-top:10px;display:flex;align-items:center;gap:10px}
+.rl-foto img{width:64px;height:84px;object-fit:cover;border-radius:8px;box-shadow:var(--shadow)}
+.rl-foto span{font-size:.68rem;color:var(--ink-soft);font-style:italic;font-family:var(--serif)}
+.rl-fech{margin:8px 20px 2px;padding:14px 16px;background:var(--surface);border-left:3px solid var(--accent-2);border-radius:0 10px 10px 0}
+.rl-fech p{font-size:.92rem;line-height:1.5;color:var(--ink)}
+.rl-video{padding:14px 20px 4px}
+.rl-video video{width:100%;border-radius:14px;display:block;background:#000;aspect-ratio:9/16;object-fit:cover;box-shadow:var(--shadow)}
+.rl-dl{display:inline-block;margin-top:10px;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-2);text-decoration:none;border:1px solid var(--line);border-radius:100px;padding:8px 16px}
+.card-foot{height:18px}
+.pro-bloco{padding:0 26px}
+.diag{font-size:.92rem;line-height:1.65;white-space:pre-line}
+.refs{margin-top:16px;display:flex;flex-direction:column;gap:10px}
+.ref{background:var(--surface-2);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)}
+.ref-n{font-weight:700;font-size:.88rem;color:var(--accent-2)}
+.ref-o{font-size:.8rem;color:var(--ink-soft);margin-top:4px;line-height:1.5}
+.ia-grid{padding:0 18px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ia-grid img{width:100%;border-radius:10px;display:block;box-shadow:var(--shadow)}
+.guia{background:var(--deep);padding:40px 26px 30px;margin-top:34px}
+.guia .gl{font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:8px}
+.guia h2{font-family:var(--serif);font-weight:600;font-size:1.85rem;color:var(--cream);line-height:1.1;margin-bottom:8px}
+.guia .gsub{font-size:.86rem;color:var(--cream-soft);line-height:1.6;margin-bottom:18px}
+.guia .pdf{margin-top:10px;display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:15px 16px;color:var(--cream);text-decoration:none}
+.guia .pdf svg{width:22px;height:22px;flex-shrink:0;stroke:var(--accent)}
+.guia .pdf .pt{font-size:.86rem;font-weight:600}
+.guia .pdf .ps{font-size:.72rem;color:var(--cream-soft);margin-top:2px}
+.foot{background:var(--deep-2);padding:34px 26px 46px;text-align:center}
+.foot .logo{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.3rem;letter-spacing:.06em;color:var(--cream)}
+.foot .tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.92rem;color:var(--cream-soft);margin-top:6px}
+.foot .ct{margin-top:18px;font-size:.72rem;color:var(--cream-soft);letter-spacing:.04em}
+.foot .gold{height:1px;width:36px;background:var(--accent);margin:20px auto 0}
+.toast{position:fixed;left:50%;bottom:30px;transform:translateX(-50%) translateY(20px);background:#14110D;color:#fff;padding:13px 22px;border-radius:100px;font-size:.84rem;font-weight:500;box-shadow:0 10px 34px rgba(0,0,0,.3);opacity:0;pointer-events:none;transition:all .3s cubic-bezier(.2,.8,.2,1);z-index:50;display:flex;align-items:center;gap:9px}
+.toast svg{width:16px;height:16px;stroke:var(--accent)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.card,.agenda,.guia,.howto{animation:rise .6s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media print{
+  body{background:#fff}
+  .app{max-width:none}
+  .copy-btn,.toast,.dlpdf{display:none!important}
+  .card{break-inside:avoid}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="hero">
+    <div class="eyebrow">Edição Julho · POSTÔ</div>
+    <div class="mark"></div>
+    <h1>Isley<br>Lauar</h1>
+    <div class="role">Sou instrutora de Pilates. Atendo em studio, com foco em movimento consciente, alívio de dores posturais e fortalecimento profundo, sem impacto. · <b>@isleylauar</b></div>
+    <div class="month"><i></i>Julho 2026 · 8 publicações</div>
+    <p class="welcome">O seu mês está pronto. Copie, salve e publique no seu ritmo.</p>
+  </header>
+  <div class="howto">
+    <div class="step"><div class="n">1</div><div class="t"><b>Toque em copiar</b> e a legenda vai direto para a área de transferência. Cole no Instagram.</div></div>
+    <div class="step"><div class="n">2</div><div class="t"><b>Toque em salvar</b> (ou segure a imagem) para guardar a arte no seu celular.</div></div>
+    <div class="step"><div class="n">3</div><div class="t"><b>Siga a sequência</b> abaixo para publicar nos melhores dias.</div></div>
+    <a class="dlpdf" href="https://postoproduz.com.br/e/isleylauar-c7e412e5/edicao.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Baixar a Edição completa em PDF</a>
+  </div>
+  <div class="body">
+    <div class="section-label"><span>Sequência do mês</span><div class="bar"></div></div>
+    <div class="agenda">
+      <div class="row"><div class="when"><div class="d">01</div><div class="m">Qua</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">13 km por jogo. E o seu joelho?</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">03</div><div class="m">Sex</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">A dor é no joelho. O problema não.</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">06</div><div class="m">Seg</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Core não é barriga. E isso muda tudo.</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">08</div><div class="m">Qua</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Fortalecer ≠ Estabilizar</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">10</div><div class="m">Sex</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">A Copa me fez pensar no seu joelho.</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">13</div><div class="m">Seg</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Mesma dor. Programas diferentes.</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">15</div><div class="m">Qua</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Agosto: Pilates para Corredores.</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">17</div><div class="m">Sex</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Sábado de manhã com método.</div><div class="hr">Melhor horário · 19h</div></div></div>
+    </div>
+    <p class="agenda-note">Horários e ordem detalhados no seu Guia de Uso.</p>
+    
+    
+    <div class="section-label" style="margin-top:34px"><span>O seu conteúdo</span><div class="bar"></div></div>
+    <div class="feed">
+      
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">01</span></div><h3 class="card-title">13 km por jogo. E o seu joelho?</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/1Y9wFgZeWNpi9WHkx4KV3F_2YP6eM2PUi=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1Y9wFgZeWNpi9WHkx4KV3F_2YP6eM2PUi" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Um jogador de Copa corre até 13 quilômetros por partida. E o seu joelho corre quanto por semana?</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c1">Um jogador de Copa corre até 13 quilômetros por partida.
+
+O corpo suporta isso porque existe base: estabilidade articular, força profunda, controle de movimento construído ao longo do tempo.
+
+O corredor de fim de semana raramente tem essa base. E o corpo avisa — no joelho, no quadril, na lombar.
+
+A dor não vem do esforço. Vem do esforço sem preparo estrutural.
+
+Nas turmas de sábado do Studio CrossPilatear, o trabalho começa por onde deveria sempre começar: pela avaliação do padrão de movimento real de cada pessoa. Não por uma sequência genérica.
+
+Se você corre — ou quer correr — e quer construir essa base com método, as vagas estão abertas. E para quem começar em junho, tem 10% de desconto na primeira mensalidade.
+
+O link está na bio. 👇</div><button class="copy-btn" data-src="c1" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">02</span></div><h3 class="card-title">A dor é no joelho. O problema não.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/14ezUrSFQm41gfcDCLFNRwH-mYcYeC741=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=14ezUrSFQm41gfcDCLFNRwH-mYcYeC741" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>A dor está no joelho. Mas o problema quase nunca está no joelho.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c2">A dor está no joelho.
+
+Mas quase sempre, o problema está no quadril.
+
+Os estabilizadores do quadril — em especial o glúteo médio — são os músculos responsáveis por alinhar o joelho durante cada passada. Quando estão fracos ou mal ativados, o joelho desvia. E o desvio repetido, ao longo de quilômetros, vira inflamação, vira dor, vira lesão.
+
+O que a maioria dos corredores faz? Trata o joelho. Para um tempo. Volta a correr. E a dor volta junto.
+
+O que o Pilates para corredores faz de diferente? Começa pela avaliação do padrão de movimento real — e trabalha estabilidade antes de qualquer carga.
+
+Não é mágica. É raciocínio clínico aplicado ao movimento.
+
+Se você corre e já sentiu isso no próprio corpo, salva esse post. E quando estiver pronta para entender o que está acontecendo de verdade — o link está na bio. 👇</div><button class="copy-btn" data-src="c2" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">03</span></div><h3 class="card-title">Core não é barriga. E isso muda tudo.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/17qMTUVta6dR8uBCsgQIHHODs2HIvJ1Iq=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=17qMTUVta6dR8uBCsgQIHHODs2HIvJ1Iq" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Core não é barriga definida. E essa confusão custa caro para quem corre.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c3">Core não é barriga definida.
+
+É o conjunto de estruturas profundas que estabiliza a coluna, organiza o quadril e distribui força de forma inteligente durante o movimento.
+
+Quando o core está mal ativado, o corpo compensa. E a compensação, no ritmo e na repetição da corrida, vira dor lombar, vira sobrecarga articular, vira lesão que parece não ter motivo.
+
+Trabalhar o core com inteligência não é fazer mil abdominais. É aprender a ativar a musculatura certa, no momento certo, dentro do movimento real.
+
+Nas turmas de sábado do Studio CrossPilatear, esse é um dos pilares centrais do trabalho — especialmente para quem corre.
+
+Primeira mensalidade com 10% de desconto para quem começar em junho.
+
+Vagas limitadas. Link na bio. 👇</div><button class="copy-btn" data-src="c3" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">04</span></div><h3 class="card-title">Fortalecer ≠ Estabilizar</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/1O8EEzHs15HwCcHjSocSAkUqnu-Lr1NVk=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1O8EEzHs15HwCcHjSocSAkUqnu-Lr1NVk" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Fortalecer e estabilizar não são a mesma coisa. Confundir os dois é o erro mais comum que vejo na prática clínica.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c4">Fortalecer e estabilizar não são a mesma coisa.
+
+Fortalecer é aumentar a capacidade de produzir força. Estabilizar é garantir que as articulações permaneçam alinhadas e controladas durante o movimento.
+
+Um sem o outro gera problema.
+
+Um joelho com musculatura forte, mas sem controle no quadril, continua sofrendo na corrida, na descida de escada, no cotidiano. A força está lá. O que falta é controle.
+
+Na prática clínica — e na construção do Sistema I-Cross — aprendi que estabilidade vem antes de carga. Sempre. Não porque é mais fácil. Porque é o único caminho que protege o resultado no longo prazo.
+
+Esse raciocínio atravessa cada avaliação, cada exercício, cada progressão aqui no studio.
+
+Se você quer uma prática que respeita essa lógica, o primeiro passo é a aula experimental. 👉 Link na bio.</div><button class="copy-btn" data-src="c4" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">05</span></div><h3 class="card-title">A Copa me fez pensar no seu joelho.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/1f5LjEiy0AINjBLHSyl7kEttjMYA_dDkJ=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1f5LjEiy0AINjBLHSyl7kEttjMYA_dDkJ" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>A Copa do Mundo me fez pensar no seu joelho.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c5">A Copa do Mundo me fez pensar no seu joelho.
+
+Não no joelho do Vinicius ou do Mbappé — eles têm equipes inteiras cuidando disso. No seu.
+
+Um jogador profissional percorre até 13 quilômetros por partida, com mudanças de direção, acelerações e impactos repetidos. O corpo suporta porque existe uma base construída ao longo de anos: estabilidade articular, força profunda, controle de movimento.
+
+O corredor de fim de semana raramente tem essa base. E o corpo avisa — no joelho, no quadril, na lombar.
+
+O esforço que você coloca no treino merece uma estrutura à altura.
+
+As turmas de sábado do Studio CrossPilatear têm foco em Pilates para corredores — trabalho individualizado, com avaliação real e progressão que respeita o seu padrão de movimento.
+
+Para quem começar em junho: 10% de desconto na primeira mensalidade.
+
+Vagas limitadas. Link na bio. 👇</div><button class="copy-btn" data-src="c5" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">06</span></div><h3 class="card-title">Mesma dor. Programas diferentes.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/1rZ2Jet-ElzGmshPKo1rSWhprwvXfvHVN=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1rZ2Jet-ElzGmshPKo1rSWhprwvXfvHVN" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Duas pessoas com a mesma dor lombar. Dois caminhos completamente diferentes. Entender isso mudou a minha prática.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c6">Duas pessoas. Mesma queixa de dor lombar.
+
+Dois programas completamente diferentes.
+
+Uma tem o problema na mobilidade do quadril. A outra, na ativação do assoalho pélvico. O sintoma é igual. O caminho precisa ser diferente — porque o corpo de cada pessoa é diferente.
+
+Depois de 25 anos de prática clínica, uma coisa ficou clara: receita genérica alivia por um tempo. Solução real começa pela avaliação.
+
+No Studio CrossPilatear, a avaliação não é etapa burocrática. É o ponto de partida de tudo. É o momento em que entendo o padrão de movimento real da pessoa e construo uma prática que faz sentido para o corpo dela — não para uma média.
+
+Esse é o fundamento do Sistema I-Cross. E é o que diferencia uma aula de Pilates de uma prática de Pilates com método.
+
+Se você quer sentir essa diferença, o primeiro passo é a aula experimental. 👉 Link na bio.</div><button class="copy-btn" data-src="c6" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">07</span></div><h3 class="card-title">Agosto: Pilates para Corredores.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/14NczqH4lSKLIRODr9I64mIMF6z13EZbr=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=14NczqH4lSKLIRODr9I64mIMF6z13EZbr" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Em agosto, três dias que mudam o jeito de entender o Pilates para corredores. Para sempre.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c7">21, 22 e 23 de agosto.
+
+Três dias de imersão presencial em Pilates Contemporâneo aplicado a corredores — teórico e prático, aqui no Studio CrossPilatear.
+
+O curso não é uma apostila de técnicas. É uma construção de raciocínio clínico: entender o que acontece no corpo durante a corrida, onde estão os pontos de sobrecarga, quais estruturas precisam de estabilidade — e como o Pilates atua nesse processo de forma estratégica e resolutiva.
+
+Esse conteúdo foi amadurecido em anos de prática clínica, docência e observação do que funciona no corpo real de quem corre.
+
+As vagas são limitadas porque o acompanhamento não abre mão da qualidade.
+
+Se você pratica e quer entender o porquê de cada movimento — ou se é profissional de movimento e quer aprofundar essa aplicação — esse é o próximo passo.
+
+Entra na lista de espera. O link está na bio. 👇</div><button class="copy-btn" data-src="c7" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">08</span></div><h3 class="card-title">Sábado de manhã com método.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/1_9SpCrAudV2WGAUdiKjOd208W0b2Yo0_=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1_9SpCrAudV2WGAUdiKjOd208W0b2Yo0_" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Existe uma diferença enorme entre fazer Pilates e praticar Pilates com método. E ela aparece logo na primeira aula.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c8">Antes de a aula começar, há uma avaliação.
+
+Um olhar para o padrão de movimento real de cada aluna. Uma conversa sobre queixa, histórico, objetivo. Só depois disso a prática é construída.
+
+A turma de sábado do Studio CrossPilatear tem foco em Pilates para corredores. Cada exercício tem uma razão clínica — estabilidade, mobilidade, controle. Não como sequência genérica, mas como resposta ao que o corpo de cada pessoa precisa.
+
+Vagas limitadas não é recurso de escassez artificial. É porque esse nível de atenção individual não cabe em turmas grandes. O tamanho da turma é parte do método.
+
+Para quem começar em junho: 10% de desconto na primeira mensalidade.
+
+Se você corre, sente dor, ou quer entender como o seu corpo funciona de verdade — o primeiro passo é a aula experimental.
+
+WhatsApp: 99391-6688 📍 Studio CrossPilatear — Lagoa Seca</div><button class="copy-btn" data-src="c8" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      
+      
+    </div>
+  </div>
+  <section class="guia">
+    <div class="gl">Guia de Uso POSTÔ</div>
+    <h2>Como tirar o máximo do seu mês</h2>
+    <p class="gsub">Melhores horários do seu nicho, sequência ideal, frequência e como gravar os Reels com os roteiros: está tudo no seu Guia, entregue junto desta Edição.</p>
+    <a class="pdf" href="./guia/"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg><div><div class="pt">Guia de Uso POSTÔ</div><div class="ps">Abrir o guia completo · salvar em PDF</div></div></a>
+  </section>
+  <footer class="foot">
+    <div class="logo">POSTÔ</div>
+    <div class="tag">A POSTÔ produz. Você posta.</div>
+    <div class="gold"></div>
+    <div class="ct">Dúvidas? contato@postoproduz.com.br</div>
+  </footer>
+</div>
+<div class="toast" id="toast"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span id="toast-msg">Copiado</span></div>
+<script>
+function showToast(m){var t=document.getElementById('toast');document.getElementById('toast-msg').textContent=m;t.classList.add('show');clearTimeout(window._tt);window._tt=setTimeout(function(){t.classList.remove('show')},1900)}
+function selectText(el){try{var r=document.createRange();r.selectNodeContents(el);var s=window.getSelection();s.removeAllRanges();s.addRange(r)}catch(e){}}
+function doCopy(text){if(navigator.clipboard&&window.isSecureContext){return navigator.clipboard.writeText(text)}
+return new Promise(function(res,rej){try{var ta=document.createElement('textarea');ta.value=text;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.focus();ta.select();ta.setSelectionRange(0,text.length);var ok=document.execCommand('copy');document.body.removeChild(ta);ok?res():rej()}catch(e){rej(e)}})}
+function copyFrom(btn){var el=document.getElementById(btn.getAttribute('data-src'));var text=el.innerText.trim();var icon=btn.querySelector('svg').outerHTML;
+doCopy(text).then(function(){var o=btn.innerHTML;btn.classList.add('done');btn.innerHTML=icon+'Copiado ✓';showToast(btn.getAttribute('data-tipo')+' · cole no Instagram');setTimeout(function(){btn.classList.remove('done');btn.innerHTML=o},2100)}).catch(function(){selectText(el);showToast('Texto selecionado · toque, segure e escolha Copiar')})}
+</script>
+</body>
+</html>
