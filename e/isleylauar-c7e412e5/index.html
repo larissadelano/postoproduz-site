@@ -9,19 +9,23 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--deep:#0D0D0D;--deep-2:#0B0B0B;--surface:#F5F0E8;--surface-2:#FFFFFF;--accent:#FFFFFF;--accent-2:#1A1A1A;
---ink:#1A1A1A;--ink-soft:#444444;--cream:#F3F1EA;--cream-soft:rgba(243,241,234,.62);--line:rgba(20,25,22,.12);
+:root{--deep:#141414;--deep-2:#101010;--surface:#F5F0E8;--surface-2:#FFFFFF;--accent:#E8C14A;--accent-2:#C9A84C;
+--ink:#2C2C2C;--ink-soft:#727272;--cream:#F3F1EA;--cream-soft:rgba(243,241,234,.62);--line:rgba(20,25,22,.12);
 --radius:18px;--shadow:0 1px 2px rgba(20,30,26,.04),0 8px 30px rgba(20,30,26,.07);
 --serif:'Cormorant Garamond', 'Cormorant Garamond', Georgia, serif;--sans:'DM Sans', 'DM Sans', -apple-system, sans-serif}
 *{margin:0;padding:0;box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{font-family:var(--sans);background:var(--deep);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
 .app{max-width:460px;margin:0 auto;background:var(--deep);min-height:100vh;position:relative;overflow:hidden}
-.hero{padding:54px 26px 40px;position:relative;background:radial-gradient(120% 90% at 80% 0%, #111111 0%, var(--deep) 55%)}
+.brandbar{background:var(--deep);display:flex;align-items:center;justify-content:center;padding:22px 26px 4px}
+.brandbar .wm{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.55rem;letter-spacing:.22em;color:var(--cream)}
+.brandbar .wm i{color:var(--accent);font-style:normal}
+.hero{padding:38px 26px 40px;position:relative;background:radial-gradient(120% 90% at 80% 0%, #1A1A1A 0%, var(--deep) 55%)}
 .hero .eyebrow{font-size:.66rem;letter-spacing:.34em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:22px}
 .hero .mark{width:30px;height:1px;background:var(--accent);opacity:.6;margin-bottom:22px}
 .hero h1{font-family:var(--serif);font-weight:600;font-size:2.5rem;line-height:1.06;color:var(--cream)}
-.hero .role{margin-top:12px;font-size:.86rem;color:var(--cream-soft)}
+.hero .positioning{margin-top:14px;font-family:var(--serif);font-weight:500;font-size:1.24rem;line-height:1.34;color:var(--cream);max-width:340px}
+.hero .role{margin-top:14px;font-size:.86rem;color:var(--cream-soft)}
 .hero .role b{color:var(--cream);font-weight:500}
 .hero .month{margin-top:26px;display:inline-flex;align-items:center;gap:10px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cream);border:1px solid rgba(255,255,255,.28);padding:9px 16px;border-radius:100px}
 .hero .month i{width:5px;height:5px;border-radius:50%;background:var(--accent)}
@@ -129,24 +133,35 @@ body{font-family:var(--sans);background:var(--deep);color:var(--ink);line-height
 @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@page{size:A4;margin:14mm 12mm}
 @media print{
-  body{background:#fff}
-  .app{max-width:none}
-  .copy-btn,.toast,.dlpdf{display:none!important}
-  .card{break-inside:avoid}
-  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  html,body{background:#fff!important}
+  .app{max-width:none;box-shadow:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact;color-adjust:exact;animation:none!important;transition:none!important}
+  .copy-btn,.toast,.dlpdf,.save-hint,.rl-dl,.strip-note{display:none!important}
+  .card,.agenda .row,.rl-cena,.ref{break-inside:avoid;page-break-inside:avoid}
+  .card{box-shadow:none;border:1px solid var(--line)}
+  .section-label,.card-title,.rl-story-h,.rl-tag{break-after:avoid;page-break-after:avoid}
+  .guia{break-before:page;page-break-before:always}
+  .art-frame{max-height:78vh}
+  .slides-scroll{flex-wrap:wrap;overflow:visible}
+  .slides-scroll img{height:auto;width:31%}
+  img{max-width:100%}
+  .copy-text,.diag,.rl-cena-b p,.rl-gancho p{orphans:3;widows:3}
 }
 </style>
 </head>
 <body>
 <div class="app">
+  <div class="brandbar"><span class="wm">POST<i>Ô</i></span></div>
   <header class="hero">
-    <div class="eyebrow">Edição Julho · POSTÔ</div>
+    <div class="eyebrow">Edição Julho</div>
     <div class="mark"></div>
     <h1>Isley<br>Lauar</h1>
-    <div class="role">Sou instrutora de Pilates. Atendo em studio, com foco em movimento consciente, alívio de dores posturais e fortalecimento profundo, sem impacto. · <b>@isleylauar</b></div>
-    <div class="month"><i></i>Julho 2026 · 27 publicações + 15 stories</div>
-    <p class="welcome">O seu mês está pronto. Copie, salve e publique no seu ritmo.</p>
+    <p class="positioning">Sou fisioterapeuta há 25 anos e criadora do Sistema I-Cross — uma metodologia de Pilates Contemporâneo que estrutura o trabalho clínico em pilares de avaliação postural, integração neuromuscular e progressão funcional.</p>
+    <div class="role">Fisioterapeuta e instrutora de Pilates contemporâneo · <b>@isleylauar</b></div>
+    <div class="month"><i></i>30 dias de conteúdo · 27 publicações + 15 stories</div>
+    <p class="welcome">Os seus próximos 30 dias estão prontos. Copie, salve e publique no seu ritmo.</p>
   </header>
   <div class="howto">
     <div class="step"><div class="n">1</div><div class="t"><b>Toque em copiar</b> e a legenda vai direto para a área de transferência. Cole no Instagram.</div></div>
@@ -155,541 +170,526 @@ button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-r
     <a class="dlpdf" href="https://postoproduz.com.br/e/isleylauar-c7e412e5/edicao.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Baixar a Edição completa em PDF</a>
   </div>
   <div class="body">
-    <div class="section-label"><span>Sequência do mês</span><div class="bar"></div></div>
+    <div class="section-label"><span>Sequência dos 30 dias</span><div class="bar"></div></div>
     <div class="agenda">
-      <div class="row"><div class="when"><div class="d">01</div><div class="m">Qua</div></div><div class="what"><div class="tipo">Carrossel</div><div class="ttl">Você corre. Mas o seu corpo está pronto para isso?</div><div class="hr">Melhor horário · 12h</div></div></div>
-      <div class="row"><div class="when"><div class="d">03</div><div class="m">Sex</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">12 km. O que te sustenta?</div><div class="hr">Melhor horário · 19h</div></div></div>
-      <div class="row"><div class="when"><div class="d">06</div><div class="m">Seg</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Core não é só barriga.</div><div class="hr">Melhor horário · 12h</div></div></div>
-      <div class="row"><div class="when"><div class="d">08</div><div class="m">Qua</div></div><div class="what"><div class="tipo">Carrossel</div><div class="ttl">Jogadores de elite fazem Pilates. Não é coincidência.</div><div class="hr">Melhor horário · 19h</div></div></div>
-      <div class="row"><div class="when"><div class="d">10</div><div class="m">Sex</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Seu corpo aguenta a corrida?</div><div class="hr">Melhor horário · 12h</div></div></div>
-      <div class="row"><div class="when"><div class="d">13</div><div class="m">Seg</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">A dor não apareceu do nada.</div><div class="hr">Melhor horário · 19h</div></div></div>
-      <div class="row"><div class="when"><div class="d">15</div><div class="m">Qua</div></div><div class="what"><div class="tipo">Carrossel</div><div class="ttl">Pilates Contemporâneo para corredores. Agosto de 2026.</div><div class="hr">Melhor horário · 12h</div></div></div>
-      <div class="row"><div class="when"><div class="d">17</div><div class="m">Sex</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">3 erros do corredor</div><div class="hr">Melhor horário · 19h</div></div></div>
-      <div class="row"><div class="when"><div class="d">20</div><div class="m">Seg</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">25 anos de clínica ensinam a escutar o corpo.</div><div class="hr">Melhor horário · 12h</div></div></div>
-      <div class="row"><div class="when"><div class="d">22</div><div class="m">Qua</div></div><div class="what"><div class="tipo">Carrossel</div><div class="ttl">Sete letras. O que cada uma significa para quem corre.</div><div class="hr">Melhor horário · 19h</div></div></div>
-      <div class="row"><div class="when"><div class="d">24</div><div class="m">Sex</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">A dor no joelho vem de longe</div><div class="hr">Melhor horário · 12h</div></div></div>
-      <div class="row"><div class="when"><div class="d">27</div><div class="m">Seg</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Qual foi a primeira coisa que mudou?</div><div class="hr">Melhor horário · 19h</div></div></div>
-      <div class="row"><div class="when"><div class="d">29</div><div class="m">Qua</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">25 anos. Um metodo. Uma escolha.</div><div class="hr">Melhor horário · 12h</div></div></div>
-      <div class="row"><div class="when"><div class="d">31</div><div class="m">Sex</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Turma de sábado. Pilates para quem corre.</div><div class="hr">Melhor horário · 19h</div></div></div>
-      <div class="row"><div class="when"><div class="d">03</div><div class="m">Seg</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Por que atletas fazem Pilates?</div><div class="hr">Melhor horário · 12h</div></div></div>
-      <div class="row"><div class="when"><div class="d">05</div><div class="m">Qua</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Correr é repetição. Repetição sem base é erro acumulado.</div><div class="hr">Melhor horário · 19h</div></div></div>
-      <div class="row"><div class="when"><div class="d">07</div><div class="m">Sex</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Por dentro da aula para corredores</div><div class="hr">Melhor horário · 12h</div></div></div>
-      <div class="row"><div class="when"><div class="d">10</div><div class="m">Seg</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Pilates não é sobre sofrer para evoluir.</div><div class="hr">Melhor horário · 19h</div></div></div>
-      <div class="row"><div class="when"><div class="d">12</div><div class="m">Qua</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Curso Pilates para Corredores — agosto</div><div class="hr">Melhor horário · 12h</div></div></div>
-      <div class="row"><div class="when"><div class="d">14</div><div class="m">Sex</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Sábado de manhã no CrossPilatear.</div><div class="hr">Melhor horário · 19h</div></div></div>
-      <div class="row"><div class="when"><div class="d">17</div><div class="m">Seg</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Docente. Fisioterapeuta. Criadora de método.</div><div class="hr">Melhor horário · 12h</div></div></div>
-      <div class="row"><div class="when"><div class="d">19</div><div class="m">Qua</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">O joelho dói. Mas o problema pode não estar no joelho.</div><div class="hr">Melhor horário · 19h</div></div></div>
-      <div class="row"><div class="when"><div class="d">21</div><div class="m">Sex</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Curso presencial. Agosto de 2026.</div><div class="hr">Melhor horário · 12h</div></div></div>
-      <div class="row"><div class="when"><div class="d">24</div><div class="m">Seg</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Você não precisa parar de correr.</div><div class="hr">Melhor horário · 19h</div></div></div>
-      <div class="row"><div class="when"><div class="d">26</div><div class="m">Qua</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Você corre? Quanto quilômetros por semana?</div><div class="hr">Melhor horário · 12h</div></div></div>
-      <div class="row"><div class="when"><div class="d">28</div><div class="m">Sex</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Lombar que dói depois de correr não é coincidência.</div><div class="hr">Melhor horário · 19h</div></div></div>
-      <div class="row"><div class="when"><div class="d">31</div><div class="m">Seg</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Primeira mensalidade com 10% de desconto.</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">26</div><div class="m">Sex</div></div><div class="what"><div class="tipo">Carrossel</div><div class="ttl">Avaliação postural não é foto de postura.</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">27</div><div class="m">Sáb</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Bom instrutor x Referência</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">28</div><div class="m">Dom</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">25 anos de prática clínica não cabem num currículo</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">29</div><div class="m">Seg</div></div><div class="what"><div class="tipo">Carrossel</div><div class="ttl">Antes de prescrever: você avalia ou você supõe?</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">30</div><div class="m">Ter</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Foto de postura nao e avaliacao</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">02</div><div class="m">Qui</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Seu aluno com dor crônica não melhora — e você já sabe por quê</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">03</div><div class="m">Sex</div></div><div class="what"><div class="tipo">Carrossel</div><div class="ttl">3 compensações que ficam invisíveis sem raciocínio clínico</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">04</div><div class="m">Sáb</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">O corredor que nao voltou</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">05</div><div class="m">Dom</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Avaliação postural não é foto de postura</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">06</div><div class="m">Seg</div></div><div class="what"><div class="tipo">Carrossel</div><div class="ttl">O Sistema I-Cross não é mais uma formação de Pilates.</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">07</div><div class="m">Ter</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Avalie antes de prescrever</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">08</div><div class="m">Qua</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Seu studio está cheio. Mas você está evoluindo?</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">09</div><div class="m">Qui</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">3 compensacoes que o classico ignora</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">11</div><div class="m">Sáb</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">A condição especial é para os 10 primeiros — e já saíram algumas vagas</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">12</div><div class="m">Dom</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Studio cheio x Evolucao tecnica</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">13</div><div class="m">Seg</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Como o Sistema I-Cross foi construído — e por que demorou anos</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">14</div><div class="m">Ter</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Como o I-Cross foi construido</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">15</div><div class="m">Qua</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Movimento com intenção não é filosofia — é critério clínico</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">16</div><div class="m">Qui</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">10 vagas com condicao especial</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">17</div><div class="m">Sex</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Pilates é muita coisa. Mas acima de tudo, é sobre você.</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">18</div><div class="m">Sáb</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">O que é high ticket no Pilates — e por que não é sobre preço</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">19</div><div class="m">Dom</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Consciência corporal não é filosofia. É prática.</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">21</div><div class="m">Ter</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">O corredor chegou no seu studio e nunca mais voltou</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">22</div><div class="m">Qua</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Uma pergunta que faço para todo instrutor que vem me procurar</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">23</div><div class="m">Qui</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">21 a 23 de agosto. Belo Horizonte. Corredores como especialidade.</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">24</div><div class="m">Sex</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">18 anos de studio. O que ficou de verdade.</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">25</div><div class="m">Sáb</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">O que separa um instrutor bom de um instrutor referência na cidade</div><div class="hr">Melhor horário · 12h</div></div></div>
     </div>
     <p class="agenda-note">Os Stories acompanham os dias entre as publicações: use um por intervalo. Horários e ordem detalhados no seu Guia de Uso.</p>
-    
+    <div class="section-label" style="margin-top:34px"><span>Análise do seu perfil</span><div class="bar"></div></div><div class="pro-bloco"><p class="diag"># Diagnóstico de Perfil — Isley Lauar | @isleylauar
+
+---
+
+## 1. O QUE ESTÁ FUNCIONANDO
+
+**Construção de autoridade pela trajetória.** O post de apresentação ("Prazer, eu sou Isley Lauar") cumpre bem a função de âncora de credibilidade: 25 anos de fisioterapia, 18 anos de studio, docência desde 2004 e vínculo com o Grupo Voll são ativos de peso declarados com objetividade. Isso é matéria-prima sólida para confiança.
+
+**O nome do método está sendo reforçado com consistência.** "Sistema I-Cross" aparece em todas as legendas analisadas — não como menção acidental, mas como elemento central da narrativa. Isso cria repetição intencional de marca, essencial para fixação em nichos técnicos.
+
+**Existe um gancho de mercado orientado por dados.** Os posts sobre corredores usam números concretos (500 milhões no mundo, 15 milhões no Brasil, +14% de crescimento) para justificar uma oportunidade de especialização. Essa estrutura argumentativa — dado + lacuna de mercado + chamada ao profissional — é mais madura do que o padrão médio de perfis de Pilates.
+
+**A bio posiciona negócio, não apenas profissional.** A menção ao @studiocrosspilatear e o conceito de "high ticket / high quality" indicam que há uma visão de ecossistema, não só de personal brand isolado.
+
+---
+
+## 2. O QUE ESTÁ FALTANDO
+
+**O CTA de compra da Certificação I-Cross está ausente nas legendas analisadas.** O objetivo declarado do mês é vender a formação completa para instrutores, mas nenhuma das seis legendas examináveis faz uma oferta direta, com prazo, vagas limitadas ou link explícito para a certificação. O único CTA identificado aponta para um curso futuro (agosto/2026, para corredores) — que não é o produto prioritário agora.
+
+**A voz do público ideal não aparece.** Nenhuma legenda reflete a dor específica do instrutor de 30 a 55 anos que sente o método tradicional "raso". Não há relato de aluno certificado, case de studio transformado, ou espelho de situação ("você formou, abriu seu studio, mas sente que falta profundidade técnica para casos mais complexos..."). O perfil fala *sobre* o método, mas ainda não fala *para* quem sente o problema.
+
+**O diferencial clínico da fisioterapia não está traduzido em linguagem de resultado prático.** A bio e as legendas citam "avaliação postural", "integração neuromuscular" e "progressão funcional", mas sem exemplificar o que muda na prática do instrutor certificado. O que esse profissional passa a fazer — e a cobrar — que não conseguia antes? Essa ponte está faltando.
+
+**Falta prova social visível.** Com 1.513 seguidores e uma metodologia de 18 anos de studio e formação docente contínua, é esperado que existam instrutores já certificados ou alunos formados. Nenhum depoimento, resultado ou rosto de ex-aluno aparece nas legendas analisadas.
+
+**O post sobre "o que é Pilates" destoa do posicionamento B2B.** Uma legenda genérica voltada ao praticante final ("é acolhimento numa sala onde ninguém te julga") não contribui para atrair instrutores que buscam aprofundamento técnico — e dilui o sinal de autoridade especializada para quem chega ao perfil pela primeira vez.
+
+---
+
+## 3. POSICIONAMENTO PERCEBIDO VS. DESEJADO
+
+| Dimensão | Posicionamento Desejado | Posicionamento Percebido (pelos dados reais) |
+|---|---|---|
+| **Para quem fala** | Instrutores e donos de studio que querem elevar nível técnico | Misto: ora para instrutores, ora para praticantes finais |
+| **O que vende** | Certificação com metodologia clínica estruturada | Método em lançamento, sem oferta clara e datada nos posts |
+| **Tom de autoridade** | Referência técnica nacional, 25 anos de prática clínica | Autoridade presente na bio, mas pouco ativada nas legendas |
+| **Diferencial** | Único método brasileiro que une Pilates + fisioterapia funcional | Citado, mas não demonstrado — falta "prova do diferencial em ação" |
+| **Senso de urgência** | Vagas limitadas, próxima turma | Ausente nos posts analisados; o único evento com data é em 2026 |
+
+**Diagnóstico central:** há um gap entre o que Isley Lauar *é* (autoridade clínica real, método autoral maduro) e o que o perfil *comunica* (método em apresentação, audiência ainda indefinida). O perfil está na fase de apresentação quando já deveria estar na fase de conversão.
+
+---
+
+## 4. 3 PRIORIDADES PARA ESTE MÊS
+
+**Prioridade 1 — Ativar a oferta da Certificação com urgência real.**
+Criar uma sequência de pelo menos 3 posts com CTA direto para a certificação: um com a estrutura do programa (o que o instrutor aprende e passa a fazer), um com vagas e prazo reais ("X vagas abertas, inscrições até [data]"), e um com o investimento ou chamada para conversa. Sem isso, o objetivo do mês não se converte em receita, independentemente da qualidade do conteúdo.
+
+**Prioridade 2 — Publicar um case ou depoimento de instrutor certificado.**
+Um único post com o resultado concreto de quem já passou pelo Sistema I-Cross — seja em formato de citação, vídeo de 30 segundos ou print com autorização — tem mais poder de persuasão para o público B2B do que dez posts explicando o método. Se não houver certificados ainda, um relato da própria transformação de studio (CrossPilatear como laboratório do método) cumpre a mesma função de prova.
+
+**Prioridade 3 — Definir e manter uma linha editorial coerente com o público B2B.**
+Eliminar ou reduzir posts voltados ao praticante final (como o "o que é Pilates") enquanto o objetivo é vender certificação para instrutores. Cada post publicado neste mês deveria responder a uma pergunta que um instrutor técnico faria: "Por que avaliação postural muda minha prescrição?", "O que separa um instructor médio de uma referência clínica na sua cidade?", "Quanto um studio pode crescer quando eleva o padrão técnico?". Conteúdo que fala direto para a dor do público-alvo declarado.
+
+---
+
+## RESUMO EXECUTIVO
+
+Isley Lauar tem um ativo raro no mercado de Pilates brasileiro: uma metodologia autoral com 18 anos de aplicação clínica, respaldo docente em pós-graduação e um diferencial genuíno — a integração entre Pilates Contemporâneo e fisioterapia funcional. Esse conjunto é difícil de construir e fácil de reconhecer por quem está no mercado há tempo. O problema não é o produto. O problema é que o perfil ainda está operando em modo de apresentação, quando o momento exige modo de conversão.
+
+As legendas analisadas mostram um padrão de conteúdo que explica o método, contextualiza o mercado e apresenta credenciais — mas não convoca o público certo a dar o próximo passo agora. O objetivo declarado para o mês é vender a Certificação Sistema I-Cross, mas nenhum dos posts analisados faz essa oferta com clareza, prazo e chamada para ação. Ao mesmo tempo, a audiência recebe sinais mistos: posts técnicos voltados a profissionais dividem espaço com conteúdo emocional voltado ao praticante final, o que dilui o posicionamento B2B que sustenta a proposta de valor da certificação.
+
+Com 1.513 seguidores, o perfil ainda está em fase de construção de audiência — o que é um dado neutro, não negativo. Mas isso torna ainda mais crítico que cada post publicado neste mês trabalhe a favor do mesmo objetivo: levar instrutores qualificados a reconhecer o Sistema I-Cross como o próximo passo real na carreira deles e a agir antes que as vagas se encerrem. As três prioridades indicadas — ativar a oferta com urgência, publicar prova social direcionada e manter linha editorial coesa para o público B2B — não exigem volume alto de conteúdo. Exigem precisão. Menos posts sobre o que o método é, mais posts sobre o que o método faz por quem o aplica.</p><div style="font-size:13px;opacity:0.6;margin:18px 0 8px">Referências do seu nicho que consideramos</div><div class="refs"><div class="ref"><div class="ref-n">@vollpilatesgroup</div></div><div class="ref"><div class="ref-n">@rafael.voll</div></div><div class="ref"><div class="ref-n">@thalyssalarangeiras</div></div><div class="ref"><div class="ref-n">@drawalkyria_fernandes</div></div></div></div>
     
     <div class="section-label" style="margin-top:34px"><span>O seu conteúdo</span><div class="bar"></div></div>
     <div class="feed">
-      <article class="card"><div class="card-head"><span class="badge carr-b">Carrossel</span><span class="num">01</span></div><h3 class="card-title">Você corre. Mas o seu corpo está pronto para isso?</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://lh3.googleusercontent.com/d/1WS4t-5ZLXhhcfRAmHdy6pWxXkhaUKHtu=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1WS4t-5ZLXhhcfRAmHdy6pWxXkhaUKHtu" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="slides-scroll"><a href="https://drive.google.com/uc?export=download&id=1n50KLk7dymLZya_hM3hDj_jDORV0R1ez" download><img src="https://lh3.googleusercontent.com/d/1n50KLk7dymLZya_hM3hDj_jDORV0R1ez=w900" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1Pmiw0D9QZ0ClI89hWN6lJlo8NDdhdj31" download><img src="https://lh3.googleusercontent.com/d/1Pmiw0D9QZ0ClI89hWN6lJlo8NDdhdj31=w900" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1mZcyK3s1_Z_eCQ0WsxtRvSsAolrOfJ9-" download><img src="https://lh3.googleusercontent.com/d/1mZcyK3s1_Z_eCQ0WsxtRvSsAolrOfJ9-=w900" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1zGYerGOg7UD1a5H3SSE78EWB0_xJojXS" download><img src="https://lh3.googleusercontent.com/d/1zGYerGOg7UD1a5H3SSE78EWB0_xJojXS=w900" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1fGxuAhg9x4ig-5l8yXkF2LW7TB2DnO7n" download><img src="https://lh3.googleusercontent.com/d/1fGxuAhg9x4ig-5l8yXkF2LW7TB2DnO7n=w900" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=12Sf5pt5R5rED-HdyaGAfUrMpcd0Ve3o2" download><img src="https://lh3.googleusercontent.com/d/12Sf5pt5R5rED-HdyaGAfUrMpcd0Ve3o2=w900" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1kip9EFPvbqs_Mx9PhOFHnpO-001tj3be" download><img src="https://lh3.googleusercontent.com/d/1kip9EFPvbqs_Mx9PhOFHnpO-001tj3be=w900" loading="lazy" alt=""></a></div><p class="strip-note">Toque em cada lâmina para salvar · publique na ordem</p><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c1">Você corre. Mas o seu corpo está pronto para isso?
+      <article class="card"><div class="card-head"><span class="badge carr-b">Carrossel</span><span class="num">01</span></div><h3 class="card-title">Avaliação postural não é foto de postura.</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://drive.google.com/thumbnail?id=1PlX0Oq8FD-4-8XfYM3EMGQ4AGY1GyPxJ&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1PlX0Oq8FD-4-8XfYM3EMGQ4AGY1GyPxJ" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="slides-scroll"><a href="https://drive.google.com/uc?export=download&id=1zQJVtiRu27OqMH6wDHc7WJu3MOc7mMgy" download><img src="https://drive.google.com/thumbnail?id=1zQJVtiRu27OqMH6wDHc7WJu3MOc7mMgy&sz=w1000" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1ciQ9H-C6bMRBg5tFqkd0Hf2vm9LwYWdE" download><img src="https://drive.google.com/thumbnail?id=1ciQ9H-C6bMRBg5tFqkd0Hf2vm9LwYWdE&sz=w1000" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1XHgwfFWKhY_DoGh3wos6CbTcnO3b7-iB" download><img src="https://drive.google.com/thumbnail?id=1XHgwfFWKhY_DoGh3wos6CbTcnO3b7-iB&sz=w1000" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1EFUCE4GLupfdTuqkgBFM1wqZwyxXkFbG" download><img src="https://drive.google.com/thumbnail?id=1EFUCE4GLupfdTuqkgBFM1wqZwyxXkFbG&sz=w1000" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1pSIe9BmHLPVxIAI-PkrHq73L9QkbRFID" download><img src="https://drive.google.com/thumbnail?id=1pSIe9BmHLPVxIAI-PkrHq73L9QkbRFID&sz=w1000" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1zu2vg-epcYMW56AwIeMPxMKRDZWY3jaH" download><img src="https://drive.google.com/thumbnail?id=1zu2vg-epcYMW56AwIeMPxMKRDZWY3jaH&sz=w1000" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1xPfdlmYQKuW4XsZ0Oh7FSu3rDJxUVfpm" download><img src="https://drive.google.com/thumbnail?id=1xPfdlmYQKuW4XsZ0Oh7FSu3rDJxUVfpm&sz=w1000" loading="lazy" alt=""></a></div><p class="strip-note">Toque em cada lâmina para salvar · publique na ordem</p><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c1">Foto de postura e avaliação postural não são sinônimos.
 
-Não é uma crítica. É uma pergunta que poucos corredores fazem antes de sentir a primeira dor.
+Essa confusão é mais comum do que parece — e ela tem consequências reais para o resultado do seu aluno.
 
-Neste carrossel, mostro o que acontece por dentro quando o corpo corre sem a base que a corrida exige — e onde o Pilates entra para resolver isso.
+Nesse carrossel, explico a diferença ponto a ponto: o que cada ferramenta faz, onde uma termina e a outra começa, e por que isso muda tudo na hora de prescrever.
 
-Arrasta para entender o padrão. Salva se reconheceu alguma coisa. 🤍
+Salva e compartilha com quem precisa entender essa distinção.</div><button class="copy-btn" data-src="c1" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge carr-b">Carrossel</span><span class="num">02</span></div><h3 class="card-title">Antes de prescrever: você avalia ou você supõe?</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://drive.google.com/thumbnail?id=1MlwWwH6C20AiH5a-AvIE4X5-j5oaQdZu&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1MlwWwH6C20AiH5a-AvIE4X5-j5oaQdZu" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="slides-scroll"><a href="https://drive.google.com/uc?export=download&id=13pMRG8obZfVXoJ1Q6R01gvGb21LOxp_y" download><img src="https://drive.google.com/thumbnail?id=13pMRG8obZfVXoJ1Q6R01gvGb21LOxp_y&sz=w1000" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=13FaN7C9c60iYPl3Z-i88ysp4AiU125IW" download><img src="https://drive.google.com/thumbnail?id=13FaN7C9c60iYPl3Z-i88ysp4AiU125IW&sz=w1000" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1_Hmq5yl5ZH0KunHdyO22qUZoHyDIBGbC" download><img src="https://drive.google.com/thumbnail?id=1_Hmq5yl5ZH0KunHdyO22qUZoHyDIBGbC&sz=w1000" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1JY1JRh-ubYSrNRMkNbzDSP6rVzMAcCOB" download><img src="https://drive.google.com/thumbnail?id=1JY1JRh-ubYSrNRMkNbzDSP6rVzMAcCOB&sz=w1000" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=14fecizxkm5VdxoFQQE5bSqIw2HNZhH93" download><img src="https://drive.google.com/thumbnail?id=14fecizxkm5VdxoFQQE5bSqIw2HNZhH93&sz=w1000" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1xF4l3UlEwWxA7u7UdUWdZm7ONjbYbwBA" download><img src="https://drive.google.com/thumbnail?id=1xF4l3UlEwWxA7u7UdUWdZm7ONjbYbwBA&sz=w1000" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1ffIdmwkvgLHCR13uwTWAjnzig-6MCV4L" download><img src="https://drive.google.com/thumbnail?id=1ffIdmwkvgLHCR13uwTWAjnzig-6MCV4L&sz=w1000" loading="lazy" alt=""></a></div><p class="strip-note">Toque em cada lâmina para salvar · publique na ordem</p><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c2">O instrutor que avalia antes de prescrever não está perdendo tempo — está construindo o diferencial que vai sustentar o studio nos próximos anos.
 
-📍 Studio CrossPilatear — Lagoa Seca
-👉 Turma de sábado com vagas abertas. WhatsApp: 99391-6688</div><button class="copy-btn" data-src="c1" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge carr-b">Carrossel</span><span class="num">02</span></div><h3 class="card-title">Jogadores de elite fazem Pilates. Não é coincidência.</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://lh3.googleusercontent.com/d/1SgeLn3xJOX7Ci2UrNXBXvpsz1WSkyv4j=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1SgeLn3xJOX7Ci2UrNXBXvpsz1WSkyv4j" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="slides-scroll"><a href="https://drive.google.com/uc?export=download&id=1VfPvxGde6BwLpMKVHvbuAIJ8ZY8-0teG" download><img src="https://lh3.googleusercontent.com/d/1VfPvxGde6BwLpMKVHvbuAIJ8ZY8-0teG=w900" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1xSsH-drFq6WfocdpZPdNTlinfOq8AS93" download><img src="https://lh3.googleusercontent.com/d/1xSsH-drFq6WfocdpZPdNTlinfOq8AS93=w900" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1IB7eNz3fFSEKfQSgP1h9lNmP2U7mLQdO" download><img src="https://lh3.googleusercontent.com/d/1IB7eNz3fFSEKfQSgP1h9lNmP2U7mLQdO=w900" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1WR5pbo5GTjfpQzgXh3BXWKmVyUvom-Vd" download><img src="https://lh3.googleusercontent.com/d/1WR5pbo5GTjfpQzgXh3BXWKmVyUvom-Vd=w900" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1S6bcc0OKd_iGVA5BLJ-1pYHrvVqH52gi" download><img src="https://lh3.googleusercontent.com/d/1S6bcc0OKd_iGVA5BLJ-1pYHrvVqH52gi=w900" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1EcSQSJ7AW7Eg1bub1lyWZH3ChfaNrblo" download><img src="https://lh3.googleusercontent.com/d/1EcSQSJ7AW7Eg1bub1lyWZH3ChfaNrblo=w900" loading="lazy" alt=""></a></div><p class="strip-note">Toque em cada lâmina para salvar · publique na ordem</p><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c2">A Copa do Mundo 2026 está na tela de todo mundo.
+Nesse carrossel, mostro o que muda na prática quando a avaliação passa a ser o ponto de partida de cada programação — não um extra.
 
-Corpos em alta performance, cobrindo 12 km por partida, repetindo padrões de movimento dezenas de vezes por jogo.
+Salva e manda pra alguém que ainda começa pela aula.</div><button class="copy-btn" data-src="c2" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge carr-b">Carrossel</span><span class="num">03</span></div><h3 class="card-title">3 compensações que ficam invisíveis sem raciocínio clínico</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://drive.google.com/thumbnail?id=1hmdEg5c5JwxYfDLY_RcMPPbehGCAjBYI&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1hmdEg5c5JwxYfDLY_RcMPPbehGCAjBYI" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="slides-scroll"><a href="https://drive.google.com/uc?export=download&id=1CkIIgFCNGTwh7sK-6Ou8jt_Tw-GU8GHZ" download><img src="https://drive.google.com/thumbnail?id=1CkIIgFCNGTwh7sK-6Ou8jt_Tw-GU8GHZ&sz=w1000" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1kG_WOgFG9e2T47agsVWAYEzFj12_NxlE" download><img src="https://drive.google.com/thumbnail?id=1kG_WOgFG9e2T47agsVWAYEzFj12_NxlE&sz=w1000" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1GAHkriVPpjBlFOQKWyxnKm8kPQj53vjY" download><img src="https://drive.google.com/thumbnail?id=1GAHkriVPpjBlFOQKWyxnKm8kPQj53vjY&sz=w1000" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1BMOupQZNn-2fsH6K8d3o_saWGeYP3s20" download><img src="https://drive.google.com/thumbnail?id=1BMOupQZNn-2fsH6K8d3o_saWGeYP3s20&sz=w1000" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1c8AjLT04oAlMicaOlffLq2ohitpKC3ah" download><img src="https://drive.google.com/thumbnail?id=1c8AjLT04oAlMicaOlffLq2ohitpKC3ah&sz=w1000" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1i6GAzcQdTg56ub3s7-_X_4gA6UHPQ_Wq" download><img src="https://drive.google.com/thumbnail?id=1i6GAzcQdTg56ub3s7-_X_4gA6UHPQ_Wq&sz=w1000" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=188lhIo2_nOjFc0l2T6DlCMT5ui4WPOjY" download><img src="https://drive.google.com/thumbnail?id=188lhIo2_nOjFc0l2T6DlCMT5ui4WPOjY&sz=w1000" loading="lazy" alt=""></a></div><p class="strip-note">Toque em cada lâmina para salvar · publique na ordem</p><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c3">Não é crítica ao Pilates clássico — é uma expansão do que ele oferece.
 
-O que a maioria não vê é o que acontece antes do campo: a preparação de movimento que sustenta tudo isso.
+O Pilates Contemporâneo integra o raciocínio funcional e clínico que transforma o exercício em tratamento. E algumas compensações que passam despercebidas num protocolo generalista se tornam visíveis quando você tem o critério certo.
 
-O Pilates faz parte desse processo — e não é novidade no mundo do esporte de alta performance.
+Nesse carrossel, mostro três padrões que aparecem com frequência — e como o Sistema I-Cross aborda cada um deles.
 
-O que é novidade: a gente tratar isso como exclusividade de atletas, quando qualquer corredor pode — e deveria — ter o mesmo cuidado com a base do seu movimento.
+Salva e compartilha com quem está se aprofundando no tema.</div><button class="copy-btn" data-src="c3" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge carr-b">Carrossel</span><span class="num">04</span></div><h3 class="card-title">O Sistema I-Cross não é mais uma formação de Pilates.</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://drive.google.com/thumbnail?id=1eMON02Yff9UEZOW0t6ESrBLkCuQLkKRu&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1eMON02Yff9UEZOW0t6ESrBLkCuQLkKRu" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="slides-scroll"><a href="https://drive.google.com/uc?export=download&id=1VUCtFf8jLPwb2_THWVPHaogeJbyYrrRm" download><img src="https://drive.google.com/thumbnail?id=1VUCtFf8jLPwb2_THWVPHaogeJbyYrrRm&sz=w1000" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1zlH1c6XdUQKerL_34o5KA3Q-8kmzP-9v" download><img src="https://drive.google.com/thumbnail?id=1zlH1c6XdUQKerL_34o5KA3Q-8kmzP-9v&sz=w1000" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1MRgfZe-SHt-_n2RsHTD-3UfjsZQgJ3Cn" download><img src="https://drive.google.com/thumbnail?id=1MRgfZe-SHt-_n2RsHTD-3UfjsZQgJ3Cn&sz=w1000" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1ERoN48RqGTK65eBYMn0YspTvzxJSdk5X" download><img src="https://drive.google.com/thumbnail?id=1ERoN48RqGTK65eBYMn0YspTvzxJSdk5X&sz=w1000" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1a0JQlUS7aNtPCUU0ApF-V4s2b3nJ5WYT" download><img src="https://drive.google.com/thumbnail?id=1a0JQlUS7aNtPCUU0ApF-V4s2b3nJ5WYT&sz=w1000" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1zc1Bxx6zoct2EbMkDdX2nKkUXiAfUSU0" download><img src="https://drive.google.com/thumbnail?id=1zc1Bxx6zoct2EbMkDdX2nKkUXiAfUSU0&sz=w1000" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1kg5i9p8vycoakNw1C3URVVMvxK8ncWwE" download><img src="https://drive.google.com/thumbnail?id=1kg5i9p8vycoakNw1C3URVVMvxK8ncWwE&sz=w1000" loading="lazy" alt=""></a></div><p class="strip-note">Toque em cada lâmina para salvar · publique na ordem</p><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c4">Antes de qualquer decisão de formação, vale entender o que está por trás do método.
 
-Arrasta. Vale a leitura.
+Nesse carrossel, mostro o que o Sistema I-Cross é — e o que ele definitivamente não é — para que você possa avaliar com clareza se faz sentido para o momento da sua carreira.
 
-📍 Studio CrossPilatear — Lagoa Seca
-👉 WhatsApp: 99391-6688</div><button class="copy-btn" data-src="c2" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge carr-b">Carrossel</span><span class="num">03</span></div><h3 class="card-title">Pilates Contemporâneo para corredores. Agosto de 2026.</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://lh3.googleusercontent.com/d/1bhugYbQQoCwOJ1c2UxXik2s3prJFAGib=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1bhugYbQQoCwOJ1c2UxXik2s3prJFAGib" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="slides-scroll"><a href="https://drive.google.com/uc?export=download&id=1l6TYIj4EGp05-qaafiELrHS0BQZAyLaI" download><img src="https://lh3.googleusercontent.com/d/1l6TYIj4EGp05-qaafiELrHS0BQZAyLaI=w900" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1I9Pbktx75TZcohIvIkmQg28Ka_JrIXkJ" download><img src="https://lh3.googleusercontent.com/d/1I9Pbktx75TZcohIvIkmQg28Ka_JrIXkJ=w900" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1Bi6A8VEJLiFMj5zv71NpB4k3OECgUjGF" download><img src="https://lh3.googleusercontent.com/d/1Bi6A8VEJLiFMj5zv71NpB4k3OECgUjGF=w900" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1z9p_GGWOCctIzmh9LW-LwCpI_W6pk9Sh" download><img src="https://lh3.googleusercontent.com/d/1z9p_GGWOCctIzmh9LW-LwCpI_W6pk9Sh=w900" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1EM0bwlF_xHes6HZw5bd2LfitQvdr-GcM" download><img src="https://lh3.googleusercontent.com/d/1EM0bwlF_xHes6HZw5bd2LfitQvdr-GcM=w900" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1KvmDD1tjH76nKVBw_DULmcPyOFH239g1" download><img src="https://lh3.googleusercontent.com/d/1KvmDD1tjH76nKVBw_DULmcPyOFH239g1=w900" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1g_TyZvzhzqiuIU6V5YEf4pBNrnI67RbL" download><img src="https://lh3.googleusercontent.com/d/1g_TyZvzhzqiuIU6V5YEf4pBNrnI67RbL=w900" loading="lazy" alt=""></a></div><p class="strip-note">Toque em cada lâmina para salvar · publique na ordem</p><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c3">Agosto de 2026 tem data marcada aqui no CrossPilatear.
+Se fizer, o link na bio te leva direto para as informações da Certificação.</div><button class="copy-btn" data-src="c4" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">01</span></div><h3 class="card-title">Bom instrutor x Referência</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://drive.google.com/thumbnail?id=11dNGcp9dG5h2Cmksy0VlASr7jWI4coJ6&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=11dNGcp9dG5h2Cmksy0VlASr7jWI4coJ6" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Tem uma diferença entre o instrutor que aplica exercícios e o instrutor que constrói autoridade clínica. E ela não está no diploma.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c5">Tem uma diferença entre o instrutor que aplica exercícios e o instrutor que constrói autoridade clínica.
 
-21, 22 e 23 de agosto — três dias de curso presencial de Pilates Contemporâneo aplicado a corredores.
+E ela não está no diploma.
 
-Teoria. Prática. Método autoral. Avaliação real. Conteúdo construído sobre 25 anos de fisioterapia clínica e docência ativa.
+O instrutor bom sabe executar. Orienta a técnica, mantém o aluno seguro, entrega uma aula organizada. Isso é o básico — e o básico importa.
 
-Arrasta para entender o que está sendo entregue — e para quem.
+Mas o instrutor referência faz algo anterior a tudo isso: avalia.
 
-Se isso faz sentido pra você, entra na lista. O link está na bio.
+Identifica o padrão de movimento. Localiza os pontos de compensação. Entende por que aquele aluno específico chegou com aquela queixa específica — e o que o corpo dele está tentando resolver sozinho quando não encontra suporte.
 
-📍 Studio CrossPilatear — Lagoa Seca
-👉 WhatsApp: 99391-6688</div><button class="copy-btn" data-src="c3" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge carr-b">Carrossel</span><span class="num">04</span></div><h3 class="card-title">Sete letras. O que cada uma significa para quem corre.</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://lh3.googleusercontent.com/d/10k1uUod-4MHZ6IOgVFqYoxtQ6_58SN_M=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=10k1uUod-4MHZ6IOgVFqYoxtQ6_58SN_M" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="slides-scroll"><a href="https://drive.google.com/uc?export=download&id=1QTRZOn5dGO3Y_QqPVFGw0YkIN4ei5_34" download><img src="https://lh3.googleusercontent.com/d/1QTRZOn5dGO3Y_QqPVFGw0YkIN4ei5_34=w900" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1IQTM9q5-OvyUwlR3bVadCjhVjq-5U0Uq" download><img src="https://lh3.googleusercontent.com/d/1IQTM9q5-OvyUwlR3bVadCjhVjq-5U0Uq=w900" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1-t6Z4bAzJRmlRx3dOvlarDccoSoH5cel" download><img src="https://lh3.googleusercontent.com/d/1-t6Z4bAzJRmlRx3dOvlarDccoSoH5cel=w900" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1ZPI_0Oe3m0uD4vo8OTlZiPBy3EhpQiCq" download><img src="https://lh3.googleusercontent.com/d/1ZPI_0Oe3m0uD4vo8OTlZiPBy3EhpQiCq=w900" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1Sj2UKDF6TDtcNDd_R_pFyrbUF8ofQ3bL" download><img src="https://lh3.googleusercontent.com/d/1Sj2UKDF6TDtcNDd_R_pFyrbUF8ofQ3bL=w900" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1nwgHRtx-2WFwaMsEcm9gUckDKYlDGCEe" download><img src="https://lh3.googleusercontent.com/d/1nwgHRtx-2WFwaMsEcm9gUckDKYlDGCEe=w900" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=14cCsfB5ZYt7syg_dFKVutB6wF9p9s-kF" download><img src="https://lh3.googleusercontent.com/d/14cCsfB5ZYt7syg_dFKVutB6wF9p9s-kF=w900" loading="lazy" alt=""></a><a href="https://drive.google.com/uc?export=download&id=1cZ4gcWG4SkrUZk4gbjVgXy_kDXx4J6rW" download><img src="https://lh3.googleusercontent.com/d/1cZ4gcWG4SkrUZk4gbjVgXy_kDXx4J6rW=w900" loading="lazy" alt=""></a></div><p class="strip-note">Toque em cada lâmina para salvar · publique na ordem</p><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c4">Sete letras. Sete pilares.
+É esse raciocínio que separa quem aplica exercícios de quem prescreve movimento com propósito.
 
-Você já viu esse post antes por aqui.
+Não é sobre ter mais certificados na parede. É sobre ter mais clareza clínica em cada decisão que você toma dentro do seu studio.
 
-Esta semana eu trouxe de volta — mas com uma lente nova: o que cada pilar significa para quem corre.
+A Certificação Sistema I-Cross foi construída para desenvolver exatamente isso — avaliação postural, prescrição funcional e progressão individualizada baseada em 25 anos de prática clínica.
 
-Porque Pilates para corredor não é Pilates genérico com tênis de corrida. É uma aplicação específica de cada um desses princípios para o padrão de movimento que a corrida exige.
+Se você já sente que o básico ficou pequeno, o próximo passo está no link da bio.</div><button class="copy-btn" data-src="c5" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">02</span></div><h3 class="card-title">Foto de postura nao e avaliacao</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://drive.google.com/thumbnail?id=1S5Jgz52lu0LrYhXHjx4iyrY4qqESnaau&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1S5Jgz52lu0LrYhXHjx4iyrY4qqESnaau" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Tirar foto de postura não é avaliação postural. E essa confusão está custando resultado aos seus alunos.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c6">Tirar foto de postura não é avaliação postural.
 
-Arrasta. E me conta nos comentários: qual pilar fez mais sentido para a sua jornada? 💬
+E essa confusão está custando resultado — dos seus alunos e da sua reputação como profissional.
 
-📍 Studio CrossPilatear — Lagoa Seca
-👉 WhatsApp: 99391-6688</div><button class="copy-btn" data-src="c4" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">01</span></div><h3 class="card-title">12 km. O que te sustenta?</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/1YCf5CA-GGLskBaT5Gy1Md61Pgfm-AJrD=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1YCf5CA-GGLskBaT5Gy1Md61Pgfm-AJrD" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>O jogador de futebol corre 12 km por partida. O que estabiliza cada uma dessas passadas?</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c5">O jogador corre 12 km por partida.
-Você sabe o que estabiliza cada passada?
+A foto registra uma posição estática. Mostra o que aparece na superfície: ombro mais alto, cabeça anteriorizada, joelho valgo. Mas não explica o porquê de nada disso.
 
-Não é força bruta.
-Não é motivação.
+Avaliação postural de verdade observa padrão de movimento.
 
-É o core funcionando em coordenação com o quadril.
-É a pelve estável antes do pé tocar o chão.
-É uma cadeia de controle que, quando falha, transfere o impacto para onde você menos quer.
+Como o aluno anda. Como ele transfere peso. O que o corpo faz quando a demanda aumenta. Onde ele compensa quando não encontra estabilidade.
 
-Joelho. Lombar. Quadril.
+São informações completamente diferentes — e levam a prescrições completamente diferentes.
 
-Isso não é problema só de jogador de futebol.
-É de qualquer pessoa que corre — ou que pede ao corpo mais do que ele consegue sustentar sem preparo.
+Um ombro mais alto pode ser encurtamento de trapézio. Pode ser padrão respiratório disfuncional. Pode ser compensação de quadril. A foto não resolve isso. O raciocínio clínico, sim.
 
-O Pilates para Corredores trabalha exatamente essa base.
-Estabilidade antes de carga. Controle antes de velocidade.
+No Sistema I-Cross, a avaliação é o ponto de partida de tudo. Não porque é protocolo — porque é o que garante que cada escolha dentro do studio tem fundamento.
 
-Temos vagas na turma de sábado. 🤍
-Link na bio.</div><button class="copy-btn" data-src="c5" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">02</span></div><h3 class="card-title">Seu corpo aguenta a corrida?</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/12_t2xcyZGZuTe2rDQGOBv0GTrHX3kU13=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=12_t2xcyZGZuTe2rDQGOBv0GTrHX3kU13" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Você corre. Mas o seu corpo está preparado para o que você pede a ele?</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c6">Você corre.
-Mas o seu corpo está preparado para o que você pede a ele?
+Salva esse post. E manda pra quem ainda confunde as duas coisas.</div><button class="copy-btn" data-src="c6" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">03</span></div><h3 class="card-title">O corredor que nao voltou</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://drive.google.com/thumbnail?id=1inaOcS13FHQ9NEQcVEYijVKlBQlY1OYo&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1inaOcS13FHQ9NEQcVEYijVKlBQlY1OYo" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Um corredor chegou no studio, fez a aula experimental e não voltou. Não foi pelo preço. Foi porque ele não viu o que precisava.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c7">Um corredor chegou no studio. Fez a aula experimental. Não voltou.
 
-Correr é impacto repetido.
-A cada passada: duas a três vezes o seu peso corporal.
+Não foi pelo preço.
 
-Quando o core não estabiliza — o impacto se distribui errado.
-Quando o quadril colapsa — o joelho compensa.
-Quando a respiração está desorganizada — a tensão sobe.
+Foi porque ele não viu o que precisava — e percebeu isso antes mesmo de você perceber.
 
-Não é falta de esforço.
-É falta de base.
+O corredor tem uma demanda muito específica. Ele quer saber como o Pilates vai melhorar a economia de corrida dele. Como vai proteger o joelho na descida. Como vai resolver a tensão no IT Band que aparece depois dos 15 quilômetros.
 
-E base se constrói.
-Com avaliação. Com método. Com consciência corporal real.
+Se a aula que ele recebeu foi a mesma aula de qualquer outro aluno — sem avaliação do padrão de movimento, sem trabalho de estabilidade de quadril, sem progressão pensada para o gesto da corrida — ele percebeu. E foi embora.
 
-É isso que o Pilates para Corredores entrega.
-Não é mais um treino. É a preparação que permite você continuar correndo — com mais eficiência, menos dor e mais anos de prática.
+O problema não foi o Pilates. Foi a falta de especificidade.
 
-Turma de sábado com vagas limitadas. 🤍
-Link na bio.</div><button class="copy-btn" data-src="c6" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">03</span></div><h3 class="card-title">3 erros do corredor</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/1z3qz237pgEYKea0PuKjTTik9ZN-Z4Wz5=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1z3qz237pgEYKea0PuKjTTik9ZN-Z4Wz5" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Três coisas que praticamente todo corredor faz errado — e que o Pilates corrige.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c7">Três coisas que praticamente todo corredor faz errado.
+Especificidade não nasce da boa vontade. Nasce do método.
 
-🔹 Correr sem estabilidade pélvica.
-O quadril oscila. O joelho desvia. O impacto não é absorvido — é transferido para onde não devia ir.
+15 milhões de corredores no Brasil, crescendo 14% ao ano. A maioria buscando um profissional que entenda exatamente do que eles precisam.
 
-🔹 Ignorar a respiração.
-Respiração desorganizada desativa o core antes do movimento começar. Você perde a base e não sabe por quê.
+O Curso de Pilates para Corredores pelo Sistema I-Cross foi construído para isso — 21 a 23 de agosto, em Belo Horizonte.
 
-🔹 Fortalecer sem mobilizar.
-Músculo forte e encurtado é músculo que limita. Antes de carga, o corpo precisa de amplitude com controle.
-
-Não é crítica.
-É diagnóstico.
-
-Esses três padrões aparecem em quase todo corredor que chega aqui — e é exatamente o que a turma de Pilates para Corredores trabalha.
-
-Toda semana. Sábado de manhã. Com avaliação e acompanhamento técnico real.
-
-Vagas limitadas. 🤍
 Link na bio.</div><button class="copy-btn" data-src="c7" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">04</span></div><h3 class="card-title">A dor no joelho vem de longe</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/1-qkBhBbUCHfKhzfXZRTC1AYaukitpfdB=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1-qkBhBbUCHfKhzfXZRTC1AYaukitpfdB" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>O problema não está no joelho. O problema está no que não está fazendo a parte dele.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c8">O problema não está no joelho.
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">04</span></div><h3 class="card-title">Avalie antes de prescrever</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://drive.google.com/thumbnail?id=1TodDCIriIQHEd7LKaZNnLN4CkdeNcmi1&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1TodDCIriIQHEd7LKaZNnLN4CkdeNcmi1" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Dois instrutores. Mesmo aluno com dor lombar. Resultados completamente diferentes. A diferença estava no que cada um fez antes de começar.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c8">Dois instrutores. Mesmo aluno com dor lombar. Resultados completamente diferentes.
 
-Está no que não está fazendo a parte dele.
+A diferença estava no que cada um fez antes de começar.
 
-Quando o core não estabiliza a pelve durante a corrida, o fêmur gira para dentro.
-O joelho segue.
-E o impacto que deveria ser distribuído cai todo num ponto que não aguenta isso sozinho.
+O primeiro foi direto para os exercícios. Abdômen, coluna, mobilidade. A aula era tecnicamente correta — e o aluno continuava voltando com a mesma dor.
 
-A dor no joelho raramente tem origem no joelho.
-Ela vem de cima. De uma cadeia que não funciona em coordenação.
+O segundo avaliou primeiro.
 
-Isso eu vejo há 25 anos como fisioterapeuta.
-E é exatamente o que o olhar clínico dentro do Pilates resolve.
+Observou o padrão de movimento. Identificou que o problema não estava na lombar em si — estava na instabilidade de quadril que sobrecarregava a coluna toda vez que o aluno ficava em pé por mais de vinte minutos.
 
-Não é sobre aguentar a dor.
-É sobre entender de onde ela vem — e trabalhar na origem.
+A prescrição mudou. Não porque o exercício era diferente — porque o raciocínio era outro.
 
-Turma de Pilates para Corredores, sábados de manhã. 🤍
-Link na bio.</div><button class="copy-btn" data-src="c8" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">05</span></div><h3 class="card-title">25 anos. Um metodo. Uma escolha.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/19vEATEGJdOjCQG8ZqRkYpwoTdeAl75zd=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=19vEATEGJdOjCQG8ZqRkYpwoTdeAl75zd" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Eu não aprendi Pilates em um fim de semana. Foram 25 anos construindo o olhar clínico que trago para cada aula.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c9">Eu não cheguei até aqui de repente.
+Quando você avalia antes de prescrever, você para de tratar sintoma e começa a resolver causa.
 
-São 25 anos como fisioterapeuta.
-18 anos à frente do Studio CrossPilatear.
-Docente desde 2004 — hoje professora em pós-graduações do Grupo Voll.
+Isso muda o resultado do aluno. Muda a percepção que ele tem do seu trabalho. Muda o quanto ele indica você para outras pessoas.
 
-Todo esse caminho resultou numa construção autoral:
-o Sistema I-Cross — Pilates Contemporâneo com Método.
+E muda, acima de tudo, o que você sente sobre o seu próprio nível técnico.
 
-Não é um protocolo que se aplica igual para todo mundo.
-É um sistema que parte da avaliação de cada pessoa para construir uma prática que resolve de verdade.
+No Sistema I-Cross, a avaliação não é etapa burocrática. É o fundamento de tudo que vem depois.
 
-Quando você chega aqui, não recebe uma aula genérica.
-Recebe um olhar clínico de décadas — e um método que foi construído na prática, amadurecido na experiência e validado por resultados reais.
+Me chama no direct — a gente conversa sobre o que faz sentido pra você.</div><button class="copy-btn" data-src="c8" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">05</span></div><h3 class="card-title">3 compensacoes que o classico ignora</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://drive.google.com/thumbnail?id=1sRBhFr13pLHiurANRKSAjNZgGM06AMMI&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1sRBhFr13pLHiurANRKSAjNZgGM06AMMI" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Três compensações que aparecem em quase todo aluno — e que o Pilates clássico não foi desenhado para resolver.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c9">Três compensações que aparecem em quase todo aluno — e que o Pilates clássico não foi desenhado para resolver.
 
-É isso que eu ofereço.
-É isso que você merece.
+**1. Dominância de lado**
+A maioria dos alunos usa um hemicorpo significativamente mais do que o outro. O Pilates clássico trabalha simetria de posição. O contemporâneo trabalha simetria de padrão — e são coisas completamente diferentes.
 
-Vagas na turma de sábado e Curso Presencial em agosto. 🤍
-Link na bio.</div><button class="copy-btn" data-src="c9" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">06</span></div><h3 class="card-title">Por que atletas fazem Pilates?</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/16_jJ38Nem8_77asQ70phw1jLLboMHhxG=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=16_jJ38Nem8_77asQ70phw1jLLboMHhxG" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Os melhores jogadores do mundo na Copa 2026 fazem Pilates. Por quê?</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c10">Na Copa do Mundo 2026, os melhores jogadores do mundo estão em campo.
-Alguns deles fazem Pilates.
+**2. Substituição de estabilizadores profundos**
+Quando o core não sustenta, o glúteo máximo e os paravertebrais assumem o trabalho. O exercício acontece, a série termina — mas o padrão disfuncional continua intacto.
 
-Não é moda. É ciência.
+**3. Padrão respiratório disfuncional**
+Apneia na fase de esforço. Respiração exclusivamente torácica. Incapacidade de dissociar a respiração do movimento. Isso compromete estabilização, mobilidade e controle motor. E raramente é abordado de forma estruturada na formação clássica.
 
-O Pilates trabalha o que o treino convencional não alcança:
-— Estabilidade profunda
-— Coordenação entre core e movimento
-— Consciência corporal que previne lesão
+O Sistema I-Cross não foi criado para substituir o clássico. Foi criado para ir onde o clássico não chegou — com fundamentação clínica de 25 anos de prática real por trás de cada escolha metodológica.
 
-Um atleta que não se lesiona treina mais.
-Recupera mais rápido. Performa com mais consistência.
+Salva esse post. E manda pra quem ainda acha que o básico é suficiente.</div><button class="copy-btn" data-src="c9" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">06</span></div><h3 class="card-title">Studio cheio x Evolucao tecnica</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://drive.google.com/thumbnail?id=17I_rs2gKL4cNU-Z7fjAiknnu655-TzKz&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=17I_rs2gKL4cNU-Z7fjAiknnu655-TzKz" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Studio cheio não é sinônimo de crescimento técnico. E essa distinção vai definir onde você está daqui a três anos.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c10">Studio cheio não é sinônimo de crescimento técnico.
 
-E sabe o que é mais interessante?
-O que o Pilates entrega para o atleta de elite é o mesmo que entrega para você.
+E essa distinção vai definir onde você está daqui a três anos.
 
-A base é a mesma.
-O método é o mesmo.
-A diferença é a intensidade — e a intenção.
+Quando o studio está cheio, existe uma armadilha muito confortável — a de achar que o que você está fazendo está funcionando. E está. Para manter o que você tem.
 
-Você não precisa correr em Copa do Mundo para merecer esse cuidado.
-Basta querer se mover melhor. 🤍
+Mas o mercado se move. Os alunos estão mais informados, mais exigentes, mais dispostos a ir atrás de quem tem algo diferente a oferecer. A concorrência está se qualificando.
 
-Turma de Pilates para Corredores — sábados de manhã.
-Link na bio.</div><button class="copy-btn" data-src="c10" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">07</span></div><h3 class="card-title">Por dentro da aula para corredores</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/15YEfWFZlyPDD2pCBhate0Ru6TB_Nk269=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=15YEfWFZlyPDD2pCBhate0Ru6TB_Nk269" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Você sabe como é, de dentro, uma aula de Pilates feita especificamente para quem corre?</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c11">Como é uma aula de Pilates para Corredores no CrossPilatear?
+O instrutor que não evolui tecnicamente começa a perder primeiro a diferenciação. Depois os alunos que pagam mais. Depois a posição no mercado.
 
-Começa com avaliação.
-Antes de qualquer exercício, eu quero entender como você se move.
-Onde trava. Onde compensa. Onde falta controle.
+Evolução técnica não é acumular certificados. É desenvolver um raciocínio clínico que muda como você toma decisões dentro do studio — todos os dias, em cada aluno, em cada progressão.
 
-Depois, trabalhamos:
-— Estabilidade pélvica
-— Ativação do core
-— Mobilidade de quadril
-— Consciência corporal aplicada à mecânica da corrida
+Um studio pode estar cheio com alunos de ticket médio. Um studio com autoridade clínica atrai alunos de ticket elevado — e os mantém porque entregam resultado real.
 
-Cada exercício tem um porquê.
-Nada é genérico. Nada é protocolo copiado.
+Studio cheio é um resultado. Autoridade clínica é uma construção.
 
-É o olhar de fisioterapeuta aplicado ao movimento de quem corre — e que quer continuar correndo por muito tempo, sem dor, sem lesão.
+As duas precisam crescer juntas.
 
-Turma de sábado de manhã.
-Vagas limitadas. 🤍
-Link na bio.</div><button class="copy-btn" data-src="c11" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">08</span></div><h3 class="card-title">Curso Pilates para Corredores — agosto</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/1nPfjTuuWuhVDzWHEwMG4v_Fiq1aQrND3=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1nPfjTuuWuhVDzWHEwMG4v_Fiq1aQrND3" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Em agosto, tem um curso que foi construído para quem leva movimento a sério.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c12">Dias 21, 22 e 23 de agosto.
+Se você está no primeiro e quer chegar no segundo, me chama no direct.</div><button class="copy-btn" data-src="c10" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">07</span></div><h3 class="card-title">Como o I-Cross foi construido</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://drive.google.com/thumbnail?id=13S0k-YZEDNrTiVre-QG5QkJRP4ZEk-E8&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=13S0k-YZEDNrTiVre-QG5QkJRP4ZEk-E8" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>O Sistema I-Cross não nasceu de uma ideia. Nasceu de uma pergunta que não saía da minha cabeça depois de anos de clínica.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c11">O Sistema I-Cross não nasceu de uma ideia.
 
-Curso Presencial de Pilates Contemporâneo Aplicado a Corredores.
-Teórico e prático. Com método. Com profundidade real.
+Nasceu de uma pergunta que não saía da minha cabeça depois de anos de clínica:
 
-O que você encontra:
-— Biomecânica da corrida com olhar clínico
-— Avaliação de padrões de movimento
-— Exercícios com intenção e aplicação prática
-— Base no Sistema I-Cross — Pilates Contemporâneo com Método
+*Por que alunos que fazem Pilates há anos continuam com as mesmas queixas?*
 
-Para quem é:
-🔹 Professoras de Pilates que atendem corredores
-🔹 Fisioterapeutas que querem aprofundar o olhar no movimento
-🔹 Profissionais do movimento que buscam método e embasamento
+Mesma dor. Mesmo padrão. Mesma compensação. O exercício acontecia. O resultado, nem sempre.
 
-Não é uma oficina.
-É um curso construído sobre 25 anos de clínica, docência e método autoral.
+25 anos de fisioterapia clínica me deram uma lente diferente para observar o movimento. Essa lente mostrava lacunas — lugares onde o método tradicional não chegava porque não foi desenhado para isso.
 
-Lista de espera aberta. 🤍
-Link na bio.</div><button class="copy-btn" data-src="c12" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">01</span></div><h3 class="card-title">Core não é só barriga.</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://lh3.googleusercontent.com/d/1AjbertEdcywDpcXgY5Rgesuw3-yDL-az=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1AjbertEdcywDpcXgY5Rgesuw3-yDL-az" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c13">Core não é só barriga.
+Então comecei a estruturar.
 
-É o conjunto de músculos que sustenta sua coluna, pelve e quadril — trabalhando em coordenação, antes mesmo de qualquer movimento começar.
+Avaliação postural como ponto de partida, não como protocolo estético. Integração neuromuscular como princípio de progressão, não como conceito teórico isolado. Aplicação funcional como critério de resultado — o aluno se move melhor fora do studio, não só dentro.
 
-Para quem corre, isso muda tudo.
+Não era mais um método novo no mercado. Era um raciocínio clínico organizado em sistema aplicável.
 
-Cada passada exige que o core ative primeiro. Quando ele não funciona, o corpo compensa. O joelho desvia. O quadril cai. A lombar absorve o que não deveria.
+O Sistema I-Cross é isso — construído na prática, amadurecido na experiência, validado por resultados reais. Não em laboratório. No studio. Com alunos reais, queixas reais e o compromisso de resolver de verdade.
 
-Não é uma lesão que aparece do nada — é um padrão que se repete milhas a fio.
+É o que está por trás de cada certificação, cada curso e cada conteúdo aqui.
 
-No Pilates, a gente trabalha esse controle profundo. Não para o core ficar bonito. Para ele funcionar quando você mais precisa.
+Bem-vindo a esse espaço.</div><button class="copy-btn" data-src="c11" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">08</span></div><h3 class="card-title">10 vagas com condicao especial</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://drive.google.com/thumbnail?id=18SWAz_fQqBM0iToE5D2zlQBIeQJP5gSB&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=18SWAz_fQqBM0iToE5D2zlQBIeQJP5gSB" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>10 vagas com condição especial. Para instrutores que já decidiram que o básico não é mais suficiente.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c12">10 vagas com condição especial.
 
-Fora da esteira. Dentro da corrida. No dia a dia inteiro.
+Para instrutores que já decidiram que o básico não é mais suficiente.
 
-📍 Studio CrossPilatear — Lagoa Seca
-👉 Vagas abertas para a turma de sábado. WhatsApp: 99391-6688</div><button class="copy-btn" data-src="c13" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">02</span></div><h3 class="card-title">A dor não apareceu do nada.</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://lh3.googleusercontent.com/d/1ZpIM-76ccBpTDNeBDr-RSlwnYm_lj7zp=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1ZpIM-76ccBpTDNeBDr-RSlwnYm_lj7zp" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c14">A dor não apareceu do nada.
+A Certificação Sistema I-Cross é uma formação completa para quem quer dominar avaliação postural, prescrição funcional e construir autoridade clínica real dentro do seu studio.
 
-Ela foi construída.
+Não é mais um curso de técnica de exercícios.
 
-Em cada quilômetro rodado com o core desligado. Em cada descida de escada com o joelho colapsando para dentro. Em cada passada repetida sem que o corpo tivesse base para sustentá-la.
+É o desenvolvimento de um raciocínio clínico que muda como você toma cada decisão — na avaliação, na progressão, na condução do aluno que chega com dor crônica, com limitação funcional, com histórico de lesão.
 
-Dor crônica em corredor raramente é acidente. É padrão.
+O que está incluído na condição especial dos 10 primeiros:
+— Desconto de 20% no valor da certificação
+— Mentoria individual de 1h — análise específica do seu studio e da sua prática
 
-E padrão se corrige — com avaliação, com intenção, com método.
+O instrutor que sai da certificação não sai com mais um diploma. Sai com um diferencial verificável — e com clareza do que ele entrega que os outros instrutores da cidade não entregam.
 
-É isso que fazemos aqui. Não é sobre aguentar o desconforto. É sobre entender o que o seu corpo está pedindo e dar a ele o suporte que falta.
+Vagas limitadas não é estratégia. É uma escolha de profundidade.
 
-Movimento consciente transforma.
-E começa muito antes do próximo treino.
+O link da bio leva direto para as informações completas e para garantir a sua vaga.</div><button class="copy-btn" data-src="c12" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">01</span></div><h3 class="card-title">25 anos de prática clínica não cabem num currículo</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://drive.google.com/thumbnail?id=1F-l14q4dXiL7j4OfQOJeIYsjz48xIR_0&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1F-l14q4dXiL7j4OfQOJeIYsjz48xIR_0" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c13">25 anos de fisioterapia.
+18 anos de studio.
+Décadas de docência.
 
-📍 Studio CrossPilatear — Lagoa Seca
-👉 Agenda sua aula experimental. O primeiro passo é só aparecer. WhatsApp: 99391-6688</div><button class="copy-btn" data-src="c14" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">03</span></div><h3 class="card-title">25 anos de clínica ensinam a escutar o corpo.</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://lh3.googleusercontent.com/d/1krxd7mqM13VM1Z4vf83nQTXPZQ04Iwdr=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1krxd7mqM13VM1Z4vf83nQTXPZQ04Iwdr" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c15">25 anos de clínica ensinam a escutar o corpo.
+Não é biográfico. É metodológico.
 
-Não o que ele parece à primeira vista. O que ele realmente está fazendo — os padrões de compensação, os encurtamentos que viraram hábito, os movimentos que parecem certos mas custam caro com o tempo.
+Cada exercício que o Sistema I-Cross propõe passou por esse filtro — avaliação clínica real, progressão com critério, resultado que se sustenta.
 
-É dessa escuta que nasce o Sistema I-Cross.
+Não é uma formação construída sobre tendência. É uma formação construída sobre o que funciona quando o aluno não melhora, quando a dor volta, quando o movimento compensado precisa ser corrigido de verdade.
 
-Não é um protocolo genérico. É uma leitura técnica de cada pessoa — construída sobre fisioterapia, biomecânica, Pilates Contemporâneo e anos de prática clínica real.
+Esse é o padrão que separa o instrutor que aplica exercícios do instrutor que constrói autoridade clínica.
 
-Quando você vem aqui, não recebe uma aula padrão.
-Recebe uma prática feita para o seu corpo. Para o que ele precisa hoje.
+A Certificação Sistema I-Cross está com vagas abertas. Condição especial para os 10 primeiros: 20% de desconto e uma mentoria individual de 1h.
 
-Isso é o que eu faço. Isso é o que o CrossPilatear entrega.
+Link na bio.</div><button class="copy-btn" data-src="c13" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">02</span></div><h3 class="card-title">Seu aluno com dor crônica não melhora — e você já sabe por quê</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://drive.google.com/thumbnail?id=18CfwWkRUQI6axz-0FnKQ7IzgcaA8H9mX&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=18CfwWkRUQI6axz-0FnKQ7IzgcaA8H9mX" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c14">O aluno chega com dor lombar há dois anos.
+Você prescreve. Ele melhora um pouco. Depois a dor volta.
 
-📍 Studio CrossPilatear — Lagoa Seca
-👉 Link na bio | WhatsApp: 99391-6688</div><button class="copy-btn" data-src="c15" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">04</span></div><h3 class="card-title">Qual foi a primeira coisa que mudou?</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://lh3.googleusercontent.com/d/15570TEs_JN-aHVC5HNtIcr1LF_CqpoCV=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=15570TEs_JN-aHVC5HNtIcr1LF_CqpoCV" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c16">Qual foi a primeira coisa que mudou?
+Isso não é falta de esforço — nem dele, nem seu.
 
-Não estou falando de antes e depois de foto.
+É falta de avaliação antes da prescrição.
 
-Estou falando daquele momento em que você percebeu: algo é diferente. Aquele jeito de sentar que ficou mais fácil. A dor que sumiu sem você ter notado exatamente quando. O sono que melhorou. A respiração que ficou mais lenta.
+Quando a gente pula a etapa de entender o padrão de movimento, a compensação e a origem real da queixa, o exercício vira repetição sem propósito. Ele pode até aliviar no curto prazo. Mas não resolve.
 
-As mudanças que o Pilates traz raramente chegam com barulho.
-Elas chegam quietas — e ficam.
+No Sistema I-Cross, a avaliação não é opcional. É o ponto de partida obrigatório de qualquer programação — porque sem diagnóstico funcional, não há progressão segura.
 
-Me conta aqui nos comentários: qual foi a primeira coisa que você percebeu quando começou a praticar?
+Isso é o que diferencia o instrutor que mantém o aluno dos que veem ele partir para a fisioterapia.
 
-E se você ainda não começou — essa pergunta é um convite. 🤍
+Se você quer entender como aplicar essa lógica na prática, a Certificação Sistema I-Cross está com vagas abertas.
 
-📍 Studio CrossPilatear — Lagoa Seca
-👉 WhatsApp: 99391-6688</div><button class="copy-btn" data-src="c16" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">05</span></div><h3 class="card-title">Turma de sábado. Pilates para quem corre.</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://lh3.googleusercontent.com/d/1vKEzPdhmlqITZhFMKCXa7xULWFbC2t0e=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1vKEzPdhmlqITZhFMKCXa7xULWFbC2t0e" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c17">Turma de sábado. Pilates para quem corre.
+Condição especial para os 10 primeiros: 20% de desconto e mentoria individual de 1h.
 
-Se você é corredor — iniciante ou experiente — e sente que o corpo está pedindo mais atenção do que o treino sozinho consegue dar, esse é o lugar.
+Link na bio.</div><button class="copy-btn" data-src="c14" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">03</span></div><h3 class="card-title">Avaliação postural não é foto de postura</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://drive.google.com/thumbnail?id=1CpRqzuNur3R1PYM0W2qPpUPGy50DZPk4&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1CpRqzuNur3R1PYM0W2qPpUPGy50DZPk4" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c15">Foto de postura mostra onde o corpo está.
+Avaliação postural investiga por que ele chegou lá.
 
-A turma de sábado foi pensada para quem quer continuar correndo. Com menos dor, com mais controle, com um corpo que aguenta o que você exige dele.
+São coisas completamente diferentes — e tratar uma como a outra é um dos erros mais comuns que vejo na formação de instrutores.
 
-Aqui você recebe:
-— Avaliação individualizada
-— Protocolo construído para a biomecânica do corredor
-— Acompanhamento técnico de uma fisioterapeuta com 25 anos de experiência
+A fotografia postural é uma ferramenta. Só isso. Ela documenta, ela registra, ela compara ao longo do tempo.
 
-Vagas limitadas.
-Para novos alunos: 10% de desconto na primeira mensalidade.
+A avaliação postural envolve análise de padrão de movimento, identificação de compensações, histórico clínico e raciocínio funcional.
 
-Sem urgência artificial. Com clareza total.
+Sem esse raciocínio, a foto é papel.
 
-Quando você estiver pronto, eu estou aqui.
+No Sistema I-Cross, ensinamos o instrutor a construir esse raciocínio — não a registrar o que o olho vê, mas a entender o que o corpo está comunicando.
 
-📍 Studio CrossPilatear — Lagoa Seca
-👉 WhatsApp: 99391-6688</div><button class="copy-btn" data-src="c17" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">06</span></div><h3 class="card-title">Correr é repetição. Repetição sem base é erro acumulado.</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://lh3.googleusercontent.com/d/1kQGJ-5E5VXKJD4tzUnYTIFuV-a5yg1gd=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1kQGJ-5E5VXKJD4tzUnYTIFuV-a5yg1gd" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c18">Correr é repetição.
+Salva esse post. Você vai querer mostrar isso pra alguém.</div><button class="copy-btn" data-src="c15" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">04</span></div><h3 class="card-title">Seu studio está cheio. Mas você está evoluindo?</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://drive.google.com/thumbnail?id=1FGUEsOJplrWP1NykKyurhIuEOHmItAqa&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1FGUEsOJplrWP1NykKyurhIuEOHmItAqa" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c16">Studio cheio não é sinal de autoridade técnica.
+É sinal de que você está ocupado.
 
-Cada passada é o mesmo padrão de movimento — centenas, às vezes milhares de vezes por treino.
+São coisas diferentes.
 
-Se esse padrão está correto, você progride.
-Se está errado, você acumula.
+Conheço instrutores com agenda esgotada que nunca conseguiram reter um aluno com dor crônica por mais de três meses. Porque o volume de atendimento não constrói profundidade — a formação constrói.
 
-O problema é que o corpo é adaptável. Ele encontra um jeito de completar o movimento mesmo sem a base certa. Compensa com o joelho. Compensa com o quadril. Compensa com a lombar.
+A pergunta real não é: quantos alunos você tem?
+É: quantos casos complexos você resolve?
 
-E por um tempo, funciona.
-Até parar de funcionar.
+Me conta nos comentários: o que você está estudando hoje para elevar seu nível técnico?</div><button class="copy-btn" data-src="c16" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">05</span></div><h3 class="card-title">A condição especial é para os 10 primeiros — e já saíram algumas vagas</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://drive.google.com/thumbnail?id=1MhluVtiygZwGZvuk9O2_zrFUfcAzlgeX&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1MhluVtiygZwGZvuk9O2_zrFUfcAzlgeX" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c17">Para o instrutor que já passou da fase de sobrevivência e quer construir autoridade clínica real:
 
-O Pilates entra aqui: não para substituir a corrida, mas para construir a estabilidade que ela exige e que raramente treina por conta própria.
+A Certificação Sistema I-Cross está com vagas abertas.
 
-Base antes de velocidade. Controle antes de quilometragem.
+O que você aprende:
+— Avaliação postural com raciocínio funcional
+— Prescrição individualizada com critério clínico
+— Progressão segura para casos complexos
+— Pilates Contemporâneo integrado aos fundamentos do movimento humano
 
-Isso é o que muda o padrão — e o resultado.
+O que você sai com:
+Não é só um diploma. É um diferencial verificável que te posiciona acima da formação básica — na sua cidade e além dela.
 
-📍 Studio CrossPilatear — Lagoa Seca
-👉 WhatsApp: 99391-6688</div><button class="copy-btn" data-src="c18" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">07</span></div><h3 class="card-title">Pilates não é sobre sofrer para evoluir.</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://lh3.googleusercontent.com/d/1mhTNL5gJTPEfbDMOfiV9MG_kUrNyjwLM=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1mhTNL5gJTPEfbDMOfiV9MG_kUrNyjwLM" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c19">Pilates não é sobre sofrer para evoluir.
+Condição especial para os 10 primeiros:
+✔ 20% de desconto
+✔ Mentoria individual de 1h com Isley Lauar
 
-Essa é uma das primeiras coisas que eu digo para quem chega aqui vindo de uma cultura de treino que valoriza o quanto dói.
+Vagas limitadas. Link na bio.</div><button class="copy-btn" data-src="c17" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">06</span></div><h3 class="card-title">Como o Sistema I-Cross foi construído — e por que demorou anos</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://drive.google.com/thumbnail?id=1KrZtEyn2zUBSh5HSYRqzdac7TG9DlPT_&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1KrZtEyn2zUBSh5HSYRqzdac7TG9DlPT_" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c18">Ninguém acorda um dia e cria um método.
 
-Aqui o critério não é a dor. É o controle.
+O Sistema I-Cross nasceu de uma inquietação que eu carrego desde os primeiros anos de clínica: por que o Pilates, tão eficiente, ainda era aplicado de forma tão padronizada para casos tão diferentes?
 
-Você consegue estabilizar antes de se mover?
-Você sente o músculo certo trabalhando?
-O movimento está vindo de onde deveria vir?
+Cada aluno que não melhorava com o protocolo convencional me empurrava mais fundo na questão. Cada caso complexo era um dado. Cada resultado ruim era uma hipótese nova.
 
-Essas perguntas importam mais do que a carga, do que o tempo ou do que qualquer outra métrica externa.
+25 anos de fisioterapia, 18 anos de studio, quase duas décadas de docência — isso não é trajetória linear. É matéria-prima metodológica.
 
-Movimento consciente não é movimento fácil. Ele desafia, ele exige, ele transforma.
-Mas a régua é outra.
+O Sistema I-Cross é a resposta que fui construindo ao longo desse tempo. Não é tendência, não é adaptação de outro método. É uma lógica própria de avaliação, prescrição e progressão — construída dentro da prática clínica real.
 
-E quando você aprende a usar essa régua, muda a forma como se move — aqui dentro e lá fora.
+É isso que está por trás de cada turma da Certificação.
 
-📍 Studio CrossPilatear — Lagoa Seca
-👉 WhatsApp: 99391-6688</div><button class="copy-btn" data-src="c19" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">08</span></div><h3 class="card-title">Sábado de manhã no CrossPilatear.</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://lh3.googleusercontent.com/d/1zk7WnN_3oj6ECJY4UZC8o_zzBbP69_Yu=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1zk7WnN_3oj6ECJY4UZC8o_zzBbP69_Yu" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c20">Sábado de manhã no CrossPilatear.
+Link na bio pra saber mais.</div><button class="copy-btn" data-src="c18" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">07</span></div><h3 class="card-title">Movimento com intenção não é filosofia — é critério clínico</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://drive.google.com/thumbnail?id=1qRPTmyJ7euASL-YJo6rja0w2j-tP73T3&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1qRPTmyJ7euASL-YJo6rja0w2j-tP73T3" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c19">Dois instrutores. Mesmo exercício. Resultados diferentes.
 
-Antes de qualquer exercício: avaliação. O que esse corpo faz. O que ele evita. Onde ele compensa.
+O que separa um do outro não é a escolha do aparelho. É a intenção por trás da prescrição.
 
-Depois: movimento com intenção.
+Movimento com intenção significa:
+— Saber qual estrutura você está trabalhando
+— Saber por que aquele exercício foi escolhido para aquele aluno
+— Saber o que observar durante a execução para confirmar ou rever a hipótese
 
-Não é uma sequência padrão rodada para todo mundo ao mesmo tempo. É uma prática construída a partir do que cada pessoa precisa naquele dia — dentro do protocolo desenvolvido para corredores.
+Sem esse raciocínio, o exercício é repetição.
+Com ele, é tratamento.
 
-Estabilização de quadril. Ativação de glúteo. Controle escapular. Respiração coordenada com o movimento.
+No Pilates Contemporâneo — e especificamente no Sistema I-Cross — esse raciocínio é o núcleo de tudo. Não é extra. É estrutural.
 
-Soa técnico — e é.
-Mas na prática, o que você sente é diferente: o corpo começa a funcionar como deveria.
+Manda esse post pra alguém que está começando na área. Pode fazer diferença no caminho que essa pessoa vai construir.</div><button class="copy-btn" data-src="c19" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">08</span></div><h3 class="card-title">Pilates é muita coisa. Mas acima de tudo, é sobre você.</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://drive.google.com/thumbnail?id=1iH646DTsJHCdY42_gcFNbBoU91I_8P_2&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1iH646DTsJHCdY42_gcFNbBoU91I_8P_2" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c20">É postura. É intenção.
+É a liberdade de se mover sem dor, sem medo, sem limitação.
 
-Isso é o que acontece aqui toda semana.
+É o aluno que chega curvado e vai embora dois centímetros mais alto — não na régua, mas na forma como se coloca no mundo.
 
-Vagas abertas para a turma de sábado. Se isso faz sentido pra você, a próxima aula pode ser a sua.
+É a pessoa que passou anos sendo atendida como diagnóstico e finalmente foi vista como corpo inteiro.
 
-📍 Studio CrossPilatear — Lagoa Seca
-👉 WhatsApp: 99391-6688</div><button class="copy-btn" data-src="c20" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">09</span></div><h3 class="card-title">Docente. Fisioterapeuta. Criadora de método.</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://lh3.googleusercontent.com/d/1_wzbrKsJsrglO5xAEMKW6OcUI9-Jq0sl=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1_wzbrKsJsrglO5xAEMKW6OcUI9-Jq0sl" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c21">Docente. Fisioterapeuta. Criadora de método.
+É estabilidade quando tudo lá fora parece instável.
+É superação nas pequenas vitórias que só você sabe o quanto custaram.
 
-Não estou listando isso para impressionar.
-Estou listando porque faz diferença para você.
+Pilates é muita coisa.
+Mas acima de tudo, é sobre você.
 
-Quando você entra no Studio CrossPilatear, está sendo atendida por alguém que:
+Manda esse post pra alguém que precisa ler isso.</div><button class="copy-btn" data-src="c20" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">09</span></div><h3 class="card-title">O que é high ticket no Pilates — e por que não é sobre preço</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://drive.google.com/thumbnail?id=1Q0GtcyNmCssB5n7yhjcl-N4nTYsOgv4W&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1Q0GtcyNmCssB5n7yhjcl-N4nTYsOgv4W" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c21">High ticket não é cobrar mais pelo mesmo serviço.
+É construir um serviço que justifique ser cobrado no nível que você quer cobrar.
 
-— Pratica fisioterapia há 25 anos
-— Está à frente do studio há 18 anos
-— Ensina em pós-graduações do Grupo Voll desde 2004
-— Construiu um método autoral — o Sistema I-Cross — porque o que existia no mercado não era suficiente
+E isso tem um nome técnico: autoridade clínica.
 
-Essa profundidade aparece na aula. Na avaliação. Na forma como cada exercício é escolhido para o seu caso.
+O instrutor high ticket:
+— Avalia antes de prescrever
+— Explica o porquê de cada escolha
+— Adapta a programação quando o resultado não aparece
+— Não trabalha no improviso — trabalha no método
 
-Não é protocolo genérico.
-Nunca foi.
+O aluno não paga mais porque a sala é bonita.
+Paga mais porque sente que está sendo atendido por alguém que sabe o que está fazendo — e que ele não vai encontrar em qualquer studio.
 
-E é exatamente isso que faz o resultado ser diferente.
+Isso se constrói com formação. Com critério. Com método.
 
-📍 Studio CrossPilatear — Lagoa Seca
-👉 WhatsApp: 99391-6688</div><button class="copy-btn" data-src="c21" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">10</span></div><h3 class="card-title">O joelho dói. Mas o problema pode não estar no joelho.</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://lh3.googleusercontent.com/d/1Fsi22zMc4ZstXMEuy5jQAYChCcErZP6K=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1Fsi22zMc4ZstXMEuy5jQAYChCcErZP6K" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c22">O joelho dói. Mas o problema pode não estar no joelho.
+É exatamente o que a Certificação Sistema I-Cross oferece.
 
-Isso é um dos padrões mais comuns que vejo em corredores.
+Vagas abertas. Link na bio.</div><button class="copy-btn" data-src="c21" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">10</span></div><h3 class="card-title">Consciência corporal não é filosofia. É prática.</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://drive.google.com/thumbnail?id=1YD1x5uP8KnefSrMmFPXYL1gVtX_Z-hNP&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1YD1x5uP8KnefSrMmFPXYL1gVtX_Z-hNP" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c22">É saber onde seu peso está quando você anda.
+É perceber que um lado do quadril trabalha mais do que o outro.
+É entender por que aquela dor no ombro volta toda vez que você fica horas na mesma posição.
 
-A dor aparece no joelho — e é no joelho que a maioria tenta resolver. Gelo, anti-inflamatório, repouso. Volta a correr. Dói de novo.
+No Pilates Contemporâneo, a consciência corporal não é o destino — é o ponto de partida.
 
-O que acontece muitas vezes: o joelho está pagando a conta de um quadril que não estabiliza.
+Sem ela, o exercício vira repetição sem intenção.
+Com ela, cada movimento tem propósito.
 
-Quando o glúteo médio não trabalha direito, o joelho desvia para dentro em cada passada. Milímetros por vez. Quilômetros de impacto acumulado.
+E é por isso que no Sistema I-Cross ela não é um valor agregado da aula. É a base do raciocínio clínico que orienta toda a prescrição.
 
-Tratar o joelho sem corrigir o padrão é apagar fumaça sem desligar o fogo.
+Salva esse post — você vai querer consultar de novo.</div><button class="copy-btn" data-src="c22" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">11</span></div><h3 class="card-title">O corredor chegou no seu studio e nunca mais voltou</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://drive.google.com/thumbnail?id=1swXj6zJlO85vUyJoJCBldZhvNFBESA2W&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1swXj6zJlO85vUyJoJCBldZhvNFBESA2W" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c23">Ele chegou com queixa no joelho.
+Você aplicou o protocolo que aprendeu na formação.
+Ele agradeceu. Não voltou.
 
-É por isso que o Pilates para corredores começa pela avaliação. Antes de qualquer exercício, a gente entende o que está acontecendo de verdade.
+Isso não é história rara — é padrão.
 
-Aí sim o trabalho resolve.
+O corredor tem demandas específicas que formações generalistas não cobrem. Análise de pisada, padrão de passada, força excêntrica, estabilização de quadril sob carga — são variáveis que mudam completamente a programação.
 
-📍 Studio CrossPilatear — Lagoa Seca
-👉 WhatsApp: 99391-6688</div><button class="copy-btn" data-src="c22" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">11</span></div><h3 class="card-title">Curso presencial. Agosto de 2026.</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://lh3.googleusercontent.com/d/1h9irqvBgw0DYRwYnYjimQSPfL_Acxi_8=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1h9irqvBgw0DYRwYnYjimQSPfL_Acxi_8" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c23">Curso presencial. Agosto de 2026.
+Sem esse recorte, você atende o corredor como atende qualquer aluno. E o corredor percebe.
 
-Três dias. 21, 22 e 23 de agosto.
+500 milhões de corredores no mundo. 15 milhões no Brasil. Crescimento de 14% em 2025.
 
-Conteúdo teórico e prático de Pilates Contemporâneo com foco em corredores — construído sobre a base do Sistema I-Cross e 25 anos de experiência clínica.
+Esse mercado existe. O profissional preparado para atendê-lo ainda é escasso.
 
-Para quem é feito:
-Profissionais que atendem corredores e querem uma abordagem mais profunda, mais técnica e mais resolutiva. Para quem já sabe que protocolo genérico não resolve.
+O Curso de Pilates para Corredores pelo Sistema I-Cross acontece de 21 a 23 de agosto de 2026, em Belo Horizonte.
 
-O que você leva:
-Uma leitura nova do movimento de corrida. Ferramentas de avaliação e aplicação prática do Pilates nesse público. Método. Não receita.
+Link na bio.</div><button class="copy-btn" data-src="c23" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">12</span></div><h3 class="card-title">Uma pergunta que faço para todo instrutor que vem me procurar</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://drive.google.com/thumbnail?id=12lPwVMSCmrjD4PadPy9p8dx3j6m6WOk7&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=12lPwVMSCmrjD4PadPy9p8dx3j6m6WOk7" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c24">Antes de falar sobre qualquer formação, eu faço uma pergunta simples:
 
-Vagas limitadas — a proposta é trabalho com atenção real, não turma numerosa.
+”Quando seu aluno não melhora depois de oito semanas — o que você faz?”
 
-Se isso faz sentido pra você, entra na lista. O link está na bio.
+As respostas me dizem muito.
 
-📍 Studio CrossPilatear — Lagoa Seca
-👉 WhatsApp: 99391-6688</div><button class="copy-btn" data-src="c23" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">12</span></div><h3 class="card-title">Você não precisa parar de correr.</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://lh3.googleusercontent.com/d/1zMH2jBLeNbTZPsKmvaeYvZrvUDE7TgYU=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1zMH2jBLeNbTZPsKmvaeYvZrvUDE7TgYU" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c24">Você não precisa parar de correr.
+Alguns trocam o exercício.
+Alguns aumentam a carga.
+Alguns encaminham para fisioterapia sem saber bem por quê.
 
-Essa costuma ser a primeira coisa que o corredor escuta quando vai ao médico com dor.
+Poucos — muito poucos — voltam para a avaliação e revisam a hipótese funcional.
 
-E às vezes é necessário. Mas na maioria das vezes, o que falta não é descanso — é base.
+E é exatamente aí que está o salto de nível.
 
-Um corpo que corre com o core ativo, com o quadril estabilizado, com a respiração coordenada com o movimento — esse corpo suporta a carga da corrida de outro jeito.
+Me conta: o que você faz nessa situação? Responde nos comentários — sem julgamento, com curiosidade real.</div><button class="copy-btn" data-src="c24" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">13</span></div><h3 class="card-title">21 a 23 de agosto. Belo Horizonte. Corredores como especialidade.</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://drive.google.com/thumbnail?id=1-kfbfsuDwf4m0jpPHLBMZMpaXwfvwFHD&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1-kfbfsuDwf4m0jpPHLBMZMpaXwfvwFHD" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c25">15 milhões de corredores no Brasil.
++14% de crescimento em 2025.
 
-Não estou prometendo que nunca vai doer. Estou dizendo que dá para construir um padrão de movimento que protege enquanto desafia.
+E a maioria dos instrutores de Pilates ainda atende esse público com programação genérica — porque nunca aprendeu o recorte específico.
 
-É isso que trabalhamos aqui. Para que você continue fazendo o que ama — com mais controle, com mais consciência, com mais longevidade no esporte.
+O Curso de Pilates para Corredores pelo Sistema I-Cross foi construído para mudar isso.
 
-Vem descobrir.
+Em três dias em Belo Horizonte, você aprende:
+— Avaliação funcional específica para o corredor
+— Programação e progressão com critério para esse público
+— Prevenção e reabilitação de lesões comuns da corrida
+— Como aplicar o raciocínio do Sistema I-Cross na prática do studio
 
-📍 Studio CrossPilatear — Lagoa Seca
-👉 WhatsApp: 99391-6688</div><button class="copy-btn" data-src="c24" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">13</span></div><h3 class="card-title">Você corre? Quanto quilômetros por semana?</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://lh3.googleusercontent.com/d/10OA5S8r3oXdHLR0irqAVYwXXQdelFYQu=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=10OA5S8r3oXdHLR0irqAVYwXXQdelFYQu" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c25">Você corre?
+O diferencial não é o conteúdo em si — é a lógica clínica que une tudo.
 
-Não importa se são 5 km ou 50. Me conta aqui nos comentários.
+21 a 23 de agosto de 2026 · Belo Horizonte
+Vagas limitadas. Link na bio.</div><button class="copy-btn" data-src="c25" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">14</span></div><h3 class="card-title">18 anos de studio. O que ficou de verdade.</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://drive.google.com/thumbnail?id=1NrQt2sjVtBrJXvTl0_1JS-Cu5M6Cd20s&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1NrQt2sjVtBrJXvTl0_1JS-Cu5M6Cd20s" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c26">18 anos à frente do Studio CrossPilatear.
 
-Eu pergunto porque o volume de treino diz muito sobre o que o corpo está sendo solicitado a fazer — e sobre o que ele precisa para aguentar isso sem se quebrar pelo caminho.
+O que fica depois de tudo isso não é uma lista de técnicas.
+É uma forma de observar o movimento humano que não existia no começo.
 
-Corredor de alto volume precisa de estabilidade para não acumular erro.
-Corredor iniciante precisa de base antes de aumentar carga.
-Os dois precisam de um corpo que funcione de dentro para fora.
+Fica a memória do aluno que chegou com diagnóstico de hérnia e voltou a correr.
+Fica o instrutor que passou pela formação aqui e hoje é referência na cidade onde atua.
+Fica a certeza de que nenhum protocolo substitui o raciocínio clínico — e que o raciocínio clínico só se afia na prática real.
 
-É sobre isso que trabalho aqui.
+O Sistema I-Cross não veio de um livro.
+Veio desses 18 anos.
 
-Então me conta: quantos km por semana?
-E se você ainda não corre mas quer começar — essa conversa também é pra você. 🤍
+E é exatamente isso que está dentro de cada turma da Certificação.
 
-📍 Studio CrossPilatear — Lagoa Seca
-👉 WhatsApp: 99391-6688</div><button class="copy-btn" data-src="c25" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">14</span></div><h3 class="card-title">Lombar que dói depois de correr não é coincidência.</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://lh3.googleusercontent.com/d/1SjGm82IxW2vXWVaa54N-2HZ6r3StDa84=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1SjGm82IxW2vXWVaa54N-2HZ6r3StDa84" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c26">Lombar que dói depois de correr não é coincidência.
+Segue aqui — tem muito mais vindo por aí.</div><button class="copy-btn" data-src="c26" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">15</span></div><h3 class="card-title">O que separa um instrutor bom de um instrutor referência na cidade</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://drive.google.com/thumbnail?id=10O6iwLubsTKO871wUmxQMZtX4WB1_D_9&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=10O6iwLubsTKO871wUmxQMZtX4WB1_D_9" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c27">Instrutores bons existem em cada cidade do Brasil.
 
-É sinal.
+Instrutores referência — os que os alunos indicam sem ser perguntados, os que os médicos encaminham, os que cobram o que querem porque o que entregam é insubstituível — são escassos.
 
-Quando a região lombar absorve o impacto da corrida, significa que algo acima ou abaixo dela não está fazendo sua parte. O core não ativou primeiro. O quadril não estabilizou. A respiração foi embora no terceiro quilômetro.
+O que separa um do outro?
 
-E a lombar — que não foi feita para ser amortecedor — vai cumprindo esse papel até não aguentar mais.
+Não é carisma. Não é studio bonito. Não é postagem todo dia.
 
-Não é fraqueza. É padrão. E padrão tem solução.
+É a capacidade de avaliar antes de prescrever.
+É a lógica que conecta a queixa do aluno à escolha do exercício.
+É o raciocínio clínico que faz o aluno sentir que está sendo atendido — não conduzido.
 
-O trabalho começa com avaliação: entender o que o seu corpo está fazendo de fato, antes de qualquer protocolo. Depois, reconstruir a base — para que cada estrutura faça o que foi feita para fazer.
+Esse raciocínio se constrói. Não vem da intuição — vem da formação certa.
 
-A dor é o aviso. O Pilates é a resposta.
+A Certificação Sistema I-Cross está com vagas abertas.
+Condição especial para os 10 primeiros: 20% de desconto e mentoria individual de 1h.
 
-📍 Studio CrossPilatear — Lagoa Seca
-👉 WhatsApp: 99391-6688</div><button class="copy-btn" data-src="c26" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">15</span></div><h3 class="card-title">Primeira mensalidade com 10% de desconto.</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://lh3.googleusercontent.com/d/1B-2FNR8_bgBQ_18ladGn6Jpw-wMu1ZLj=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1B-2FNR8_bgBQ_18ladGn6Jpw-wMu1ZLj" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c27">Estamos com vagas abertas para a turma de sábado.
-
-Pilates para corredores. Acompanhamento técnico individualizado. Protocolo construído a partir da avaliação do seu movimento — não de uma sequência padrão.
-
-Para novos alunos: 10% de desconto na primeira mensalidade.
-
-Sem urgência artificial. Sem pressão.
-
-Se você vive com dor depois dos treinos, sente o corpo travado ou simplesmente quer se mover melhor — esse pode ser o ponto de partida.
-
-A primeira aula é para você entender a proposta.
-Para eu entender o seu corpo.
-
-Sem compromisso. Com atenção real.
-
-Quando você estiver pronto, eu estou aqui.
-
-📍 Studio CrossPilatear — Lagoa Seca
-👉 WhatsApp: 99391-6688</div><button class="copy-btn" data-src="c27" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">01</span></div><h3 class="card-title">Você corre ou já correu?</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/188mF0Kt9hk3lfRuh7mvMcZ3f6ZwPLwHv=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=188mF0Kt9hk3lfRuh7mvMcZ3f6ZwPLwHv" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">02</span></div><h3 class="card-title">O que o core tem a ver com a corrida?</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/1yBBsoIdkG_plb0MIbnuCB0zuSb2WExO7=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1yBBsoIdkG_plb0MIbnuCB0zuSb2WExO7" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">03</span></div><h3 class="card-title">Dói depois de correr? Aqui está o porquê.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/1586UOEmxmIv8JeH6n81LlgcJAZqV5zRT=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1586UOEmxmIv8JeH6n81LlgcJAZqV5zRT" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">04</span></div><h3 class="card-title">Sábado de manhã no CrossPilatear.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/1SO_svMVF1UL7NfGl1gG-81up_LzX9raz=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1SO_svMVF1UL7NfGl1gG-81up_LzX9raz" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">05</span></div><h3 class="card-title">Vagas abertas. Turma de sábado.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/1eUliEGvS-7jELdjFrMzd-fP6R9tKG76v=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1eUliEGvS-7jELdjFrMzd-fP6R9tKG76v" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">06</span></div><h3 class="card-title">O joelho dói. Mas o problema pode não ser ele.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/1Esotwr-WJYX_fED2oOU3m5u4-UCydL44=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1Esotwr-WJYX_fED2oOU3m5u4-UCydL44" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">07</span></div><h3 class="card-title">Você não precisa parar de correr.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/1hL-8I7y6p4K8vEAtQsD6OoyRDyqmEtub=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1hL-8I7y6p4K8vEAtQsD6OoyRDyqmEtub" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">08</span></div><h3 class="card-title">25 anos. Um método. Uma forma de ver o corpo.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/1yUOioSOpV3BHu4YrD06rLPxMxfXXhuou=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1yUOioSOpV3BHu4YrD06rLPxMxfXXhuou" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">09</span></div><h3 class="card-title">Curso presencial. 21 a 23 de agosto.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/1XQCaxjapmFz93eyDpSGQMas6-2-jIxVz=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1XQCaxjapmFz93eyDpSGQMas6-2-jIxVz" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">10</span></div><h3 class="card-title">Qual é a sua maior dificuldade na corrida?</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/1XAE7LYUFMDzx4PtCeuY8dLZnm31klYke=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1XAE7LYUFMDzx4PtCeuY8dLZnm31klYke" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">11</span></div><h3 class="card-title">Respiração é fundamento. Não detalhe.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/1kGcXd3raE-2DVXSDPoJirRDOWvFVlRMy=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1kGcXd3raE-2DVXSDPoJirRDOWvFVlRMy" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">12</span></div><h3 class="card-title">Lombar depois da corrida. Reconhece isso?</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/1YtvvXKDjgyqNcU0-7HKzZ5cra0913s0R=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1YtvvXKDjgyqNcU0-7HKzZ5cra0913s0R" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">13</span></div><h3 class="card-title">Como é a avaliação antes de começar.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/1RKY7m7O7eJNsUhu3TtBypnNVcEQCxijv=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1RKY7m7O7eJNsUhu3TtBypnNVcEQCxijv" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">14</span></div><h3 class="card-title">10% de desconto. Só para novos alunos.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/106Ae-MUBO5_X8a7ogHKl28Whosb_D9pg=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=106Ae-MUBO5_X8a7ogHKl28Whosb_D9pg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">15</span></div><h3 class="card-title">O movimento certo muda tudo.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://lh3.googleusercontent.com/d/1D6l7HpSYqI3Svatfo2L_Gsd9vUokbNAm=w900" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1D6l7HpSYqI3Svatfo2L_Gsd9vUokbNAm" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+Link na bio.</div><button class="copy-btn" data-src="c27" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">01</span></div><h3 class="card-title">Você avalia antes de prescrever?</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://drive.google.com/thumbnail?id=1RBR1vksIlG-_nj_UmvhUXQdsLddRlB9z&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1RBR1vksIlG-_nj_UmvhUXQdsLddRlB9z" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">02</span></div><h3 class="card-title">Avaliação não é burocracia. É o início do tratamento.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://drive.google.com/thumbnail?id=1CrLR1eZ6EGvNfQUQQCDUS5xKCoWv_9rx&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1CrLR1eZ6EGvNfQUQQCDUS5xKCoWv_9rx" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">03</span></div><h3 class="card-title">25 anos de clínica. Um método. Vagas abertas.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://drive.google.com/thumbnail?id=1eFeIzdPKLXueNrcWrFfmr66N6K8HPPwV&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1eFeIzdPKLXueNrcWrFfmr66N6K8HPPwV" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">04</span></div><h3 class="card-title">10 vagas com condição especial. Já saíram algumas.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://drive.google.com/thumbnail?id=1GQAi1RAToSA2x-zzXZuvpMrKRoGqdI1q&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1GQAi1RAToSA2x-zzXZuvpMrKRoGqdI1q" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">05</span></div><h3 class="card-title">Quando seu aluno não melhora, o que você faz?</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://drive.google.com/thumbnail?id=1wGvZSewuiLGIG-JjWzU4ovLhZEvjeN3i&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1wGvZSewuiLGIG-JjWzU4ovLhZEvjeN3i" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">06</span></div><h3 class="card-title">Consciência corporal começa antes da primeira repetição.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://drive.google.com/thumbnail?id=1M8zCdwOhXNS6OAtoITTFL4bbBZSJqS7R&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1M8zCdwOhXNS6OAtoITTFL4bbBZSJqS7R" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">07</span></div><h3 class="card-title">18 anos de studio. O que fica é o raciocínio clínico.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://drive.google.com/thumbnail?id=1JY7WAJr-bauyFFIXKYJL0gDGYovBQVVn&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1JY7WAJr-bauyFFIXKYJL0gDGYovBQVVn" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">08</span></div><h3 class="card-title">Agosto em BH. Corredores como especialidade sua.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://drive.google.com/thumbnail?id=1WlDqvsHLJTLV19eveRVlggGhYqLRuu36&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1WlDqvsHLJTLV19eveRVlggGhYqLRuu36" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">09</span></div><h3 class="card-title">Qual é o seu maior desafio técnico hoje?</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://drive.google.com/thumbnail?id=1PzKMcKVMseVihn8qyXpHhe6uEZvDdkCz&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1PzKMcKVMseVihn8qyXpHhe6uEZvDdkCz" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">10</span></div><h3 class="card-title">Postura não se corrige. Se fortalece.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://drive.google.com/thumbnail?id=15w7hUxvzJFOZI5mFcfE338aFipCWaZ2b&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=15w7hUxvzJFOZI5mFcfE338aFipCWaZ2b" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">11</span></div><h3 class="card-title">Studio cheio não é sinônimo de evolução técnica.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://drive.google.com/thumbnail?id=1HifSV2cE0wqQ6ZUql02heFxfi9XEkLSG&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1HifSV2cE0wqQ6ZUql02heFxfi9XEkLSG" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">12</span></div><h3 class="card-title">A condição especial é para os 10 primeiros.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://drive.google.com/thumbnail?id=1FC9EakTnoMVNgnarYVzCeXKH2MH37Ckv&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1FC9EakTnoMVNgnarYVzCeXKH2MH37Ckv" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">13</span></div><h3 class="card-title">Pilates é sobre você. Não sobre o exercício perfeito.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://drive.google.com/thumbnail?id=126ApfDlyenoWnBqCDeNYug2r_mV7UL5g&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=126ApfDlyenoWnBqCDeNYug2r_mV7UL5g" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">14</span></div><h3 class="card-title">O instrutor referência avalia. O básico prescreve.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://drive.google.com/thumbnail?id=1crtGtOT8k4EGCRg7O898QMRf2QXiv70e&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1crtGtOT8k4EGCRg7O898QMRf2QXiv70e" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">15</span></div><h3 class="card-title">Você se vê como referência técnica na sua cidade?</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://drive.google.com/thumbnail?id=1WSdOQ0SzR4IdtaBEdAX64Mfy0ZHraVz8&sz=w1000" alt="" loading="lazy"></div><div class="save-hint"><a href="https://drive.google.com/uc?export=download&id=1WSdOQ0SzR4IdtaBEdAX64Mfy0ZHraVz8" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
     </div>
   </div>
   <section class="guia">
     <div class="gl">Guia de Uso POSTÔ</div>
-    <h2>Como tirar o máximo do seu mês</h2>
+    <h2>Como tirar o máximo dos seus 30 dias</h2>
     <p class="gsub">Melhores horários do seu nicho, sequência ideal, frequência e como gravar os Reels com os roteiros: está tudo no seu Guia, entregue junto desta Edição.</p>
     <a class="pdf" href="./guia/"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg><div><div class="pt">Guia de Uso POSTÔ</div><div class="ps">Abrir o guia completo · salvar em PDF</div></div></a>
   </section>
