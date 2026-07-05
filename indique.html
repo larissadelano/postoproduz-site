@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Indique a POSTÔ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme:dark;
+    --preto:#08080C; --carbon:#111118; --card:#15151c; --linha:#23232c;
+    --creme:#F5F0E8; --corpo:#B7B0A2; --mute:#8C8474;
+    --gold:#C9A84C; --sage:#7A9E7E; --terra:#C4622D;
+    --serif:"Cormorant Garamond","Cormorant",Georgia,"Times New Roman",serif;
+    --sans:"DM Sans","Helvetica Neue",Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{background-color:#111118;background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAFElEQVR4nGMUFJRgwAaYsIoOWgkAM90ASmeZQ5oAAAAASUVORK5CYII=');}
+  body{
+    background-color:#111118;
+    background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAFElEQVR4nGMUFJRgwAaYsIoOWgkAM90ASmeZQ5oAAAAASUVORK5CYII=');
+    background-repeat:repeat;
+    background-attachment:fixed;
+    color:var(--corpo);font-family:var(--sans);line-height:1.6;padding:56px 24px 110px;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:680px;margin:0 auto;}
+  .topbar{height:6px;background:var(--gold);border-radius:3px;margin-bottom:44px;}
+
+  .eyebrow{font-family:var(--sans);font-weight:600;font-size:14px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);}
+  h1{font-family:var(--serif);font-weight:600;font-size:60px;line-height:1.04;color:var(--creme);margin:16px 0 12px;letter-spacing:-.01em;}
+  .sub{font-family:var(--serif);font-style:italic;font-size:27px;color:var(--mute);margin-bottom:30px;line-height:1.3;}
+  .lead{font-family:var(--serif);font-size:24px;line-height:1.5;color:var(--creme);}
+
+  section{margin-bottom:50px;}
+  h2{font-family:var(--serif);font-weight:600;font-size:36px;color:var(--creme);margin-bottom:6px;letter-spacing:-.005em;}
+  h2 .n{color:var(--gold);font-style:italic;margin-right:14px;}
+  .rule{height:2px;width:54px;background:var(--gold);border-radius:2px;margin:14px 0 26px;}
+
+  ul{list-style:none;margin:6px 0 14px;}
+  li{position:relative;padding-left:28px;margin-bottom:16px;font-size:19px;line-height:1.5;color:var(--corpo);}
+  li::before{content:"";position:absolute;left:4px;top:11px;width:8px;height:8px;border-radius:50%;background:var(--gold);}
+  li b{color:var(--creme);font-weight:600;}
+
+  .num-list li{padding-left:46px;}
+  .num-list li .ord{position:absolute;left:0;top:-4px;font-family:var(--serif);font-style:italic;font-size:30px;color:var(--gold);}
+  .num-list li::before{display:none;}
+
+  table{width:100%;border-collapse:collapse;font-size:17px;margin-top:6px;}
+  th{font-family:var(--sans);font-weight:600;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);text-align:left;padding:0 14px 12px;}
+  th.r,td.r{text-align:right;}
+  td{padding:15px 14px;border-top:1px solid var(--linha);vertical-align:middle;color:var(--corpo);}
+  td.k{color:var(--creme);font-weight:600;font-family:var(--sans);font-size:18px;}
+  td.v{color:var(--gold);font-family:var(--serif);font-size:23px;font-weight:600;white-space:nowrap;}
+  .note{font-size:15px;color:var(--mute);margin-top:16px;line-height:1.55;}
+
+  .cta{margin:60px 0 0;text-align:center;}
+  .btn{display:inline-block;font-family:var(--sans);font-weight:600;font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--preto);background:var(--gold);padding:20px 44px;border-radius:3px;text-decoration:none;}
+  .cta .small{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--mute);margin-top:20px;}
+
+  .foot{margin-top:64px;padding-top:24px;border-top:1px solid var(--linha);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:14px;}
+  .foot .h{font-family:var(--sans);font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;}
+  .foot .s{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--mute);}
+
+  @media(max-width:640px){
+    h1{font-size:46px;}
+    .sub{font-size:23px;}
+    .lead{font-size:21px;}
+    h2{font-size:30px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar"></div>
+
+  <div class="eyebrow">Programa de indicação</div>
+  <h1>Indique a POSTÔ</h1>
+  <div class="sub">Quem indica, ganha. Quem entra, também.</div>
+  <p class="lead">A POSTÔ produz o mês de conteúdo de quem você indica. Cada indicação que vira cliente gera 10% de comissão para você e 10% de desconto para quem entra.</p>
+
+  <section style="margin-top:50px;">
+    <h2><span class="n">01</span>Como funciona</h2>
+    <div class="rule"></div>
+    <ul class="num-list">
+      <li><span class="ord">1</span><b>Você se cadastra uma vez e recebe o seu link.</b> Conta gratuita na Hotmart, aprovada na hora, válida para sempre.</li>
+      <li><span class="ord">2</span><b>Você compartilha o seu link.</b> Com quem precisa de presença no Instagram. Quem entra por ele ganha 10% na primeira Edição.</li>
+      <li><span class="ord">3</span><b>A indicação vira cliente e a comissão entra na sua conta.</b> A Hotmart faz o pagamento. Você não controla nada disso.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">02</span>O que cada lado ganha</h2>
+    <div class="rule"></div>
+    <p class="lead" style="margin-bottom:26px;">O programa premia os dois lados de cada indicação: 10% de comissão para você, 10% de desconto para quem você indica.</p>
+    <table>
+      <thead>
+        <tr><th>Plano</th><th class="r">Quem entra paga</th><th class="r">Você recebe</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="k">Essencial</td><td class="r">R$447</td><td class="v r">≈ R$40</td></tr>
+        <tr><td class="k">Profissional</td><td class="r">R$807</td><td class="v r">≈ R$73</td></tr>
+        <tr><td class="k">Premium IA</td><td class="r">R$1.347</td><td class="v r">≈ R$121</td></tr>
+      </tbody>
+    </table>
+    <p class="note">A comissão acompanha o plano que a pessoa indicada contrata. Sem limite de indicações.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">03</span>Como você recebe</h2>
+    <div class="rule"></div>
+    <ul>
+      <li>A Hotmart registra cada venda no seu nome e faz o pagamento da comissão. Você acompanha tudo pelo painel.</li>
+      <li>O valor é resgatável na sua <b>conta corrente</b> a partir de 30 dias da venda, conforme a política da Hotmart.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">04</span>Condições</h2>
+    <div class="rule"></div>
+    <ul>
+      <li>Indicar não exige ser cliente. Qualquer pessoa se cadastra e recebe.</li>
+      <li>O seu link identifica cada indicação no seu nome.</li>
+      <li>A comissão é liberada após o período que cobre a garantia de 7 dias.</li>
+      <li>Sem prazo de validade e sem limite. Cada indicação que vira cliente conta.</li>
+    </ul>
+  </section>
+
+  <div class="cta">
+    <!-- TROCAR o href pelo link de afiliação do produto na Hotmart -->
+    <a class="btn" href="#LINK-DE-AFILIACAO-HOTMART">Quero meu link de indicação</a>
+    <div class="small">O cadastro é gratuito e leva poucos minutos.</div>
+  </div>
+
+  <div class="foot">
+    <span class="h">@postoproduz</span>
+    <span class="s">A POSTÔ produz. Você posta.</span>
+  </div>
+
+</div>
+</body>
+</html>
