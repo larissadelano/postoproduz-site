@@ -290,7 +290,7 @@ body::before {
 .diferencial-li svg, .nao-inclui-li svg { flex-shrink: 0; margin-top: 2px; }
 .nao-inclui-li { color: var(--creme); opacity: 0.72; }
 
-/* ═══ ESTILOS MINI ═══ */
+
 .estilos-section { background: var(--preto); }
 
 .estilos-grid {
@@ -299,30 +299,6 @@ body::before {
   gap: 16px;
   max-width: 1200px; margin: 0 auto 40px;
 }
-.estilo-mini {
-  aspect-ratio: 4 / 5;
-  padding: 26px 22px;
-  position: relative; overflow: hidden;
-  display: flex; flex-direction: column; justify-content: space-between;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255,255,255,.08);
-}
-.estilo-mini:hover { transform: translateY(-6px) scale(1.02); }
-.estilo-mini-num {
-  font-family: var(--serif); font-weight: 700; font-style: italic;
-  font-size: 44px; line-height: 0.9; letter-spacing: -0.02em;
-}
-.estilo-mini-nome {
-  font-family: var(--serif); font-weight: 700; font-size: 24px;
-  line-height: 1.05;
-}
-.estilo-mini-line { width: 28px; height: 2px; margin: 10px 0; }
-.estilo-mini-para {
-  font-family: var(--sans); font-weight: 400; font-size: 11.5px;
-  line-height: 1.5; opacity: 0.75;
-  margin-top: auto;
-}
-
 .estilos-rodape {
   text-align: center;
   font-family: var(--serif); font-style: italic; font-size: 17px;
@@ -478,6 +454,57 @@ body::before {
   letter-spacing: 0.2em; text-transform: uppercase;
   color: var(--soft);
 }
+
+/* ═══ VITRINE ═══ */
+.vitrine-section { background: var(--carbon); border-top: 1px solid rgba(201,168,76,.1); border-bottom: 1px solid rgba(201,168,76,.1); }
+.vitrine-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px; margin: 0 auto 32px;
+}
+@media (max-width: 768px) { .vitrine-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; } }
+.vitrine-item {
+  position: relative; overflow: hidden;
+  border: 1px solid rgba(201,168,76,.18);
+  background: var(--preto);
+  transition: all 0.3s ease;
+}
+.vitrine-item:hover { transform: translateY(-5px); border-color: rgba(201,168,76,.45); box-shadow: 0 24px 48px -16px rgba(0,0,0,.6); }
+.vitrine-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.vitrine-tall { aspect-ratio: 4 / 5; }
+.vitrine-story { aspect-ratio: 9 / 16; }
+.vitrine-tag {
+  position: absolute; bottom: 12px; left: 12px;
+  background: rgba(8,8,12,0.82); backdrop-filter: blur(8px);
+  color: var(--dourado);
+  font-family: var(--sans); font-weight: 600; font-size: 10px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  padding: 6px 12px;
+}
+.vitrine-rodape {
+  text-align: center;
+  font-family: var(--serif); font-style: italic; font-size: 16px;
+  color: var(--soft);
+}
+.vitrine-rodape em { color: var(--dourado); }
+
+
+/* ═══ ESTILOS SHOWCASE ═══ */
+.estilos-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  max-width: 1100px; margin: 0 auto 44px;
+}
+.estilo-showcase-item {
+  overflow: hidden;
+  border: 1px solid rgba(201,168,76,.16);
+  transition: all 0.3s ease;
+}
+.estilo-showcase-item:hover { transform: translateY(-4px); border-color: rgba(201,168,76,.4); box-shadow: 0 20px 44px -16px rgba(0,0,0,.55); }
+.estilo-showcase-item img { width: 100%; display: block; }
+
 </style>
 </head>
 <body>
@@ -583,6 +610,44 @@ body::before {
         </div>
         
     </div>
+  </div>
+</section>
+
+
+<!-- ═══ VITRINE — ARTES REAIS ═══ -->
+<section class="section vitrine-section">
+  <div class="container">
+    <div class="section-eyebrow">Uma Edição de verdade</div>
+    <h2 class="section-h2">Não é promessa. <em>É o que sai.</em></h2>
+    <p class="section-lead">Estas são peças reais de uma Edição POSTÔ — feitas com as fotos, a voz e as cores da cliente. É exatamente assim que a sua chega no Drive.</p>
+
+    <div class="vitrine-grid">
+      <div class="vitrine-item vitrine-tall">
+        <img src="/vitrine/tati-post-1.jpg" alt="Post de feed produzido pela POSTÔ" loading="lazy">
+        <span class="vitrine-tag">Post de feed</span>
+      </div>
+      <div class="vitrine-item vitrine-tall">
+        <img src="/vitrine/tati-carrossel-2.jpg" alt="Capa de carrossel produzida pela POSTÔ" loading="lazy">
+        <span class="vitrine-tag">Carrossel</span>
+      </div>
+      <div class="vitrine-item vitrine-tall">
+        <img src="/vitrine/tati-post-2.jpg" alt="Post de feed produzido pela POSTÔ" loading="lazy">
+        <span class="vitrine-tag">Post de feed</span>
+      </div>
+      <div class="vitrine-item vitrine-story">
+        <img src="/vitrine/tati-story-1.jpg" alt="Story produzido pela POSTÔ" loading="lazy">
+        <span class="vitrine-tag">Story</span>
+      </div>
+      <div class="vitrine-item vitrine-story">
+        <img src="/vitrine/tati-reel-1.jpg" alt="Capa de Reel produzida pela POSTÔ" loading="lazy">
+        <span class="vitrine-tag">Capa de Reel</span>
+      </div>
+      <div class="vitrine-item vitrine-story">
+        <img src="/vitrine/tati-story-2.jpg" alt="Story produzido pela POSTÔ" loading="lazy">
+        <span class="vitrine-tag">Story</span>
+      </div>
+    </div>
+    <p class="vitrine-rodape">Edição real · <em>Doces da Tati</em> · confeitaria</p>
   </div>
 </section>
 
@@ -713,84 +778,18 @@ body::before {
   <div class="container">
     <div class="section-eyebrow">Você escolhe o seu</div>
     <h2 class="section-h2">Dez estilos. <em>Um</em> é o seu.</h2>
-    <p class="section-lead">Cada estilo é uma composição estruturalmente diferente — não é só paleta variando. Você escolhe o que combina com a sua marca, e nos diz suas cores. A POSTÔ aplica suas cores dentro do estilo escolhido.</p>
+    <p class="section-lead">Cada estilo é uma composição estruturalmente diferente — não é só paleta variando. Você escolhe o que combina com a sua marca, e a POSTÔ aplica as suas cores dentro do estilo escolhido. Veja cada um aplicado em uma marca real.</p>
 
-    <div class="estilos-grid">
-      
-        <div class="estilo-mini" style="background:#F2EDE3;color:#1F1B16;">
-          <div class="estilo-mini-num" style="color:#9B7E4F;">01</div>
-          <div class="estilo-mini-nome">Sereno</div>
-          <div class="estilo-mini-line" style="background:#9B7E4F;"></div>
-          <div class="estilo-mini-para">Coaches, consultoras, terapeutas</div>
-        </div>
-        
-        <div class="estilo-mini" style="background:#0A0A0A;color:#FFFFFF;">
-          <div class="estilo-mini-num" style="color:#FF3D24;">02</div>
-          <div class="estilo-mini-nome">Bold</div>
-          <div class="estilo-mini-line" style="background:#FF3D24;"></div>
-          <div class="estilo-mini-para">Fitness, vendas, alta performance</div>
-        </div>
-        
-        <div class="estilo-mini" style="background:#181410;color:#FAF6EC;">
-          <div class="estilo-mini-num" style="color:#D4B069;">03</div>
-          <div class="estilo-mini-nome">Magazine</div>
-          <div class="estilo-mini-line" style="background:#D4B069;"></div>
-          <div class="estilo-mini-para">Moda, beleza premium, lifestyle</div>
-        </div>
-        
-        <div class="estilo-mini" style="background:#E8DFCD;color:#3D2E1F;">
-          <div class="estilo-mini-num" style="color:#7A9E7E;">04</div>
-          <div class="estilo-mini-nome">Botânico</div>
-          <div class="estilo-mini-line" style="background:#7A9E7E;"></div>
-          <div class="estilo-mini-para">Nutrição, wellness, sustentabilidade</div>
-        </div>
-        
-        <div class="estilo-mini" style="background:#FAFAFB;color:#1A2942;">
-          <div class="estilo-mini-num" style="color:#3D7DCA;">05</div>
-          <div class="estilo-mini-nome">Clínico</div>
-          <div class="estilo-mini-line" style="background:#3D7DCA;"></div>
-          <div class="estilo-mini-para">Médicas, dentistas, fisioterapeutas</div>
-        </div>
-        
-        <div class="estilo-mini" style="background:#FFD93D;color:#1A1A1A;">
-          <div class="estilo-mini-num" style="color:#FF6B6B;">06</div>
-          <div class="estilo-mini-nome">Solar</div>
-          <div class="estilo-mini-line" style="background:#FF6B6B;"></div>
-          <div class="estilo-mini-para">Confeitaria, eventos, Gen Z</div>
-        </div>
-        
-        <div class="estilo-mini" style="background:#1A1F2E;color:#F0F0F0;">
-          <div class="estilo-mini-num" style="color:#E8B860;">07</div>
-          <div class="estilo-mini-nome">Arquitetura</div>
-          <div class="estilo-mini-line" style="background:#E8B860;"></div>
-          <div class="estilo-mini-para">Arquitetos, designers, engenheiros</div>
-        </div>
-        
-        <div class="estilo-mini" style="background:#FBF6F0;color:#5C3A4A;">
-          <div class="estilo-mini-num" style="color:#C9A876;">08</div>
-          <div class="estilo-mini-nome">Romântico</div>
-          <div class="estilo-mini-line" style="background:#C9A876;"></div>
-          <div class="estilo-mini-para">Maternidade, doulas, terapeutas femininas</div>
-        </div>
-        
-        <div class="estilo-mini" style="background:#1C1C20;color:#E8E8EC;">
-          <div class="estilo-mini-num" style="color:#00E5FF;">09</div>
-          <div class="estilo-mini-nome">Noir Tech</div>
-          <div class="estilo-mini-line" style="background:#00E5FF;"></div>
-          <div class="estilo-mini-para">Tecnologia, fintech, consultoria estratégica</div>
-        </div>
-        
-        <div class="estilo-mini" style="background:linear-gradient(135deg,#FFA45C 0%,#FF6B9D 50%,#9B5DE5 100%);color:#2D1B3D;">
-          <div class="estilo-mini-num" style="color:#FFFFFF;">10</div>
-          <div class="estilo-mini-nome">Inspirador</div>
-          <div class="estilo-mini-line" style="background:#FFFFFF;"></div>
-          <div class="estilo-mini-para">Coaching emocional, espiritualidade</div>
-        </div>
-        
+    <div class="estilos-showcase">
+      <div class="estilo-showcase-item"><img src="/vitrine/estilos-02.jpg" alt="Estilos Sereno e Bold aplicados" loading="lazy"></div>
+      <div class="estilo-showcase-item"><img src="/vitrine/estilos-03.jpg" alt="Estilos Magazine e Botânico aplicados" loading="lazy"></div>
+      <div class="estilo-showcase-item"><img src="/vitrine/estilos-04.jpg" alt="Estilos Clínico e Solar aplicados" loading="lazy"></div>
+      <div class="estilo-showcase-item"><img src="/vitrine/estilos-05.jpg" alt="Estilos Arquitetura e Romântico aplicados" loading="lazy"></div>
+      <div class="estilo-showcase-item"><img src="/vitrine/estilos-06.jpg" alt="Estilos Noir Tech e Inspirador aplicados" loading="lazy"></div>
     </div>
 
     <div class="estilos-rodape">
-      Veja prévias completas de cada estilo em <em>postoproduz.com.br/estilos</em>.
+      Veja os dez estilos completos em <em><a href="/estilos.html" style="color:var(--dourado);text-decoration:none;border-bottom:1px solid rgba(201,168,76,.4);">postoproduz.com.br/estilos</a></em>.
     </div>
   </div>
 </section>
