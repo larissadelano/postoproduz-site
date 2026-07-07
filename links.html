@@ -1,37 +1,231 @@
 <!DOCTYPE html>
-<html lang="pt-BR"><head><meta charset="UTF-8">
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>POSTÔ · Planos e contato</title>
+<title>POSTÔ · A POSTÔ produz. Você posta.</title>
+<meta name="description" content="Um mês inteiro de Instagram, produzido pela POSTÔ. Com as suas fotos, a sua voz, a sua marca. Em 72 horas, no seu Drive.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--preto:#08080C;--carbon:#111118;--creme:#F5F0E8;--dourado:#C9A84C;--sage:#7A9E7E;--line:#2C2C36;--muted:#9E9880;--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif}
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{background:var(--preto)}
-body{font-family:var(--sans);color:var(--creme);min-height:100vh;padding:54px 22px 60px;display:flex;flex-direction:column;align-items:center;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNgYGD4DwABBAEAfbLI3wAAAABJRU5ErkJggg==");background-repeat:repeat}
-.wm{font:700 40px/1 var(--serif);letter-spacing:.04em;color:var(--creme)}
-.rule{width:46px;height:2px;background:var(--dourado);margin:14px 0 10px}
-.tag{font:500 13px/1.5 var(--sans);color:var(--muted);text-align:center;max-width:340px;margin-bottom:30px}
-.col{width:100%;max-width:400px;display:flex;flex-direction:column;gap:12px}
-.sec{font:700 11px/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--dourado);margin:18px 0 2px;text-align:center}
-a.btn{display:block;text-decoration:none;background:var(--carbon);border:1px solid var(--line);border-radius:12px;padding:16px 18px;color:var(--creme);font:600 15px/1.3 var(--sans);text-align:center;transition:border-color .2s}
-a.btn:active{border-color:var(--dourado)}
-a.btn .s{display:block;font-weight:400;font-size:12.5px;color:var(--muted);margin-top:3px}
-a.wpp{border-color:var(--sage)}
-.foot{margin-top:34px;font:600 italic 16px/1.3 var(--serif);color:var(--sage)}
-</style></head><body>
-<div class="wm">POSTÔ</div>
-<div class="rule"></div>
-<div class="tag">O seu mês inteiro de Instagram, pronto em 72 horas. Com a sua voz, as suas fotos e a sua marca.</div>
-<div class="col">
-  <div class="sec">Planos</div>
-  <a class="btn" href="/comprar-essencial.html">POSTÔ Essencial<span class="s">Comece a produzir o seu mês</span></a>
-  <a class="btn" href="/comprar-profissional.html">POSTÔ Profissional<span class="s">Mais conteúdo, mais presença</span></a>
-  <a class="btn" href="/comprar-premium.html">POSTÔ Premium<span class="s">A edição mais completa</span></a>
-  <div class="sec">Contato</div>
-  <a class="btn wpp" href="https://wa.me/5531995708609">Falar com a POSTÔ no WhatsApp<span class="s">(31) 99570-8609</span></a>
-  <div class="sec">Indique e ganhe</div>
-  <a class="btn" href="/indique.html">Programa de indicação POSTÔ<span class="s">10% pra quem indica, 10% pra quem entra</span></a>
+:root {
+  --preto: #08080C;
+  --carbon: #111118;
+  --card: #16161F;
+  --dourado: #C9A84C;
+  --dourado-deep: #8A6820;
+  --creme: #F5F0E8;
+  --soft: #9E9880;
+  --terracota: #C4622D;
+  --sage: #7A9E7E;
+  --line: #2A2A34;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'DM Sans', system-ui, sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--preto);
+  color: var(--creme);
+  font-family: var(--sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  padding: 0 0 48px;
+}
+body::before {
+  content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  background:
+    radial-gradient(ellipse 70% 40% at 50% 0%, rgba(201,168,76,.08), transparent 62%),
+    radial-gradient(ellipse 50% 30% at 85% 20%, rgba(196,98,45,.05), transparent 58%);
+}
+.wrap { max-width: 460px; margin: 0 auto; padding: 0 22px; position: relative; z-index: 1; }
+
+/* ── HERO ── */
+.hero { text-align: center; padding: 52px 0 34px; }
+.brand {
+  font-family: var(--serif); font-weight: 700; font-size: 44px;
+  letter-spacing: 0.18em; color: var(--creme); line-height: 1;
+}
+.rule {
+  width: 60px; height: 1px; margin: 16px auto 14px;
+  background: linear-gradient(90deg, transparent, var(--dourado), transparent);
+}
+.slogan {
+  font-family: var(--serif); font-style: italic; font-size: 17px; color: var(--soft);
+}
+.slogan em { color: var(--dourado); font-style: italic; }
+.lead {
+  font-family: var(--sans); font-weight: 400; font-size: 14.5px;
+  color: var(--creme); opacity: 0.82; margin-top: 22px;
+  max-width: 380px; margin-left: auto; margin-right: auto;
+}
+.lead strong { color: var(--dourado); font-weight: 600; }
+
+/* ── PROVA VISUAL (faixa de artes) ── */
+.prova {
+  margin: 30px 0 8px;
+  display: flex; gap: 8px; overflow: hidden;
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  padding: 14px 0;
+}
+.prova img {
+  width: 84px; height: 105px; object-fit: cover; flex-shrink: 0;
+  border: 1px solid rgba(201,168,76,.2);
+}
+.prova-label {
+  text-align: center; font-family: var(--sans); font-weight: 600;
+  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--soft); margin-bottom: 26px;
+}
+
+/* ── SEÇÃO LABEL ── */
+.sec {
+  font-family: var(--sans); font-weight: 600; font-size: 11px;
+  letter-spacing: 0.26em; text-transform: uppercase; color: var(--dourado);
+  text-align: center; margin: 30px 0 14px;
+}
+
+/* ── PLANOS ── */
+.plano {
+  display: block; text-decoration: none;
+  background: var(--card); border: 1px solid var(--line);
+  border-left: 3px solid var(--dourado);
+  padding: 18px 20px; margin-bottom: 12px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+.plano:hover, .plano:active {
+  border-color: var(--dourado); border-left-color: var(--dourado);
+  transform: translateX(3px);
+}
+.plano-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.plano-nome {
+  font-family: var(--serif); font-weight: 600; font-size: 22px; color: var(--creme);
+  line-height: 1.1;
+}
+.plano-preco {
+  font-family: var(--serif); font-weight: 600; font-size: 20px; color: var(--dourado);
+  white-space: nowrap;
+}
+.plano-desc {
+  font-family: var(--sans); font-weight: 400; font-size: 13px;
+  color: var(--creme); opacity: 0.7; margin-top: 5px;
+}
+.plano-arrow {
+  font-family: var(--sans); font-size: 12px; color: var(--dourado);
+  letter-spacing: 0.1em; margin-top: 8px; font-weight: 600;
+}
+.destaque { border-left-color: var(--terracota); }
+.destaque .plano-nome em { font-style: normal; }
+.badge {
+  position: absolute; top: -9px; right: 16px;
+  background: var(--terracota); color: var(--creme);
+  font-family: var(--sans); font-weight: 700; font-size: 9px;
+  letter-spacing: 0.16em; text-transform: uppercase; padding: 4px 12px;
+}
+
+/* ── BOTÕES SECUNDÁRIOS ── */
+.btn {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  text-decoration: none;
+  background: transparent; border: 1px solid var(--line);
+  padding: 16px 18px; margin-bottom: 11px;
+  color: var(--creme); font-family: var(--sans); font-weight: 600; font-size: 14px;
+  transition: all 0.2s ease; text-align: center;
+}
+.btn:hover, .btn:active { border-color: var(--dourado); }
+.btn .sub {
+  display: block; font-weight: 400; font-size: 12px; color: var(--soft); margin-top: 2px;
+}
+.btn-inner { line-height: 1.35; }
+.btn-wpp { border-color: rgba(122,158,126,.5); }
+.btn-wpp:hover { border-color: var(--sage); }
+
+/* ── FOOTER ── */
+.foot { text-align: center; margin-top: 38px; }
+.foot-slogan {
+  font-family: var(--serif); font-style: italic; font-weight: 600; font-size: 17px;
+  color: var(--dourado);
+}
+.foot-meta {
+  font-family: var(--sans); font-size: 11px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--soft); margin-top: 16px;
+}
+.foot-meta a { color: var(--soft); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="brand">POSTÔ</div>
+    <div class="rule"></div>
+    <div class="slogan">A POSTÔ <em>produz.</em> Você posta.</div>
+    <p class="lead">Um mês inteiro de Instagram, produzido pela POSTÔ. Com as <strong>suas fotos</strong>, a <strong>sua voz</strong>, a <strong>sua marca</strong>. Em 72 horas, no seu Drive.</p>
+  </div>
+
+  <div class="prova">
+    <img src="/vitrine/tati-post-1.jpg" alt="Arte POSTÔ" loading="lazy">
+    <img src="/vitrine/tati-carrossel-2.jpg" alt="Arte POSTÔ" loading="lazy">
+    <img src="/vitrine/tati-post-2.jpg" alt="Arte POSTÔ" loading="lazy">
+    <img src="/vitrine/tati-story-1.jpg" alt="Arte POSTÔ" loading="lazy">
+    <img src="/vitrine/tati-story-2.jpg" alt="Arte POSTÔ" loading="lazy">
+  </div>
+  <div class="prova-label">Peças reais de uma Edição POSTÔ</div>
+
+  <div class="sec">Escolha o seu plano</div>
+
+  <a class="plano" href="/essencial.html">
+    <div class="plano-top">
+      <div class="plano-nome">Studio Essencial</div>
+      <div class="plano-preco">R$ 697</div>
+    </div>
+    <div class="plano-desc">50 peças prontas. Para quem já tem o que dizer e quer aparecer com consistência.</div>
+    <div class="plano-arrow">Ver o que entra →</div>
+  </a>
+
+  <a class="plano destaque" href="/profissional.html">
+    <span class="badge">Mais escolhido</span>
+    <div class="plano-top">
+      <div class="plano-nome">Studio Profissional</div>
+      <div class="plano-preco">R$ 1.197</div>
+    </div>
+    <div class="plano-desc">76 peças prontas. Presença constante, com mais carrosséis, stories e Reels.</div>
+    <div class="plano-arrow">Ver o que entra →</div>
+  </a>
+
+  <a class="plano" href="/premium.html">
+    <div class="plano-top">
+      <div class="plano-nome">Studio Premium IA</div>
+      <div class="plano-preco">R$ 1.997</div>
+    </div>
+    <div class="plano-desc">107 peças + 30 fotos suas geradas por IA. A Edição mais completa, sem sessão de fotos.</div>
+    <div class="plano-arrow">Ver o que entra →</div>
+  </a>
+
+  <div class="sec">Conhecer antes</div>
+
+  <a class="btn" href="/estilos.html">
+    <div class="btn-inner">Os 10 estilos visuais<span class="sub">Veja cada estilo aplicado em marcas reais</span></div>
+  </a>
+
+  <a class="btn btn-wpp" href="https://wa.me/5531995708609">
+    <div class="btn-inner">Falar com a POSTÔ no WhatsApp<span class="sub">(31) 99570-8609 · tire suas dúvidas</span></div>
+  </a>
+
+  <a class="btn" href="/indique.html">
+    <div class="btn-inner">Indique e ganhe<span class="sub">10% pra quem indica, 10% de desconto pra quem entra</span></div>
+  </a>
+
+  <div class="foot">
+    <div class="foot-slogan">A POSTÔ produz. Você posta.</div>
+    <div class="foot-meta">
+      <a href="https://instagram.com/postoproduz">@postoproduz</a> · postoproduz.com.br
+    </div>
+  </div>
+
 </div>
-<div class="foot">A POSTÔ produz. Você posta.</div>
-</body></html>
+</body>
+</html>
