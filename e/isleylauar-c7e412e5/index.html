@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Edição Julho · Isley Lauar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--deep:#0F0F0F;--deep-2:#0C0C0C;--surface:#F5F2EE;--surface-2:#FFFFFF;--accent:#FFFFFF;--accent-2:#1C1C1C;
+--ink:#1C1C1C;--ink-soft:#494949;--cream:#F3F1EA;--cream-soft:rgba(243,241,234,.62);--line:rgba(20,25,22,.12);
+--radius:18px;--shadow:0 1px 2px rgba(20,30,26,.04),0 8px 30px rgba(20,30,26,.07);
+--serif:'Cormorant Garamond', 'Cormorant Garamond', Georgia, serif;--sans:'DM Sans', 'DM Sans', -apple-system, sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--deep);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+.app{max-width:460px;margin:0 auto;background:var(--deep);min-height:100vh;position:relative;overflow:hidden}
+.brandbar{background:var(--deep);display:flex;align-items:center;justify-content:center;padding:22px 26px 4px}
+.brandbar .wm{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.55rem;letter-spacing:.22em;color:var(--cream)}
+.brandbar .wm i{color:var(--accent);font-style:normal}
+.hero{padding:38px 26px 40px;position:relative;background:radial-gradient(120% 90% at 80% 0%, #131313 0%, var(--deep) 55%)}
+.hero .eyebrow{font-size:.66rem;letter-spacing:.34em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:22px}
+.hero .mark{width:30px;height:1px;background:var(--accent);opacity:.6;margin-bottom:22px}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:2.5rem;line-height:1.06;color:var(--cream)}
+.hero .positioning{margin-top:14px;font-family:var(--serif);font-weight:500;font-size:1.24rem;line-height:1.34;color:var(--cream);max-width:340px}
+.hero .role{margin-top:14px;font-size:.86rem;color:var(--cream-soft)}
+.hero .role b{color:var(--cream);font-weight:500}
+.hero .month{margin-top:26px;display:inline-flex;align-items:center;gap:10px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cream);border:1px solid rgba(255,255,255,.28);padding:9px 16px;border-radius:100px}
+.hero .month i{width:5px;height:5px;border-radius:50%;background:var(--accent)}
+.hero .welcome{margin-top:24px;font-family:var(--serif);font-style:italic;font-size:1.22rem;line-height:1.4;color:var(--cream);max-width:330px}
+.howto{background:var(--deep-2);padding:22px 26px;display:flex;flex-direction:column;gap:14px}
+.howto .step{display:flex;gap:13px}
+.howto .n{font-family:var(--serif);font-size:1.1rem;color:var(--accent);width:18px;flex-shrink:0;font-weight:600}
+.howto .t{font-size:.82rem;color:var(--cream-soft);line-height:1.45}
+.howto .t b{color:var(--cream);font-weight:600}
+.howto .dlpdf{margin-top:8px;display:flex;align-items:center;justify-content:center;gap:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.24);border-radius:12px;padding:14px;color:var(--cream);text-decoration:none;font-size:.82rem;font-weight:600}
+.howto .dlpdf svg{width:17px;height:17px;stroke:var(--accent)}
+.body{background:var(--surface);border-radius:26px 26px 0 0;padding:34px 0 0;margin-top:-12px;position:relative;z-index:2}
+.section-label{padding:0 26px;display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.section-label .bar{height:1px;flex:1;background:var(--line)}
+.section-label span{font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;white-space:nowrap}
+.agenda{padding:0 26px 6px}
+.agenda .row{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.agenda .row:last-child{border-bottom:none}
+.agenda .when{width:64px;flex-shrink:0}
+.agenda .when .d{font-family:var(--serif);font-size:1.5rem;font-weight:600;line-height:1}
+.agenda .when .m{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-top:3px}
+.agenda .what{flex:1}
+.agenda .what .tipo{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-2);font-weight:700;margin-bottom:3px}
+.agenda .what .ttl{font-size:.9rem;font-weight:500;line-height:1.3}
+.agenda .what .hr{font-size:.72rem;color:var(--ink-soft);margin-top:3px}
+.agenda-note{padding:14px 26px 0;color:var(--ink-soft);font-style:italic;font-family:var(--serif);font-size:.95rem}
+.feed{padding:30px 18px 10px;display:flex;flex-direction:column;gap:26px}
+.card{background:var(--surface-2);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.card-head{padding:18px 20px 0;display:flex;align-items:center;justify-content:space-between}
+.badge{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;padding:6px 11px;border-radius:100px}
+.badge.feed-b,.badge.story-b{background:rgba(0,0,0,.05);color:var(--accent-2)}
+.badge.carr-b{background:rgba(0,0,0,.05);color:var(--accent)}
+.badge.reel-b{background:rgba(0,0,0,.06);color:var(--deep)}
+.card-head .num{font-family:var(--serif);font-size:1rem;color:var(--ink-soft)}
+.card-title{padding:12px 20px 0;font-family:var(--serif);font-weight:600;font-size:1.42rem;line-height:1.18}
+.art-wrap{padding:16px 20px 4px}
+.art-frame{position:relative;border-radius:12px;overflow:hidden;box-shadow:0 6px 22px rgba(20,30,26,.16);background:var(--deep-2)}
+.art-45{aspect-ratio:4/5}
+.art-916{aspect-ratio:9/16;max-width:230px;margin:0 auto}
+.art-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.art-pend{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--cream-soft);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase}
+.save-hint{display:flex;align-items:center;gap:10px;justify-content:center;margin-top:11px;flex-wrap:wrap}
+.save-hint a{font-size:.72rem;color:var(--accent-2);font-weight:600;display:inline-flex;align-items:center;gap:6px;text-decoration:none;padding:6px}
+.save-hint svg{width:14px;height:14px}
+.save-hint span{font-size:.68rem;color:var(--ink-soft)}
+.slides-scroll{display:flex;gap:9px;overflow-x:auto;padding:12px 20px 2px;-webkit-overflow-scrolling:touch}
+.slides-scroll img{height:150px;border-radius:9px;box-shadow:0 4px 14px rgba(20,30,26,.14);display:block}
+.strip-note{padding:8px 20px 0;font-size:.7rem;color:var(--ink-soft)}
+.copy-block{padding:16px 20px 6px}
+.copy-block .cb-label{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);font-weight:700;margin-bottom:9px}
+.copy-text{font-size:.92rem;line-height:1.6;white-space:pre-line}
+.copy-text.roteiro{font-size:.86rem;line-height:1.7}
+.copy-btn{margin-top:13px;width:100%;display:flex;align-items:center;justify-content:center;gap:9px;background:var(--deep);color:var(--cream);border:none;border-radius:11px;padding:14px;font-family:var(--sans);font-size:.82rem;font-weight:600;cursor:pointer;transition:transform .12s ease}
+.copy-btn:active{transform:scale(.985)}
+.copy-btn.done{background:var(--accent-2)}
+.copy-btn svg{width:16px;height:16px;flex-shrink:0}
+.copy-block + .copy-block{padding-top:8px}
+.rl-meta{display:flex;flex-wrap:wrap;gap:8px;padding:14px 20px 2px}
+.rl-chip{font-size:.7rem;color:var(--ink-soft);background:var(--surface);border:1px solid var(--line);border-radius:100px;padding:6px 12px;line-height:1.3}
+.rl-chip b{color:var(--accent-2);font-weight:700;letter-spacing:.03em;margin-right:5px}
+.rl-tag{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);font-weight:700;margin-bottom:6px}
+.rl-gancho{margin:14px 20px 0;padding:14px 16px;background:var(--surface);border-left:3px solid var(--accent);border-radius:0 10px 10px 0}
+.rl-gancho p{font-family:var(--serif);font-size:1.06rem;line-height:1.35;color:var(--ink)}
+.rl-story{padding:16px 20px 4px}
+.rl-story-h{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:12px}
+.rl-cena{display:flex;gap:12px;padding:11px 0;border-top:1px solid var(--line)}
+.rl-cena:first-of-type{border-top:none;padding-top:2px}
+.rl-n{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--deep);color:var(--cream);font-family:var(--serif);font-weight:600;font-size:.92rem;display:flex;align-items:center;justify-content:center}
+.rl-cena-b{flex:1}
+.rl-cena-b p{font-size:.9rem;line-height:1.55}
+.rl-foto{margin-top:10px;display:flex;align-items:center;gap:10px}
+.rl-foto img{width:64px;height:84px;object-fit:cover;border-radius:8px;box-shadow:var(--shadow)}
+.rl-foto span{font-size:.68rem;color:var(--ink-soft);font-style:italic;font-family:var(--serif)}
+.rl-fech{margin:8px 20px 2px;padding:14px 16px;background:var(--surface);border-left:3px solid var(--accent-2);border-radius:0 10px 10px 0}
+.rl-fech p{font-size:.92rem;line-height:1.5;color:var(--ink)}
+.rl-video{padding:14px 20px 4px}
+.rl-video video{width:100%;border-radius:14px;display:block;background:#000;aspect-ratio:9/16;object-fit:cover;box-shadow:var(--shadow)}
+.rl-dl{display:inline-block;margin-top:10px;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-2);text-decoration:none;border:1px solid var(--line);border-radius:100px;padding:8px 16px}
+.card-foot{height:18px}
+.pro-bloco{padding:0 26px}
+.diag{font-size:.92rem;line-height:1.65;white-space:pre-line}
+.refs{margin-top:16px;display:flex;flex-direction:column;gap:10px}
+.ref{background:var(--surface-2);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)}
+.ref-n{font-weight:700;font-size:.88rem;color:var(--accent-2)}
+.ref-o{font-size:.8rem;color:var(--ink-soft);margin-top:4px;line-height:1.5}
+.ia-grid{padding:0 18px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ia-grid img{width:100%;border-radius:10px;display:block;box-shadow:var(--shadow)}
+.guia{background:var(--deep);padding:40px 26px 30px;margin-top:34px}
+.guia .gl{font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:8px}
+.guia h2{font-family:var(--serif);font-weight:600;font-size:1.85rem;color:var(--cream);line-height:1.1;margin-bottom:8px}
+.guia .gsub{font-size:.86rem;color:var(--cream-soft);line-height:1.6;margin-bottom:18px}
+.guia .pdf{margin-top:10px;display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:15px 16px;color:var(--cream);text-decoration:none}
+.guia .pdf svg{width:22px;height:22px;flex-shrink:0;stroke:var(--accent)}
+.guia .pdf .pt{font-size:.86rem;font-weight:600}
+.guia .pdf .ps{font-size:.72rem;color:var(--cream-soft);margin-top:2px}
+.foot{background:var(--deep-2);padding:34px 26px 46px;text-align:center}
+.foot .logo{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.3rem;letter-spacing:.06em;color:var(--cream)}
+.foot .tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.92rem;color:var(--cream-soft);margin-top:6px}
+.foot .ct{margin-top:18px;font-size:.72rem;color:var(--cream-soft);letter-spacing:.04em}
+.foot .gold{height:1px;width:36px;background:var(--accent);margin:20px auto 0}
+.toast{position:fixed;left:50%;bottom:30px;transform:translateX(-50%) translateY(20px);background:#14110D;color:#fff;padding:13px 22px;border-radius:100px;font-size:.84rem;font-weight:500;box-shadow:0 10px 34px rgba(0,0,0,.3);opacity:0;pointer-events:none;transition:all .3s cubic-bezier(.2,.8,.2,1);z-index:50;display:flex;align-items:center;gap:9px}
+.toast svg{width:16px;height:16px;stroke:var(--accent)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.card,.agenda,.guia,.howto{animation:rise .6s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@page{size:A4;margin:14mm 12mm}
+@media print{
+  html,body{background:#fff!important}
+  .app{max-width:none;box-shadow:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact;color-adjust:exact;animation:none!important;transition:none!important}
+  .copy-btn,.toast,.dlpdf,.save-hint,.rl-dl,.strip-note{display:none!important}
+  .card,.agenda .row,.rl-cena,.ref{break-inside:avoid;page-break-inside:avoid}
+  .card{box-shadow:none;border:1px solid var(--line)}
+  .section-label,.card-title,.rl-story-h,.rl-tag{break-after:avoid;page-break-after:avoid}
+  .guia{break-before:page;page-break-before:always}
+  .art-frame{max-height:78vh}
+  .slides-scroll{flex-wrap:wrap;overflow:visible}
+  .slides-scroll img{height:auto;width:31%}
+  img{max-width:100%}
+  .copy-text,.diag,.rl-cena-b p,.rl-gancho p{orphans:3;widows:3}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="brandbar"><span class="wm">POST<i>Ô</i></span></div>
+  <header class="hero">
+    <div class="eyebrow">Edição Julho</div>
+    <div class="mark"></div>
+    <h1>Isley<br>Lauar</h1>
+    <p class="positioning">Sou fisioterapeuta há 25 anos e criadora do Sistema I-Cross. Aplico o Pilates contemporâneo à corrida para construir força, estabilidade e uma passada sem lesão.</p>
+    <div class="role">Fisioterapeuta e instrutora de Pilates contemporâneo aplicado à corrida · <b>@isleylauar</b></div>
+    <div class="month"><i></i>30 dias de conteúdo · 10 publicações</div>
+    <p class="welcome">Os seus próximos 30 dias estão prontos. Copie, salve e publique no seu ritmo.</p>
+  </header>
+      <section style="padding:0 28px;margin:22px 0 6px"><div style="border:1px solid var(--line);border-radius:var(--radius);padding:20px;background:var(--surface);text-align:center"><div style="font:600 13px/1 var(--sans);letter-spacing:.24em;color:var(--accent);text-transform:uppercase;margin-bottom:6px">SEUS REELS</div><div style="font:600 22px/1.3 var(--serif);color:var(--ink);margin-bottom:16px">10 reels-video, prontos pra postar.</div><div style="margin:0 auto 18px;max-width:340px"><div style="font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.7;margin:0 0 8px">Reel com os seus vídeos</div><video src="https://postoproduz.com.br/e/isleylauar-c7e412e5/reel-video.mp4" controls playsinline preload="metadata" style="width:100%;display:block;border-radius:14px;background:#000"></video></div><div style="margin:0 auto 18px;max-width:340px"><video src="https://postoproduz.com.br/e/isleylauar-c7e412e5/reel-01.mp4" controls playsinline preload="metadata" style="width:100%;display:block;border-radius:var(--radius);background:#000"></video><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/reel-01.mp4" download style="display:inline-block;margin-top:8px;font:600 13px/1 var(--sans);color:var(--accent);text-decoration:none">Baixar Reel 01</a></div><div style="margin:0 auto 18px;max-width:340px"><video src="https://postoproduz.com.br/e/isleylauar-c7e412e5/reel-02.mp4" controls playsinline preload="metadata" style="width:100%;display:block;border-radius:var(--radius);background:#000"></video><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/reel-02.mp4" download style="display:inline-block;margin-top:8px;font:600 13px/1 var(--sans);color:var(--accent);text-decoration:none">Baixar Reel 02</a></div><div style="margin:0 auto 18px;max-width:340px"><video src="https://postoproduz.com.br/e/isleylauar-c7e412e5/reel-03.mp4" controls playsinline preload="metadata" style="width:100%;display:block;border-radius:var(--radius);background:#000"></video><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/reel-03.mp4" download style="display:inline-block;margin-top:8px;font:600 13px/1 var(--sans);color:var(--accent);text-decoration:none">Baixar Reel 03</a></div><div style="margin:0 auto 18px;max-width:340px"><video src="https://postoproduz.com.br/e/isleylauar-c7e412e5/reel-04.mp4" controls playsinline preload="metadata" style="width:100%;display:block;border-radius:var(--radius);background:#000"></video><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/reel-04.mp4" download style="display:inline-block;margin-top:8px;font:600 13px/1 var(--sans);color:var(--accent);text-decoration:none">Baixar Reel 04</a></div><div style="margin:0 auto 18px;max-width:340px"><video src="https://postoproduz.com.br/e/isleylauar-c7e412e5/reel-05.mp4" controls playsinline preload="metadata" style="width:100%;display:block;border-radius:var(--radius);background:#000"></video><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/reel-05.mp4" download style="display:inline-block;margin-top:8px;font:600 13px/1 var(--sans);color:var(--accent);text-decoration:none">Baixar Reel 05</a></div><div style="margin:0 auto 18px;max-width:340px"><video src="https://postoproduz.com.br/e/isleylauar-c7e412e5/reel-06.mp4" controls playsinline preload="metadata" style="width:100%;display:block;border-radius:var(--radius);background:#000"></video><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/reel-06.mp4" download style="display:inline-block;margin-top:8px;font:600 13px/1 var(--sans);color:var(--accent);text-decoration:none">Baixar Reel 06</a></div><div style="margin:0 auto 18px;max-width:340px"><video src="https://postoproduz.com.br/e/isleylauar-c7e412e5/reel-07.mp4" controls playsinline preload="metadata" style="width:100%;display:block;border-radius:var(--radius);background:#000"></video><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/reel-07.mp4" download style="display:inline-block;margin-top:8px;font:600 13px/1 var(--sans);color:var(--accent);text-decoration:none">Baixar Reel 07</a></div><div style="margin:0 auto 18px;max-width:340px"><video src="https://postoproduz.com.br/e/isleylauar-c7e412e5/reel-08.mp4" controls playsinline preload="metadata" style="width:100%;display:block;border-radius:var(--radius);background:#000"></video><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/reel-08.mp4" download style="display:inline-block;margin-top:8px;font:600 13px/1 var(--sans);color:var(--accent);text-decoration:none">Baixar Reel 08</a></div><div style="margin:0 auto 18px;max-width:340px"><video src="https://postoproduz.com.br/e/isleylauar-c7e412e5/reel-09.mp4" controls playsinline preload="metadata" style="width:100%;display:block;border-radius:var(--radius);background:#000"></video><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/reel-09.mp4" download style="display:inline-block;margin-top:8px;font:600 13px/1 var(--sans);color:var(--accent);text-decoration:none">Baixar Reel 09</a></div><div style="margin:0 auto 18px;max-width:340px"><video src="https://postoproduz.com.br/e/isleylauar-c7e412e5/reel-10.mp4" controls playsinline preload="metadata" style="width:100%;display:block;border-radius:var(--radius);background:#000"></video><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/reel-10.mp4" download style="display:inline-block;margin-top:8px;font:600 13px/1 var(--sans);color:var(--accent);text-decoration:none">Baixar Reel 10</a></div></div></section>
+  <div class="howto">
+    <div class="step"><div class="n">1</div><div class="t"><b>Toque em copiar</b> e a legenda vai direto para a área de transferência. Cole no Instagram.</div></div>
+    <div class="step"><div class="n">2</div><div class="t"><b>Toque em salvar</b> (ou segure a imagem) para guardar a arte no seu celular.</div></div>
+    <div class="step"><div class="n">3</div><div class="t"><b>Siga a sequência</b> abaixo para publicar nos melhores dias.</div></div>
+    <a class="dlpdf" href="https://postoproduz.com.br/e/isleylauar-c7e412e5/edicao.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Baixar a Edição completa em PDF</a>
+  </div>
+  <div class="body">
+    <div class="section-label"><span>Sequência dos 30 dias</span><div class="bar"></div></div>
+    <div class="agenda">
+      <div class="row"><div class="when"><div class="d">12</div><div class="m">Dom</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">A dor não começa no joelho</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">15</div><div class="m">Qua</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Sua lombar está falando</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">18</div><div class="m">Sáb</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Seu core funciona na corrida?</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">22</div><div class="m">Qua</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Pilates generico nao resolve</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">25</div><div class="m">Sáb</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">3 perguntas que mudam tudo</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">28</div><div class="m">Ter</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Passada eficiente e para voce</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">31</div><div class="m">Sex</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">25 anos ensinaram isso</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">04</div><div class="m">Ter</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Por que a primeira turma e agora</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">07</div><div class="m">Sex</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">O que o quadril faz no km 15</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">10</div><div class="m">Seg</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Curso Pilates para Corredores</div><div class="hr">Melhor horário · 19h</div></div></div>
+    </div>
+    <p class="agenda-note">Horários e ordem detalhados no seu Guia de Uso.</p>
+    <div class="section-label" style="margin-top:34px"><span>Referências do seu nicho</span><div class="bar"></div></div><div class="pro-bloco"><div class="refs"><div class="ref"><div class="ref-n">@vollpilatesgroup</div></div><div class="ref"><div class="ref-n">@rafael.voll</div></div><div class="ref"><div class="ref-n">@thalyssalarangeiras</div></div><div class="ref"><div class="ref-n">@drawalkyria_fernandes</div></div></div></div>
+    
+    <div class="section-label" style="margin-top:34px"><span>O seu conteúdo</span><div class="bar"></div></div>
+    <div class="feed">
+      
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">01</span></div><h3 class="card-title">A dor não começa no joelho</h3><div class="art-wrap"><div class="art-frame art-916"><div class="art-pend">Arte em produção</div></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>A dor no joelho do corredor não começa no joelho. Começa antes.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c1">A dor no joelho do corredor não começa no joelho.
+
+Começa antes — na forma como o quadril estabiliza cada passada. Ou deixa de estabilizar.
+
+Quando o quadril cede, o joelho absorve o impacto que não era pra ele. O tornozelo desvia. A lombar segura o resto. A dor aparece em um lugar, mas a origem estava em outro desde a primeira passada.
+
+É exatamente esse encadeamento que a avaliação do padrão de movimento identifica — antes de prescrever qualquer exercício.
+
+Não é sobre tratar o sintoma. É sobre entender o que o corpo está tentando compensar.
+
+Onde você sente a dor depois de uma corrida mais longa?</div><button class="copy-btn" data-src="c1" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">02</span></div><h3 class="card-title">Sua lombar está falando</h3><div class="art-wrap"><div class="art-frame art-916"><div class="art-pend">Arte em produção</div></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Dor lombar depois de correr não é sinal de que você correu demais. É dado.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c2">Dor lombar depois de correr não é sinal de que você correu demais.
+
+É dado.
+
+A lombar é um dos primeiros lugares a avisar quando o core não está sustentando o movimento como deveria. Nos primeiros quilômetros, o corpo aguenta. Depois que a fadiga chega, o padrão se revela — e a lombar assume o que a musculatura profunda do tronco deixou de fazer.
+
+Esse é um dos padrões mais recorrentes que vejo em corredores amadores depois de 25 anos de prática clínica.
+
+Não é falta de descanso. Não é exagero de volume. É organização do movimento.
+
+E organização se treina.
+
+Você sente essa dor em qual momento da corrida — logo no início ou só quando o cansaço bate?</div><button class="copy-btn" data-src="c2" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">03</span></div><h3 class="card-title">Seu core funciona na corrida?</h3><div class="art-wrap"><div class="art-frame art-916"><div class="art-pend">Arte em produção</div></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Você treina o core. Mas treina o core de quem está parado ou o core de quem corre?</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c3">Você treina o core. Mas treina o core de quem está parado — ou o core de quem corre?
+
+Essa pergunta muda tudo.
+
+Estabilizar o tronco no mat é uma habilidade. Estabilizar o tronco enquanto o pé bate no chão a cada passada, com fadiga, velocidade e impacto acumulado — é outra.
+
+A corrida não perdoa core que só funciona em repouso. Nos quilômetros finais, o padrão se revela: a postura desaba, a passada perde eficiência, a lombar começa a avisar.
+
+O Pilates contemporâneo aplicado à corrida não treina o core para a foto. Treina para o quilômetro 18.
+
+É para isso que o Sistema I-Cross foi construído.
+
+Qual é o quilômetro em que você sente que o corpo começa a desorganizar?</div><button class="copy-btn" data-src="c3" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">04</span></div><h3 class="card-title">Pilates generico nao resolve</h3><div class="art-wrap"><div class="art-frame art-916"><div class="art-pend">Arte em produção</div></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Pilates resolve lesão de corredor. Mas só quando o Pilates foi pensado para corredor.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c4">Pilates resolve lesão de corredor.
+
+Mas só quando o Pilates foi pensado para corredor.
+
+Essa distinção importa — porque o mercado está cheio de corredores que já fazem Pilates, continuam se machucando e chegam ao consultório sem entender por quê.
+
+A resposta quase sempre é a mesma: o trabalho é bom, mas não conversa com o gesto da corrida. Mobilidade de quadril em posição estática é diferente de estabilidade de quadril sob impacto. Respiração no mat é diferente de respiração no ritmo de prova.
+
+O Pilates contemporâneo aplicado à corrida começa pela avaliação do padrão de movimento. Entende onde o corpo está limitado, o que ele compensa e o que precisa ser construído para que a corrida deixe de ser um risco.
+
+Não é Pilates com tema de corrida. É Pilates com raciocínio clínico de corrida.
+
+Você já tentou Pilates e sentiu que o resultado não apareceu na pista?</div><button class="copy-btn" data-src="c4" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">05</span></div><h3 class="card-title">3 perguntas que mudam tudo</h3><div class="art-wrap"><div class="art-frame art-916"><div class="art-pend">Arte em produção</div></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Antes de qualquer exercício, faço três perguntas. Elas definem tudo o que vem depois.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c5">Antes de qualquer exercício, faço três perguntas para todo corredor que chega.
+
+Primeira: em qual quilômetro a dor aparece? Não onde — quando. Isso me diz se o problema é estrutural ou de fadiga. São lógicas diferentes e pedem respostas diferentes.
+
+Segunda: a dor persiste depois da corrida ou passa rápido? A velocidade de recuperação diz muito sobre o padrão de movimento e sobre o quanto o corpo ainda tem de reserva adaptativa.
+
+Terceira: você já parou por lesão e voltou com a dor no mesmo lugar? Se sim, o sintoma foi tratado — mas o padrão que gerou a lesão nunca foi.
+
+25 anos de prática clínica me ensinaram que as respostas a essas três perguntas constroem um mapa mais preciso do que qualquer protocolo genérico.
+
+O exercício certo na lógica errada não resolve. Começa pelo entendimento.
+
+Qual das três perguntas descreveu a sua situação?</div><button class="copy-btn" data-src="c5" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">06</span></div><h3 class="card-title">Passada eficiente e para voce</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-06-Capa.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-06-Capa.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Eficiência de passada não é para corredor de elite. É para qualquer pessoa que quer durar na corrida.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c6">Eficiência de passada não é para corredor de elite.
+
+É para qualquer pessoa que quer durar na corrida.
+
+A crença de que biomecânica é assunto de atleta profissional custa caro para o corredor amador. Custa joelho, quadril, lombar — e temporadas inteiras interrompidas por lesão que tinha solução.
+
+Passada eficiente não é técnica de alta performance inacessível. É entender o que o quadril faz em cada impacto, o que o core sustenta quando o cansaço bate e onde o corpo está compensando o que deveria estar trabalhando.
+
+Isso se treina. Com método. Com avaliação. Com progressão.
+
+O Pilates contemporâneo aplicado à corrida foi desenvolvido exatamente para construir essa base no corredor amador — aquele que treina de madrugada, paga a própria inscrição na prova e não tem equipe de suporte.
+
+Correr melhor não é correr mais rápido. É correr com mais inteligência de movimento.
+
+Em qual aspecto da sua corrida você sente mais que ainda falta essa base?</div><button class="copy-btn" data-src="c6" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">07</span></div><h3 class="card-title">25 anos ensinaram isso</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-07-Capa.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-07-Capa.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>25 anos de prática clínica ensinam uma coisa que nenhum livro cobre direito.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c7">25 anos de prática clínica ensinam uma coisa que nenhum livro cobre direito.
+
+O corpo do corredor não falha de forma genérica.
+
+Cada lesão tem uma história de movimento por trás. E quase sempre essa história começou bem antes da dor aparecer — em passadas acumuladas com um padrão que ninguém avaliou, em volume aumentado sem a base que esse volume exigia, em sintomas tratados sem que a origem fosse tocada.
+
+Os três padrões mais recorrentes que observei ao longo desses anos:
+
+Corretor que fortalece a musculatura superficial e abandona o trabalho profundo.
+Corretor que aumenta carga sem construir estabilidade primeiro.
+Corretor que trata o sintoma, melhora, volta para a pista e repete o ciclo.
+
+Não é falta de esforço. É falta de informação sobre o próprio padrão de movimento.
+
+Foi essa escuta que moldou o Sistema I-Cross. Não como teoria — como consequência do que aprendi observando pessoas reais se moverem por 25 anos.
+
+Qual desses três padrões mais se parece com a sua história?</div><button class="copy-btn" data-src="c7" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">08</span></div><h3 class="card-title">Por que a primeira turma e agora</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-08-Capa.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-08-Capa.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Esse curso poderia ter existido antes. Mas só faz sentido agora.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c8">Esse curso poderia ter existido antes.
+
+Mas só faz sentido agora.
+
+25 anos de prática clínica constroem algo que não tem atalho: a capacidade de reconhecer padrões. De entender, antes mesmo do exame, onde o corpo está cedendo e por quê.
+
+O Curso Pilates para Corredores nasce dessa acumulação. Não como mais uma formação sobre Pilates — como um espaço específico para o corredor amador que treina com seriedade, sente dor recorrente e ainda não encontrou um trabalho que olhe para o movimento dele com profundidade clínica.
+
+Três dias intensivos. Força, estabilidade de quadril, core e passada eficiente — com base no Sistema I-Cross.
+
+A primeira turma acontece em agosto. É o início de algo que foi amadurecido no tempo certo.
+
+Se você está nesse lugar — treinando, sentindo dor, buscando uma solução que dure — essa turma foi feita para você.</div><button class="copy-btn" data-src="c8" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">09</span></div><h3 class="card-title">O que o quadril faz no km 15</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-09-Capa.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-09-Capa.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>No quilômetro 15, o seu quadril já não é o mesmo do quilômetro 1.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c9">No quilômetro 15, o seu quadril já não é o mesmo do quilômetro 1.
+
+Os estabilizadores de quadril estão entre os primeiros grupos musculares a entrar em fadiga durante uma corrida longa. Quando eles cedem — e cedem gradualmente, não de uma vez — o padrão de passada começa a mudar.
+
+A pelve oscila. O joelho vai para dentro. O pé busca outro apoio. Cada passada a partir dali é uma passada com compensação.
+
+Compensação acumulada é lesão em formação.
+
+O corredor que chega no quilômetro 20 com dor no joelho ou no quadril quase sempre não entendeu o que aconteceu nos quilômetros anteriores. O problema começa antes. Muito antes da dor.
+
+O trabalho de estabilidade de quadril com base na biomecânica da corrida prepara o corpo para esse momento específico — não para a foto do treino, mas para o quilômetro em que o cansaço testa tudo que foi construído.
+
+Em qual quilômetro você percebe que o corpo começa a mudar o padrão?</div><button class="copy-btn" data-src="c9" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">10</span></div><h3 class="card-title">Curso Pilates para Corredores</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-10-Capa.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-10-Capa.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Se você corre e sente que o corpo está sempre um passo atrás do treino, o que vou dizer agora é para você.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c10">Se você corre e sente que o corpo está sempre um passo atrás do treino — esse curso foi feito para você.
+
+Curso Pilates para Corredores — primeira turma.
+21, 22 e 23 de agosto de 2026.
+
+Três dias de formação intensiva com base no Sistema I-Cross: força, estabilidade de quadril, core e eficiência de passada — construídos sobre avaliação individual do padrão de movimento.
+
+Não é Pilates com tema de corrida. É um raciocínio clínico aplicado ao gesto da corrida. O mesmo que uso há 25 anos no consultório, agora em formato de curso.
+
+Para quem é:
+Corretor amador de 30 a 50 anos que treina de 5 km a 42 km, sente dores recorrentes em joelho, quadril ou lombar e quer uma solução que dure mais do que uma temporada.
+
+Condição de pré-matrícula para os 10 primeiros inscritos:
+20% de desconto + avaliação individual do padrão de movimento (presencial ou por vídeo).
+
+As vagas são limitadas porque o trabalho é individual. Essa lógica não muda.
+
+Se você reconheceu a própria história ao longo desse mês, o próximo passo está no link da bio.</div><button class="copy-btn" data-src="c10" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      
+      
+    </div>
+  </div>
+  <section class="guia">
+    <div class="gl">Guia de Uso POSTÔ</div>
+    <h2>Como tirar o máximo dos seus 30 dias</h2>
+    <p class="gsub">Melhores horários do seu nicho, sequência ideal, frequência e como gravar os Reels com os roteiros: está tudo no seu Guia, entregue junto desta Edição.</p>
+    <a class="pdf" href="./guia/"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg><div><div class="pt">Guia de Uso POSTÔ</div><div class="ps">Abrir o guia completo · salvar em PDF</div></div></a>
+  </section>
+  <footer class="foot">
+    <div class="logo">POSTÔ</div>
+    <div class="tag">A POSTÔ produz. Você posta.</div>
+    <div class="gold"></div>
+    <div class="ct">Dúvidas? contato@postoproduz.com.br</div>
+  </footer>
+</div>
+<div class="toast" id="toast"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span id="toast-msg">Copiado</span></div>
+<script>
+function showToast(m){var t=document.getElementById('toast');document.getElementById('toast-msg').textContent=m;t.classList.add('show');clearTimeout(window._tt);window._tt=setTimeout(function(){t.classList.remove('show')},1900)}
+function selectText(el){try{var r=document.createRange();r.selectNodeContents(el);var s=window.getSelection();s.removeAllRanges();s.addRange(r)}catch(e){}}
+function doCopy(text){if(navigator.clipboard&&window.isSecureContext){return navigator.clipboard.writeText(text)}
+return new Promise(function(res,rej){try{var ta=document.createElement('textarea');ta.value=text;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.focus();ta.select();ta.setSelectionRange(0,text.length);var ok=document.execCommand('copy');document.body.removeChild(ta);ok?res():rej()}catch(e){rej(e)}})}
+function copyFrom(btn){var el=document.getElementById(btn.getAttribute('data-src'));var text=el.innerText.trim();var icon=btn.querySelector('svg').outerHTML;
+doCopy(text).then(function(){var o=btn.innerHTML;btn.classList.add('done');btn.innerHTML=icon+'Copiado ✓';showToast(btn.getAttribute('data-tipo')+' · cole no Instagram');setTimeout(function(){btn.classList.remove('done');btn.innerHTML=o},2100)}).catch(function(){selectText(el);showToast('Texto selecionado · toque, segure e escolha Copiar')})}
+</script>
+</body>
+</html>
