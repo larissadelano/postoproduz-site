@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--deep:#0E0E0E;--deep-2:#0B0B0B;--surface:#F5F2ED;--surface-2:#FFFFFF;--accent:#E8D5A3;--accent-2:#C6A96B;
---ink:#2B2B2B;--ink-soft:#707070;--cream:#F3F1EA;--cream-soft:rgba(243,241,234,.62);--line:rgba(20,25,22,.12);
+:root{--deep:#0D0D0D;--deep-2:#0B0B0B;--surface:#F5F2ED;--surface-2:#FFFFFF;--accent:#FFFFFF;--accent-2:#1C1C1C;
+--ink:#1C1C1C;--ink-soft:#494949;--cream:#F3F1EA;--cream-soft:rgba(243,241,234,.62);--line:rgba(20,25,22,.12);
 --radius:18px;--shadow:0 1px 2px rgba(20,30,26,.04),0 8px 30px rgba(20,30,26,.07);
 --serif:'Cormorant Garamond', 'Cormorant Garamond', Georgia, serif;--sans:'DM Sans', 'DM Sans', -apple-system, sans-serif}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -20,7 +20,7 @@ body{font-family:var(--sans);background:var(--deep);color:var(--ink);line-height
 .brandbar{background:var(--deep);display:flex;align-items:center;justify-content:center;padding:22px 26px 4px}
 .brandbar .wm{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.55rem;letter-spacing:.22em;color:var(--cream)}
 .brandbar .wm i{color:var(--accent);font-style:normal}
-.hero{padding:38px 26px 40px;position:relative;background:radial-gradient(120% 90% at 80% 0%, #121212 0%, var(--deep) 55%)}
+.hero{padding:38px 26px 40px;position:relative;background:radial-gradient(120% 90% at 80% 0%, #111111 0%, var(--deep) 55%)}
 .hero .eyebrow{font-size:.66rem;letter-spacing:.34em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:22px}
 .hero .mark{width:30px;height:1px;background:var(--accent);opacity:.6;margin-bottom:22px}
 .hero h1{font-family:var(--serif);font-weight:600;font-size:2.5rem;line-height:1.06;color:var(--cream)}
@@ -173,450 +173,501 @@ button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-r
   <div class="body">
     <div class="section-label"><span>Sequência dos 30 dias</span><div class="bar"></div></div>
     <div class="agenda">
-      <div class="row"><div class="when"><div class="d">15</div><div class="m">Qua</div></div><div class="what"><div class="tipo">Carrossel</div><div class="ttl">A dor está no joelho. A causa, raramente.</div><div class="hr">Melhor horário · 12h</div></div></div>
-      <div class="row"><div class="when"><div class="d">16</div><div class="m">Qui</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Dor no joelho? O erro é aqui</div><div class="hr">Melhor horário · 19h</div></div></div>
-      <div class="row"><div class="when"><div class="d">17</div><div class="m">Sex</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">O joelho não mente — você está ouvindo errado</div><div class="hr">Melhor horário · 12h</div></div></div>
-      <div class="row"><div class="when"><div class="d">18</div><div class="m">Sáb</div></div><div class="what"><div class="tipo">Carrossel</div><div class="ttl">Pilates para corredores não é o que você imagina.</div><div class="hr">Melhor horário · 19h</div></div></div>
-      <div class="row"><div class="when"><div class="d">19</div><div class="m">Dom</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Seu quadril sabota cada passada</div><div class="hr">Melhor horário · 12h</div></div></div>
-      <div class="row"><div class="when"><div class="d">20</div><div class="m">Seg</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Seu quadril está sabotando a passada</div><div class="hr">Melhor horário · 19h</div></div></div>
-      <div class="row"><div class="when"><div class="d">21</div><div class="m">Ter</div></div><div class="what"><div class="tipo">Carrossel</div><div class="ttl">A dor voltou. De novo. Por quê?</div><div class="hr">Melhor horário · 12h</div></div></div>
-      <div class="row"><div class="when"><div class="d">22</div><div class="m">Qua</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Seu core falha no km 30</div><div class="hr">Melhor horário · 19h</div></div></div>
-      <div class="row"><div class="when"><div class="d">23</div><div class="m">Qui</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Três sinais de que seu corpo quer Pilates</div><div class="hr">Melhor horário · 12h</div></div></div>
-      <div class="row"><div class="when"><div class="d">24</div><div class="m">Sex</div></div><div class="what"><div class="tipo">Carrossel</div><div class="ttl">Três dias. Método. Resultado verificável.</div><div class="hr">Melhor horário · 19h</div></div></div>
-      <div class="row"><div class="when"><div class="d">25</div><div class="m">Sáb</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">3 sinais que seu corpo avisa</div><div class="hr">Melhor horário · 12h</div></div></div>
-      <div class="row"><div class="when"><div class="d">26</div><div class="m">Dom</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">O que acontece com seu core no km 30</div><div class="hr">Melhor horário · 19h</div></div></div>
-      <div class="row"><div class="when"><div class="d">27</div><div class="m">Seg</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Pilates e forca. Nao alongamento.</div><div class="hr">Melhor horário · 12h</div></div></div>
-      <div class="row"><div class="when"><div class="d">28</div><div class="m">Ter</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Pilates não é alongamento. Para o corredor, é estrutura.</div><div class="hr">Melhor horário · 19h</div></div></div>
-      <div class="row"><div class="when"><div class="d">30</div><div class="m">Qui</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">A dor voltou. E nao era surpresa.</div><div class="hr">Melhor horário · 12h</div></div></div>
-      <div class="row"><div class="when"><div class="d">31</div><div class="m">Sex</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Fui ao ortopedista, parei de correr — e a dor voltou</div><div class="hr">Melhor horário · 19h</div></div></div>
-      <div class="row"><div class="when"><div class="d">01</div><div class="m">Sáb</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Semana de prova: o que NAO fazer</div><div class="hr">Melhor horário · 12h</div></div></div>
-      <div class="row"><div class="when"><div class="d">02</div><div class="m">Dom</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">O corredor com lombar travada — e o que a avaliação revelou</div><div class="hr">Melhor horário · 19h</div></div></div>
-      <div class="row"><div class="when"><div class="d">03</div><div class="m">Seg</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Lombar travada: o que ninguem viu</div><div class="hr">Melhor horário · 12h</div></div></div>
-      <div class="row"><div class="when"><div class="d">04</div><div class="m">Ter</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Cadência, passada e força: o que falta no seu treino</div><div class="hr">Melhor horário · 19h</div></div></div>
-      <div class="row"><div class="when"><div class="d">05</div><div class="m">Qua</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Por que abri essa primeira turma</div><div class="hr">Melhor horário · 12h</div></div></div>
-      <div class="row"><div class="when"><div class="d">06</div><div class="m">Qui</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Por que decidi abrir esse curso — e para quem ele é</div><div class="hr">Melhor horário · 19h</div></div></div>
-      <div class="row"><div class="when"><div class="d">07</div><div class="m">Sex</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Curso Pilates para Corredores. Agosto.</div><div class="hr">Melhor horário · 12h</div></div></div>
-      <div class="row"><div class="when"><div class="d">08</div><div class="m">Sáb</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">O que não fazer na semana antes da prova</div><div class="hr">Melhor horário · 19h</div></div></div>
-      <div class="row"><div class="when"><div class="d">09</div><div class="m">Dom</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Faltam 10 dias para a primeira turma começar</div><div class="hr">Melhor horário · 12h</div></div></div>
-      <div class="row"><div class="when"><div class="d">10</div><div class="m">Seg</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">As vagas com desconto estão acabando</div><div class="hr">Melhor horário · 19h</div></div></div>
-      <div class="row"><div class="when"><div class="d">11</div><div class="m">Ter</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Começa hoje.</div><div class="hr">Melhor horário · 12h</div></div></div>
-      <div class="row"><div class="when"><div class="d">12</div><div class="m">Qua</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Correr não é o problema. O padrão é.</div><div class="hr">Melhor horário · 19h</div></div></div>
-      <div class="row"><div class="when"><div class="d">13</div><div class="m">Qui</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">O Sistema I-Cross nasceu da prática clínica real</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">15</div><div class="m">Qua</div></div><div class="what"><div class="tipo">Carrossel</div><div class="ttl">O treino convencional não chega onde a corrida exige</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">16</div><div class="m">Qui</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">25 anos. O erro ainda me surpreende.</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">17</div><div class="m">Sex</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">25 anos atendendo corredores</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">18</div><div class="m">Sáb</div></div><div class="what"><div class="tipo">Carrossel</div><div class="ttl">Semana de prova: o que o Pilates faz aqui</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">19</div><div class="m">Dom</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">O que o Pilates faz que o treino não faz</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">20</div><div class="m">Seg</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">O Pilates que o corredor precisa</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">21</div><div class="m">Ter</div></div><div class="what"><div class="tipo">Carrossel</div><div class="ttl">Prescrever sem avaliar é trabalhar no escuro</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">22</div><div class="m">Qua</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Seu quadril entrega antes do joelho</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">23</div><div class="m">Qui</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">A passada revela tudo</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">24</div><div class="m">Sex</div></div><div class="what"><div class="tipo">Carrossel</div><div class="ttl">A lesão raramente aparece de repente</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">25</div><div class="m">Sáb</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">5 dias de treino. E ainda dói.</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">26</div><div class="m">Dom</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Treina 5 dias por semana e ainda se machuca</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">27</div><div class="m">Seg</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Core forte. Joelho dói. Por quê?</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">28</div><div class="m">Ter</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Seu core forte não está te protegendo</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">30</div><div class="m">Qui</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">6 anos de maratona. 3 de dor. O que mudou.</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">31</div><div class="m">Sex</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">O que mudou depois de ajustar a passada</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">01</div><div class="m">Sáb</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Primeira turma. Por que agora.</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">02</div><div class="m">Dom</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Primeira turma. Por que estou abrindo isso agora.</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">03</div><div class="m">Seg</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Antes de correr: 3 movimentos de quadril</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">04</div><div class="m">Ter</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Antes de colocar o tênis</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">05</div><div class="m">Qua</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">3 dias. O que muda no seu atendimento.</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">06</div><div class="m">Qui</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">3 dias que mudam o atendimento</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">07</div><div class="m">Sex</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Ultimas vagas. Condicao inaugural.</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">08</div><div class="m">Sáb</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">O joelho não mente</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">09</div><div class="m">Dom</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">O que o Strava não mede</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">10</div><div class="m">Seg</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">A primeira turma fecha em agosto</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">11</div><div class="m">Ter</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Por que escolhi a corrida como campo</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">12</div><div class="m">Qua</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">O que acontece na semana antes da prova</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">13</div><div class="m">Qui</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Sistema I-Cross: método autoral com 25 anos de base</div><div class="hr">Melhor horário · 12h</div></div></div>
     </div>
     <p class="agenda-note">Os Stories acompanham os dias entre as publicações: use um por intervalo. Horários e ordem detalhados no seu Guia de Uso.</p>
     <div class="section-label" style="margin-top:34px"><span>Referências do seu nicho</span><div class="bar"></div></div><div class="pro-bloco"><div class="refs"><div class="ref"><div class="ref-n">@vollpilatesgroup</div></div><div class="ref"><div class="ref-n">@rafael.voll</div></div><div class="ref"><div class="ref-n">@thalyssalarangeiras</div></div><div class="ref"><div class="ref-n">@drawalkyria_fernandes</div></div></div></div>
     
     <div class="section-label" style="margin-top:34px"><span>O seu conteúdo</span><div class="bar"></div></div>
     <div class="feed">
-      <article class="card"><div class="card-head"><span class="badge carr-b">Carrossel</span><span class="num">01</span></div><h3 class="card-title">A dor está no joelho. A causa, raramente.</h3><div class="art-wrap"><div class="art-frame art-45"><div class="art-pend">Arte em produção</div></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c1">A dor no joelho é o sinal mais comum que o corredor traz para o consultório.
+      <article class="card"><div class="card-head"><span class="badge carr-b">Carrossel</span><span class="num">01</span></div><h3 class="card-title">O treino convencional não chega onde a corrida exige</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-01-1-Capa.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-01-1-Capa.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="slides-scroll"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-01-2-Slide.png" download><img src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-01-2-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-01-3-Slide.png" download><img src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-01-3-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-01-4-Slide.png" download><img src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-01-4-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-01-5-Slide.png" download><img src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-01-5-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-01-6-Slide.png" download><img src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-01-6-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-01-7-Slide.png" download><img src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-01-7-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-01-Final-CTA.png" download><img src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-01-Final-CTA.png" loading="lazy" alt=""></a></div><p class="strip-note">Toque em cada lâmina para salvar · publique na ordem</p><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c1">O Pilates contemporâneo não compete com o treino de corrida. Ele faz o que o treino convencional não foi desenhado para fazer: rastrear o padrão de movimento, corrigir onde falha e construir a base que sustenta a performance ao longo do tempo.
 
-E é quase sempre o sinal mais enganoso.
+Cada slide desse carrossel mostra um ponto de intervenção específico — e por que ele muda o resultado do corredor quando está bem trabalhado.
 
-Esse carrossel explica o raciocínio clínico por trás da avaliação que o Sistema I-Cross aplica — e por que tratar o joelho sem ler o padrão de movimento é resolver a metade errada do problema.
+Salva esse conteúdo se você atende corredores ou corre e quer entender melhor o que está acontecendo em cada passada.
 
-Arrastra e salva. Esse conteúdo vai fazer falta antes de uma prova.
+O Curso Pilates para Corredores está no link da bio — primeira turma, condição inaugural.</div><button class="copy-btn" data-src="c1" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge carr-b">Carrossel</span><span class="num">02</span></div><h3 class="card-title">Semana de prova: o que o Pilates faz aqui</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-02-1-Capa.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-02-1-Capa.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="slides-scroll"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-02-2-Slide.png" download><img src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-02-2-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-02-3-Slide.png" download><img src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-02-3-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-02-4-Slide.png" download><img src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-02-4-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-02-5-Slide.png" download><img src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-02-5-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-02-6-Slide.png" download><img src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-02-6-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-02-7-Slide.png" download><img src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-02-7-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-02-Final-CTA.png" download><img src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-02-Final-CTA.png" loading="lazy" alt=""></a></div><p class="strip-note">Toque em cada lâmina para salvar · publique na ordem</p><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c2">Com provas de agosto chegando, esse é o conteúdo que mais importa agora para quem atende corredores — ou para o próprio corredor que quer chegar no melhor estado possível.
 
-Se você se identifica com algum desses padrões, comenta aqui — qual slide descreveu o que você vive.</div><button class="copy-btn" data-src="c1" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge carr-b">Carrossel</span><span class="num">02</span></div><h3 class="card-title">Pilates para corredores não é o que você imagina.</h3><div class="art-wrap"><div class="art-frame art-45"><div class="art-pend">Arte em produção</div></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c2">A crença mais comum que afasta o corredor do Pilates é achar que é coisa leve. Que é para quem não treina de verdade.
+A semana da prova tem lógica própria. E o Pilates, quando bem prescrito, tem função clínica específica nesse momento.
 
-Esse carrossel existe para desfazer essa crença com precisão técnica — não com argumento de venda.
+Salva esse carrossel para consultar antes da próxima prova.
 
-Arrastra. E se algum slide mudou a forma como você enxerga o Pilates aplicado à corrida, comenta aqui.</div><button class="copy-btn" data-src="c2" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge carr-b">Carrossel</span><span class="num">03</span></div><h3 class="card-title">A dor voltou. De novo. Por quê?</h3><div class="art-wrap"><div class="art-frame art-45"><div class="art-pend">Arte em produção</div></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c3">Esse ciclo tem nome. Tem causa. E tem resolução — quando o tratamento começa pelo padrão de movimento, não pelo sintoma.
+As informações do Curso Pilates para Corredores estão no link da bio — primeira turma, condição inaugural para os 10 primeiros inscritos.</div><button class="copy-btn" data-src="c2" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge carr-b">Carrossel</span><span class="num">03</span></div><h3 class="card-title">Prescrever sem avaliar é trabalhar no escuro</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-03-1-Capa.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-03-1-Capa.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="slides-scroll"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-03-2-Slide.png" download><img src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-03-2-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-03-3-Slide.png" download><img src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-03-3-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-03-4-Slide.png" download><img src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-03-4-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-03-5-Slide.png" download><img src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-03-5-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-03-6-Slide.png" download><img src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-03-6-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-03-7-Slide.png" download><img src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-03-7-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-03-Final-CTA.png" download><img src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-03-Final-CTA.png" loading="lazy" alt=""></a></div><p class="strip-note">Toque em cada lâmina para salvar · publique na ordem</p><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c3">Avaliar o corredor antes de prescrever não é detalhe — é o que separa um protocolo clínico de um protocolo genérico.
 
-Arrastra esse carrossel e salva.
+Esse carrossel mostra os pontos de observação que usamos no Sistema I-Cross antes de qualquer prescrição. São os mesmos pontos que ensinamos no Curso Pilates para Corredores.
 
-Se você já viveu esse ciclo mais de uma vez, comenta aqui quantas. Você não está sozinho — e isso tem solução.</div><button class="copy-btn" data-src="c3" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge carr-b">Carrossel</span><span class="num">04</span></div><h3 class="card-title">Três dias. Método. Resultado verificável.</h3><div class="art-wrap"><div class="art-frame art-45"><div class="art-pend">Arte em produção</div></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c4">Três dias de imersão para sair com método, não só com técnica.
+Se você atende corredores e quer dominar essa leitura, as informações da formação estão no link da bio.
 
-O Curso Pilates para Corredores é a formação que cruza biomecânica da corrida, avaliação individual e Pilates contemporâneo — com 25 anos de clínica como fundação.
+Primeira turma: 21, 22 e 23 de agosto de 2026, em Belo Horizonte.</div><button class="copy-btn" data-src="c3" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge carr-b">Carrossel</span><span class="num">04</span></div><h3 class="card-title">A lesão raramente aparece de repente</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-04-1-Capa.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-04-1-Capa.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="slides-scroll"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-04-2-Slide.png" download><img src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-04-2-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-04-3-Slide.png" download><img src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-04-3-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-04-4-Slide.png" download><img src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-04-4-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-04-5-Slide.png" download><img src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-04-5-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-04-6-Slide.png" download><img src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-04-6-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-04-7-Slide.png" download><img src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-04-7-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-04-Final-CTA.png" download><img src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Carrossel-04-Final-CTA.png" loading="lazy" alt=""></a></div><p class="strip-note">Toque em cada lâmina para salvar · publique na ordem</p><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c4">A lesão do corredor quase sempre tem história — e a história começa antes da dor aparecer.
 
-Salva esse carrossel. Compartilha com quem precisa entender o que acontece com o próprio corpo na corrida.
+Esse carrossel mostra a lógica por trás do ciclo de lesão mais comum que vejo na prática clínica — e onde o protocolo certo faz a ruptura.
 
-E se a vaga com condição especial ainda está disponível quando você ler isso — acessa o link na bio antes que feche.</div><button class="copy-btn" data-src="c4" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">01</span></div><h3 class="card-title">Dor no joelho? O erro é aqui</h3><div class="art-wrap"><div class="art-frame art-916"><div class="art-pend">Arte em produção</div></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>A dor no joelho não vem do joelho. Quase nunca.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c5">A dor no joelho não vem do joelho.
+Se você se viu em algum desses slides, me conta nos comentários em qual.
 
-Essa frase incomoda — e é exatamente por isso que precisa ser dita.
+O Curso Pilates para Corredores abre a primeira turma em agosto de 2026, com condição inaugural para os 10 primeiros inscritos. Link da bio.</div><button class="copy-btn" data-src="c4" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">01</span></div><h3 class="card-title">25 anos. O erro ainda me surpreende.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-01-Capa.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-01-Capa.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Eu atendo corredores há 25 anos. E o erro mais comum ainda me surpreende.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c5">Eu atendo corredores há 25 anos. E o erro mais comum ainda me surpreende.
 
-O corredor chega na clínica com o joelho inflamado. Parou de treinar, fez fisioterapia pontual, voltou a correr — e a dor apareceu de novo. Sempre de novo.
+Não é excesso de treino. Não é falta de descanso.
 
-O problema não foi tratado porque não foi encontrado.
+É correr sem consciência do próprio movimento.
 
-Quando o quadril não estabiliza, a passada compensa. Quando o core não responde, o joelho absorve o que não deveria absorver. A estrutura toda se reorganiza em torno do desequilíbrio — e o joelho vira o mensageiro de um problema que mora em outro lugar.
+O corredor que chega ao consultório com dor no joelho, no quadril ou na lombar quase nunca chegou até lá de repente. A lesão foi construída em semanas — às vezes meses — de padrão de movimento inadequado que ninguém avaliou.
 
-Prevenção real começa na leitura do padrão de movimento inteiro. Não no sintoma.
+Quadril que não estabiliza. Core que não sustenta. Passada que sobrecarrega onde não deveria.
 
-Salva esse vídeo. Ele vai fazer sentido na próxima vez que a dor aparecer.</div><button class="copy-btn" data-src="c5" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">02</span></div><h3 class="card-title">Seu quadril sabota cada passada</h3><div class="art-wrap"><div class="art-frame art-916"><div class="art-pend">Arte em produção</div></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Seu quadril está trabalhando contra você — e você não sabe.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c6">O quadril não dói. Por isso você ignora.
+O problema não está no quanto se treina. Está no como.
 
-Mas ele é, na maior parte dos casos que vejo em clínica, a origem da dor que aparece em outro lugar — no joelho, na lombar, no tornozelo.
+E esse como só aparece quando alguém olha para o movimento — não para a planilha.
 
-A instabilidade de quadril na fase de apoio da passada desencadeia uma cadeia de compensações. O corpo encontra jeito de continuar correndo — mas não sem custo.
+É exatamente isso que a minha prática clínica me ensinou: avaliação antes de prescrição. Sempre.
 
-Esse custo aparece depois. Sempre aparece.
+Se você quer entender como o Pilates contemporâneo entra nessa equação, acompanha o que vem por aí.</div><button class="copy-btn" data-src="c5" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">02</span></div><h3 class="card-title">O que o Pilates faz que o treino não faz</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-02-Capa.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-02-Capa.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Pilates não é alongamento. E quando é aplicado à corrida do jeito certo, muda tudo.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c6">Pilates não é alongamento.
 
-A boa notícia: estabilidade de quadril é treinável. Com avaliação individualizada, prescrição correta e Pilates contemporâneo aplicado à biomecânica da corrida, dá para reconstruir esse padrão — e mudar a passada de verdade.
+E quando é aplicado à corrida com base clínica, o impacto é outro.
 
-Não é protocolo. É leitura de corpo.
+O treino convencional de corrida constrói volume, velocidade e resistência cardiovascular. Isso é insubstituível. Mas ele não olha para dentro da passada — não avalia se o quadril estabiliza, se o core sustenta, se o padrão de movimento está sobrecarregando onde não deveria.
 
-Comenta aqui qual é a dor mais recorrente no seu treino — joelho, quadril ou lombar. Quero entender o que o seu corpo está sinalizando.</div><button class="copy-btn" data-src="c6" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">03</span></div><h3 class="card-title">Seu core falha no km 30</h3><div class="art-wrap"><div class="art-frame art-916"><div class="art-pend">Arte em produção</div></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>No km 30, o seu core para de trabalhar. E aí começa o problema.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c7">Você treina abdômen. E mesmo assim, os últimos quilômetros da prova são sobrevivência.
+O Pilates contemporâneo entra exatamente nesse ponto cego.
 
-Não é falta de preparo. É falta do preparo certo.
+Não como atividade complementar, mas como protocolo clínico integrado à corrida.
 
-Core funcional para o corredor não é o músculo reto abdominal contraído em série. É a integração dinâmica entre diafragma, transverso, assoalho pélvico e multífidos — respondendo em tempo real à demanda do movimento.
+Três eixos que fazem a diferença:
+→ Força funcional aplicada ao gesto da corrida
+→ Estabilidade de quadril que protege joelho, lombar e tornozelo
+→ Consciência corporal que transforma o movimento antes de ele virar lesão
 
-Quando esse sistema falha sob fadiga, o tronco perde controle. A passada vira compensação. A lombar assume o que não deveria assumir.
+Quando esses três pilares estão construídos, o corredor não só rende mais — ele dura mais.
 
-E o km 30 cobra o preço de um treino que nunca focou no que importava.
+É isso que o Sistema I-Cross faz. Parte da biomecânica da passada e prescreve com precisão.
 
-O Pilates contemporâneo tem as ferramentas para treinar exatamente isso — com consciência corporal, respiração integrada e prescrição baseada no padrão de movimento de cada corredor.
+Se faz sentido pra você, continua acompanhando.</div><button class="copy-btn" data-src="c6" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">03</span></div><h3 class="card-title">Seu quadril entrega antes do joelho</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-03-Capa.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-03-Capa.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Esse é o quadril do corredor que vai se machucar. E esse é o que não vai. A diferença é visível.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c7">A dor no joelho raramente começa no joelho.
 
-Salva esse vídeo e manda para quem já sentiu isso numa prova.</div><button class="copy-btn" data-src="c7" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">04</span></div><h3 class="card-title">3 sinais que seu corpo avisa</h3><div class="art-wrap"><div class="art-frame art-916"><div class="art-pend">Arte em produção</div></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Três sinais. Seu corpo já está avisando. Você está ouvindo?</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c8">Três sinais. O corpo já está avisando — a questão é se você sabe o que ouvir.
+Começa aqui: na queda lateral do quadril a cada passada.
 
-1. Dor recorrente que some e volta — joelho, quadril, lombar. Não é azar. É padrão de movimento não resolvido.
+Quando o glúteo médio não estabiliza, o quadril cede para o lado a cada apoio. Isso rotaciona o joelho para dentro, sobrecarrega a banda iliotibial e comprime estruturas que não foram feitas para esse nível de estresse repetitivo.
 
-2. Passada assimétrica que persiste mesmo com ajustes de treino, tênis ou pisada. Se o problema é estrutural, o equipamento não conserta.
+Kilômetro a quilômetro, passada a passada.
 
-3. Últimos quilômetros sempre em modo de sobrevivência — tronco sem controle, passada caindo, dor aparecendo. Isso não é falta de volume de treino. É falta de força funcional no lugar certo.
+O corredor sente no joelho. Mas o problema está no quadril.
 
-Os três sinais têm um ponto em comum: o padrão de movimento nunca foi avaliado com profundidade.
+E o quadril tem protocolo. Tem exercício certo, progressão certa, avaliação certa.
 
-E é exatamente aí que o Pilates contemporâneo entra — não como complemento decorativo, mas como base estrutural do treino do corredor.
+O Pilates contemporâneo, quando aplicado com base clínica e biomecânica, reconstrói esse padrão de estabilização com precisão. Não é improviso. É método.
 
-Se você se reconheceu em algum desses sinais, salva esse vídeo.</div><button class="copy-btn" data-src="c8" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">05</span></div><h3 class="card-title">Pilates e forca. Nao alongamento.</h3><div class="art-wrap"><div class="art-frame art-916"><div class="art-pend">Arte em produção</div></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Pilates não é alongamento. Nunca foi. E para o corredor, é estrutura.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c9">Pilates não é alongamento.
+O que você viu nesse vídeo é o que avaliamos em cada corredor antes de qualquer prescrição.
 
-Essa crença tem um custo alto — e quem paga é o corredor que precisa de estrutura e recebe flexibilidade passiva.
+Porta do joelho — raiz no quadril.</div><button class="copy-btn" data-src="c7" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">04</span></div><h3 class="card-title">5 dias de treino. E ainda dói.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-04-Capa.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-04-Capa.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Você treina cinco dias por semana e ainda se machuca. O problema não é o quanto. É o como.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c8">Você treina cinco dias por semana. E ainda se machuca.
 
-O Pilates contemporâneo aplicado à corrida trabalha exatamente o que a passada eficiente exige:
+O problema não é o quanto. É o como.
 
-— Força funcional nos grupos certos
-— Estabilidade de quadril sob carga real
-— Core integrado que sustenta o tronco nos últimos quilômetros
-— Consciência corporal que muda o padrão de movimento, não só o movimento em si
+Volume alto com padrão de movimento inadequado não é progressão. É acúmulo de erro.
 
-Isso é estrutura. Não é relaxamento. Não é complemento opcional.
+Cada quilômetro rodado com quadril instável, core desativado ou passada descoordenada vai contra você — mesmo que o ritmo esteja bom e o pace caindo.
 
-Quando o Pilates é aplicado com base clínica e biomecânica da corrida, ele se torna uma das ferramentas mais precisas que o corredor pode ter no treino.
+O corpo aguenta. Por um tempo, aguenta bem.
 
-Se você ainda achava que Pilates não era para você — esse vídeo foi feito pra desfazer esse equívoco.
+Aí vem uma semana mais pesada, uma prova no calendário, uma aceleração de carga — e o que estava se construindo em silêncio se manifesta.
 
-Comenta aqui o que você achava que Pilates era antes de assistir.</div><button class="copy-btn" data-src="c9" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">06</span></div><h3 class="card-title">A dor voltou. E nao era surpresa.</h3><div class="art-wrap"><div class="art-frame art-916"><div class="art-pend">Arte em produção</div></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Ele parou de correr. Fez fisioterapia. A dor voltou. Por quê?</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c10">A dor voltou. E não era surpresa.
+Não foi esse treino que causou. Foram meses.
 
-Ele tinha feito tudo certo — ortopedista, fisioterapia, repouso. Três meses sem correr. Na primeira semana de retomada, a lombar travou de novo.
+A avaliação do padrão de movimento revela o que a planilha jamais mostraria: onde o corpo falha, onde compensa, onde sobrecarrega sem você perceber.
 
-O problema não era que o tratamento foi ruim. O problema é que o tratamento atacou o sintoma — e deixou a causa intacta.
+Com esse dado, a prescrição muda. O protocolo é outro. E o resultado também.
 
-O corredor com dor lombar recorrente quase sempre tem um padrão de movimento não resolvido: core que não ativa, quadril que não estabiliza, passada que sobrecarrega a coluna em cada apoio.
+Correr mais não é a resposta. Correr com estrutura — essa é a diferença que faz o corredor durar.</div><button class="copy-btn" data-src="c8" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">05</span></div><h3 class="card-title">Core forte. Joelho dói. Por quê?</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-05-Capa.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-05-Capa.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Seu core é forte. E mesmo assim o seu joelho dói. Vou te explicar por quê.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c9">Você tem core forte. Faz prancha, abdominal, os exercícios todos.
 
-Tratar a lombar sem ler esse padrão é apagar a fumaça. O fogo continua lá.
+E ainda assim sente dor na corrida.
 
-A avaliação do padrão de movimento é o ponto de partida de tudo que faço — e é o que diferencia uma intervenção que resolve de uma que apenas adia.
+Vou te explicar o que está acontecendo.
 
-25 anos de clínica me ensinaram isso antes de qualquer protocolo.
+Core forte em posição estática não é a mesma coisa que core funcional durante o movimento.
 
-Se você já viveu esse ciclo — dor, pausa, tratamento, retorno, dor de novo — comenta aqui. Você não está sozinho nessa.</div><button class="copy-btn" data-src="c10" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">07</span></div><h3 class="card-title">Semana de prova: o que NAO fazer</h3><div class="art-wrap"><div class="art-frame art-916"><div class="art-pend">Arte em produção</div></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Semana de prova. Esse não é o momento de melhorar — é o momento de chegar intacto.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c11">Semana de prova. E o corpo está carregado de meses de treino.
+A força que você treina deitado ou parado não é transferida automaticamente para o gesto da corrida. Na passada, o core precisa trabalhar de forma reativa e integrada — coordenado com o quadril, com o tronco e com o apoio do pé, em frações de segundo.
 
-É exatamente nesse momento que a prescrição errada custa mais caro.
+Se essa integração não foi treinada, o core forte vira um recurso que o corpo não sabe usar quando mais precisa.
 
-O que não fazer:
-— Sessão pesada de última hora
-— Exercício novo que o corpo nunca executou
-— Alongamento intenso fora da rotina
-— Qualquer estímulo que gere fadiga muscular nova
+O que o corredor precisa não é de mais força.
 
-O que funciona:
-Uma sessão leve, prescrita com intenção — focada em ativar os padrões de movimento que a prova vai exigir, calibrar o sistema nervoso e preservar a potência que foi construída em meses de preparação.
+É de ativação do core no contexto específico da corrida — com progressão clínica, avaliação de padrão e prescrição individualizada.
 
-O Pilates contemporâneo aplicado com método sabe exatamente onde atuar nessa semana — e, mais importante, quando não atuar.
+É exatamente isso que o Pilates contemporâneo, aplicado com base biomecânica, entrega.
 
-O trabalho foi feito. Agora é sobre chegar intacto.
+Não é mais um exercício no programa. É o exercício certo, na hora certa, para o movimento que você de fato executa.</div><button class="copy-btn" data-src="c9" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">06</span></div><h3 class="card-title">6 anos de maratona. 3 de dor. O que mudou.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-06-Capa.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-06-Capa.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Ele rodou maratona por seis anos. Nos últimos três, mal chegava aos trinta quilômetros sem parar.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c10">Seis anos de maratona. Três deles com dor no joelho que não passava.
 
-Salva esse post — ele vai fazer falta antes da próxima prova.</div><button class="copy-btn" data-src="c11" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">08</span></div><h3 class="card-title">Lombar travada: o que ninguem viu</h3><div class="art-wrap"><div class="art-frame art-916"><div class="art-pend">Arte em produção</div></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Lombar travada. Três anos de dor. A causa não estava onde todo mundo procurou.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c12">Três anos de dor lombar. Exames sem alteração. Tratamentos que aliviavam e não resolviam.
+Ele já havia feito fisioterapia convencional. Trocado de tênis. Reduzido volume. Descansado. Nada resolveu.
 
-Esse corredor chegou até mim depois de esgotar o que o sistema convencional ofereceu.
+Quando chegou, a primeira coisa que fizemos foi avaliar o padrão de movimento — não a planilha de treino, o movimento real do corpo dele em corrida.
 
-A avaliação do padrão de movimento mostrou o que nenhum exame de imagem mostra: um quadril direito sem estabilidade na fase de apoio e um core completamente ausente da passada.
+O que apareceu foi preciso: queda lateral do quadril a cada apoio do lado direito. Rotação interna do joelho como compensação. Glúteo médio que não estava cumprindo o papel dele no momento crítico da passada.
 
-A lombar estava sozinha absorvendo o impacto que um sistema inteiro deveria dividir. Por três anos. Em cada passada.
+O problema não estava no joelho. Nunca esteve.
 
-O protocolo foi construído a partir dessa leitura — não de uma prescrição padrão para lombalgias.
+Construímos um protocolo com exercícios do Pilates contemporâneo direcionados à estabilização de quadril — integrado, progressivo e individualizado para o padrão de movimento dele.
 
-Oito semanas de trabalho específico. Retomada do treino sem dor. Em quatro meses, prova completa — sem episódio de dor.
+Em doze semanas, o padrão havia mudado de forma consistente.
 
-Isso não é resultado de protocolo. É resultado de avaliação real, prescrição com intenção e Pilates contemporâneo aplicado com base clínica.
+Na maratona seguinte: quarenta e dois quilômetros sem episódio de dor.
 
-25 anos de clínica me ensinaram a procurar a causa onde ela está — não onde a dor aparece.</div><button class="copy-btn" data-src="c12" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">09</span></div><h3 class="card-title">Por que abri essa primeira turma</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-09-Capa.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-09-Capa.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Primeira turma. Aqui está o que me levou a abrir esse curso.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c13">Primeira turma. E essa decisão não foi rápida.
+Não porque correu mais. Porque passou a correr com estrutura.
 
-Por anos, vi o mesmo padrão se repetir: o corredor motivado, disciplinado, com meses de preparação — chegando em clínica com uma lesão que o sistema convencional não resolvia.
+Avaliação. Diagnóstico funcional. Protocolo individualizado.
 
-Não era falta de preparo. Era falta de integração entre o que a biomecânica da corrida pede e o que o treino entregava.
+É isso que faz a diferença entre tratar o sintoma e resolver o problema.</div><button class="copy-btn" data-src="c10" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">07</span></div><h3 class="card-title">Primeira turma. Por que agora.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-07-Capa.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-07-Capa.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Por muito tempo esse conhecimento ficou dentro do consultório. Chegou a hora de sair daqui.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c11">Por muito tempo esse conhecimento ficou dentro do consultório.
 
-O Sistema I-Cross nasceu dessa lacuna. Pilates contemporâneo com base clínica, avaliação do padrão de movimento, força funcional e passada eficiente — tudo integrado num único método.
+Chegou a hora de sair daqui.
 
-Agora, pela primeira vez, estou abrindo esse trabalho num curso presencial de três dias — 21, 22 e 23 de agosto de 2026, em Belo Horizonte.
+Em 25 anos de prática clínica, vi o mesmo padrão se repetir: corredores que chegam com dor recorrente, que já passaram por outros profissionais, que já tentaram várias abordagens — e que não encontraram uma resposta integrada.
 
-Para os 10 primeiros inscritos: 20% de desconto e uma avaliação individual do padrão de movimento como bônus.
+O Sistema I-Cross nasceu exatamente disso.
 
-Não é para qualquer corredor. É para quem já está no caminho e quer parar de improvisar.
+De anos avaliando padrões de movimento, construindo protocolos e observando o que funciona — e o que não funciona — quando o assunto é o corpo do corredor.
 
-O link está na bio.</div><button class="copy-btn" data-src="c13" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">10</span></div><h3 class="card-title">Curso Pilates para Corredores. Agosto.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-10-Capa.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-10-Capa.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Três dias. Um método. Uma decisão que muda como você corre.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c14">Três dias. Um método. Uma decisão que muda como você corre.
+Não é Pilates genérico com correções de postura.
+Não é fisioterapia avulsa que usa o aparelho de vez em quando.
 
-Curso Pilates para Corredores — primeira turma.
-21, 22 e 23 de agosto de 2026 | Belo Horizonte
+É um método que parte da biomecânica da passada, mapeia onde o corpo falha e prescreve com precisão clínica.
 
-O que você vai dominar:
-— Biomecânica da corrida aplicada ao movimento real
-— Avaliação do padrão de passada e identificação de desequilíbrios
-— Força funcional, estabilidade de quadril e core específico para corrida
-— Protocolo integrado de Pilates contemporâneo com base clínica
+Eu decidi abrir essa primeira turma agora porque o mercado tem uma lacuna real.
 
-Construído sobre 25 anos de prática clínica e o Sistema I-Cross — não é compilação de conteúdo. É método autoral.
+E instrutores(as) e fisioterapeutas bem formados nessa intersecção são exatamente o que o corredor amador de 35 a 50 anos mais precisa e menos encontra.
 
-Condição de pré-matrícula para os 10 primeiros inscritos:
-→ 20% de desconto
-→ Bônus: avaliação individual do padrão de movimento (presencial ou por vídeo)
+Três dias de imersão presencial em Belo Horizonte — 21, 22 e 23 de agosto de 2026.
 
-Performance sustentável não é promessa. É o resultado de uma prática construída com intenção.
+Vagas limitadas. Condição inaugural para os dez primeiros inscritos: 20% de desconto e avaliação individual do padrão de movimento incluída.
 
-Vagas limitadas. O link está na bio.</div><button class="copy-btn" data-src="c14" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">01</span></div><h3 class="card-title">O joelho não mente — você está ouvindo errado</h3><div class="art-wrap"><div class="art-frame art-45"><div class="art-pend">Arte em produção</div></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c15">O joelho não mente.
+A primeira turma não volta.</div><button class="copy-btn" data-src="c11" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">08</span></div><h3 class="card-title">Antes de correr: 3 movimentos de quadril</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-08-Capa.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-08-Capa.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Antes de colocar o tênis, três minutos de mobilidade de quadril mudam a qualidade de cada quilômetro que vem depois.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c12">Antes de colocar o tênis.
 
-Mas a maioria dos corredores ouve o sinal errado.
+Três movimentos. Três minutos. E o corpo chega diferente ao primeiro quilômetro.
 
-A dor aparece ali — na lateral, abaixo da patela, no tendão que cansa antes da hora — e a conclusão imediata é: problema no joelho.
+→ Rotação controlada de quadril
+Não é questão de amplitude. É controle em toda a amplitude disponível. Oito repetições de cada lado.
 
-Quase nunca é.
+→ Liberação de psoas em carga
+Corredor com psoas encurtado corre com passada curta e lombar sobrecarregada. Esse movimento devolve a extensão que a corrida exige. Dez segundos de cada lado.
 
-O joelho é o mensageiro. O quadril é a origem. O core é a base que não sustentou. A passada assimétrica é o padrão que se repetiu por meses até o corpo cobrar.
+→ Ativação de glúteo médio
+O músculo que estabiliza o quadril no apoio. Sem ele ativo antes de correr, o que vem depois é compensação — e compensação, em volume alto, vira lesão. Três séries de doze.
 
-Físio de consultório trata o sintoma. Avaliação do padrão de movimento revela a causa.
+Esses movimentos não substituem o aquecimento da corrida. Eles preparam o quadril para fazer o trabalho certo — antes que o corpo comece a improvisar.
 
-São coisas diferentes. E a diferença muda o resultado.
+Mobilidade sem estabilidade não chega longe.
+Estabilidade sem mobilidade também não.
 
-Se a dor no joelho voltou depois do tratamento, o problema não foi resolvido — foi silenciado.
+Os dois juntos, com progressão clínica, é o que o Pilates contemporâneo constrói no corredor.</div><button class="copy-btn" data-src="c12" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">09</span></div><h3 class="card-title">3 dias. O que muda no seu atendimento.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-09-Capa.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-09-Capa.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Três dias. O que entra no protocolo de cada um e o que muda no atendimento depois.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c13">Três dias de imersão presencial em Belo Horizonte.
 
-Salva esse post. Ele vai fazer sentido antes da sua próxima prova.</div><button class="copy-btn" data-src="c15" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">02</span></div><h3 class="card-title">Seu quadril está sabotando a passada</h3><div class="art-wrap"><div class="art-frame art-45"><div class="art-pend">Arte em produção</div></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c16">Quadril instável não avisa com dor no quadril.
+Não vou falar em transformação. Vou falar em protocolo — que é o que de fato muda o atendimento.
 
-Avisa com dor no joelho. Com lombar que trava. Com aquela fadiga muscular que aparece cedo demais na corrida e não encaixa no seu nível de condicionamento.
+**Dia 1 — Ciência e biomecânica da corrida**
+Você entende o que acontece no corpo do corredor em cada fase da passada. Aprende a olhar o movimento com olhar clínico — não intuitivo.
 
-A estabilidade de quadril é o que mantém a passada eficiente quando o cansaço chega. Quando ela falha, o corpo compensa — e a compensação tem endereço certo: joelho, tornozelo, coluna.
+**Dia 2 — Avaliação e protocolos de força e mobilidade**
+Você aprende a avaliar o padrão de movimento, identificar compensações e prescrever a partir desse dado. Não do exercício que parece certo — do que a avaliação indica.
 
-Isso é biomecânica, não azar.
+**Dia 3 — Prevenção e reabilitação com Pilates como fio condutor**
+Protocolo clínico integrado. Como o Pilates contemporâneo entra em cada fase — da prevenção à reabilitação.
 
-O problema é que o treino de corrida raramente trabalha essa estabilidade de forma específica. E o abdominal que você já faz não resolve — porque core funcional para corrida é muito mais do que uma prancha.
+O que muda depois?
 
-Entender o que está sabotando a sua passada é o primeiro passo para parar de tratar sintoma e começar a resolver causa.
+Você passa a atender o corredor com estrutura. Com avaliação, protocolo e progressão. O Pilates deixa de ser complemento e passa a ser método.
 
-Comenta aqui qual é a dor que volta sempre, mesmo depois de tratamento.</div><button class="copy-btn" data-src="c16" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">03</span></div><h3 class="card-title">Três sinais de que seu corpo quer Pilates</h3><div class="art-wrap"><div class="art-frame art-45"><div class="art-pend">Arte em produção</div></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c17">Não é fraqueza. Não é falta de treino. É o corpo pedindo um tipo específico de trabalho que a corrida sozinha não entrega.
+Método gera resultado. Resultado gera autoridade.
 
-Três sinais que aparecem com frequência nos corredores que chegam até mim:
+21, 22 e 23 de agosto de 2026 · Belo Horizonte
+Vagas limitadas.
+Condição inaugural para os 10 primeiros: 20% de desconto + avaliação individual incluída.</div><button class="copy-btn" data-src="c13" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">10</span></div><h3 class="card-title">Ultimas vagas. Condicao inaugural.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-10-Capa.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Reel-10-Capa.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>A primeira turma não volta. A condição inaugural também não. Mas o que você aprende nos três dias — isso fica.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c14">A primeira turma não volta.
+A condição inaugural também não.
 
-1. A dor que some no repouso e volta quando você aumenta o volume de treino. Não é lesão nova — é padrão de movimento que falha sob carga.
+Mas o que você aprende nos três dias — esse fica.
 
-2. A sensação de que um lado do corpo está desconectado do outro durante a corrida. Isso é assimetria de ativação muscular. É treinável. É prescritível.
+Durante esse mês, falei sobre o padrão de movimento do corredor. Sobre o que acontece no quadril, no core, na passada quando o corpo não tem estrutura.
 
-3. A lombar que trava depois de corridas longas, mesmo com core treinado. Porque core forte e core funcional para corrida são coisas diferentes.
+Sobre por que o corredor que treina cinco dias por semana ainda se machuca.
 
-O Pilates contemporâneo aplicado à corrida trabalha exatamente esses três pontos — com avaliação individual, não com protocolo genérico.
+Sobre o que a avaliação clínica revela que a planilha de treino jamais vai mostrar.
 
-Você reconhece algum desses sinais no próprio corpo? Comenta aqui — 1, 2 ou 3.</div><button class="copy-btn" data-src="c17" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">04</span></div><h3 class="card-title">O que acontece com seu core no km 30</h3><div class="art-wrap"><div class="art-frame art-45"><div class="art-pend">Arte em produção</div></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c18">No km 30, o abdominal que você treina já foi embora.
+Tudo isso tem protocolo. Tem método.
 
-Não porque você é fraco. Mas porque core funcional para corrida não é força de contração abdominal — é capacidade de estabilizar o tronco em movimento, sob fadiga, por horas.
+E o método tem nome: Sistema I-Cross.
 
-São sistemas diferentes. E o treinamento que resolve um não resolve o outro.
+Em três dias de imersão presencial em Belo Horizonte, você domina:
+→ A ciência e a biomecânica da corrida
+→ A avaliação do padrão de movimento do corredor
+→ Os protocolos de força, mobilidade, prevenção e reabilitação
+→ O Pilates contemporâneo como fio condutor clínico
 
-O que falha no km 30 é a integração: respiração, estabilidade de quadril, controle do tronco em passada. Quando esse sistema perde coerência, a passada desmorona. O joelho absorve o que o core deveria segurar. A lombar compensa o que o quadril deveria estabilizar.
+Condição inaugural para os 10 primeiros inscritos:
+20% de desconto + avaliação individual do padrão de movimento incluída.
 
-Isso é prescritível. É treinável com método.
+21, 22 e 23 de agosto de 2026 · Belo Horizonte
 
-O Pilates contemporâneo aplicado à corrida constrói esse sistema — não o abdômen isolado, mas a cadeia completa que mantém a passada eficiente quando o cansaço chega.
+Para o instrutor ou a fisioterapeuta que quer ser referência no atendimento a corredores.
 
-Salva esse post — ele responde uma dúvida que a maioria dos corredores amadores ainda não sabe que tem.</div><button class="copy-btn" data-src="c18" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">05</span></div><h3 class="card-title">Pilates não é alongamento. Para o corredor, é estrutura.</h3><div class="art-wrap"><div class="art-frame art-45"><div class="art-pend">Arte em produção</div></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c19">A crença mais comum que afasta o corredor do Pilates: achar que é alongamento. Relaxamento. Coisa de quem não corre.
+A primeira turma não volta. O próximo passo está no link da bio.</div><button class="copy-btn" data-src="c14" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">01</span></div><h3 class="card-title">25 anos atendendo corredores</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-01-autoridade.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-01-autoridade.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c15">Eu atendo corredores há 25 anos. E o erro mais comum ainda me surpreende — não pela raridade, mas pela frequência.
 
-Não é.
+Corredor com histórico de lesão recorrente, planilha bem montada, tênis adequado, nutrição no ponto. E ainda assim: dor no joelho, sobrecarga no quadril, lombar que não para de falar.
 
-Para o corredor, Pilates contemporâneo é força. É estabilidade de quadril sob carga. É core que sustenta a passada no km 35 quando o corpo quer compensar. É mobilidade funcional que mantém a cadência eficiente do começo ao fim.
+O problema quase nunca está no quanto se treina. Está no como o corpo se organiza em cada passada.
 
-Não é flexibilidade por flexibilidade — é mobilidade com função. Não é contração isolada — é ativação integrada em padrão de movimento real.
+Estabilidade de quadril insuficiente. Core que ativa tarde. Passada que sobrecarrega uma estrutura que não aguenta o volume que a planilha pede.
 
-A diferença entre correr com estrutura e correr na base da compensação aparece primeiro na passada. Depois, na lesão.
+Esses padrões não aparecem no Garmin. Não aparecem no Strava. Aparecem na avaliação — quando alguém olha para o movimento com olho clínico.
 
-O corredor que entende isso não usa Pilates como complemento secundário. Usa como base do próprio treino.
+É exatamente isso que o Pilates contemporâneo, aplicado com método, consegue rastrear e corrigir.
 
-Se você ainda acha que Pilates é coisa leve demais para quem corre, comenta aqui — quero entender de onde veio essa ideia.</div><button class="copy-btn" data-src="c19" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">06</span></div><h3 class="card-title">Fui ao ortopedista, parei de correr — e a dor voltou</h3><div class="art-wrap"><div class="art-frame art-45"><div class="art-pend">Arte em produção</div></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c20">Ortopedista. Fisioterapia convencional. Pausa no treino. Volta à corrida. Dor retorna.
+Se você corre e carrega alguma dor que não resolve com descanso, vale a pena entender o que está acontecendo debaixo da superfície.
 
-Esse ciclo tem nome: tratamento de sintoma sem leitura de padrão de movimento.
+As informações sobre o curso Pilates para Corredores estão no link da bio.</div><button class="copy-btn" data-src="c15" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">02</span></div><h3 class="card-title">O Pilates que o corredor precisa</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-02-educativo.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-02-educativo.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c16">O Pilates contemporâneo aplicado à corrida não funciona como atividade paralela.
 
-A dor some porque o tecido descansa. A causa permanece porque o padrão de movimento que gerou a lesão não foi endereçado. Na primeira semana de volume, o corpo repete o que sempre fez — e a dor volta exatamente onde estava.
+Ele entra como protocolo — parte do planejamento, integrado à periodização, prescrito com base na avaliação individual de cada corredor.
 
-Não é falta de saúde. É falta de diagnóstico do movimento.
+A corrida exige estabilidade de quadril que sustente o impacto de cada passada. Exige core que ative no momento certo, não depois. Exige consciência corporal suficiente para que o corpo corrija o padrão antes de a lesão aparecer.
 
-Quando o quadril não estabiliza, o core não responde e a passada compensa, o corpo escolhe o elo mais fraco para absorver a carga. Semana após semana. Quilômetro após quilômetro.
+O treino convencional de força não chega nisso com a mesma precisão. Não porque seja inferior — mas porque não foi desenhado para mapear o padrão de movimento em movimento.
 
-A avaliação do padrão de movimento — não o exame de imagem, não a palpação isolada — é o que revela onde esse ciclo começa de verdade.
+O Pilates contemporâneo foi.
 
-Isso é o que o Pilates contemporâneo aplicado à corrida, com método, oferece: não o silêncio da dor, mas a resolução da causa.
+Quando a prescrição parte da biomecânica da passada e não de um protocolo genérico, a resposta do corpo é diferente. A lesão perde espaço. A performance ganha base.
 
-Já viveu esse ciclo? Comenta aqui — quantas vezes a dor voltou.</div><button class="copy-btn" data-src="c20" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">07</span></div><h3 class="card-title">O corredor com lombar travada — e o que a avaliação revelou</h3><div class="art-wrap"><div class="art-frame art-45"><div class="art-pend">Arte em produção</div></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c21">Chegou no studio com lombar travada depois de cada corrida longa.
+Esse é o fio condutor do Sistema I-Cross — e é o que está no centro do Curso Pilates para Corredores.
 
-Já tinha feito fisioterapia. Já tinha parado de treinar por três semanas. Já tinha voltado — e a lombar travava de novo na primeira corrida acima de 15 km.
+Link da bio para saber mais.</div><button class="copy-btn" data-src="c16" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">03</span></div><h3 class="card-title">A passada revela tudo</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-03-engajamento.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-03-engajamento.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c17">Olha o que muda na passada quando o quadril não tem estabilidade suficiente.
 
-A avaliação do padrão de movimento revelou o que o tratamento anterior não tinha visto: quadril com mobilidade assimétrica e glúteo médio inativo no lado direito. A cada passada, a lombar compensava o que o quadril deveria absorver.
+O tronco inclina. O joelho desvia. O pé busca compensação que o corpo não pediu. E isso se repete algumas centenas de vezes por quilômetro.
 
-Três meses de trabalho com Pilates contemporâneo e avaliação individualizada. Core reintegrado ao padrão de corrida. Cadeia posterior reativada. Passada reequilibrada.
+Não é fraqueza de vontade. Não é falta de treino. É padrão de movimento — e padrão se avalia, se treina e se corrige.
 
-A lombar parou de travar. Não porque foi tratada — mas porque parou de ser sobrecarregada.
+A diferença entre correr com e sem essa base não aparece nos primeiros quilômetros. Aparece nas semanas seguintes: na dor que fica, na recuperação que demora, na lesão que volta sem aviso.
 
-Esse é o raciocínio clínico que o Sistema I-Cross aplica: ler o corpo antes de prescrever. Sempre.
+O Pilates contemporâneo aplicado à corrida existe para fechar esse vão — entre o quanto o corredor treina e o quanto o corpo consegue sustentar.
 
-Se você se identifica com esse caso, o link na bio tem o caminho.</div><button class="copy-btn" data-src="c21" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">08</span></div><h3 class="card-title">Cadência, passada e força: o que falta no seu treino</h3><div class="art-wrap"><div class="art-frame art-45"><div class="art-pend">Arte em produção</div></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c22">Cadência. Passada. Força.
+Se você se viu nessa imagem, me conta nos comentários: qual parte do corpo costuma avisar primeiro quando o volume sobe?</div><button class="copy-btn" data-src="c17" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">04</span></div><h3 class="card-title">Treina 5 dias por semana e ainda se machuca</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-04-dor.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-04-dor.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c18">Cinco dias de treino por semana. Planilha respeitada. Sono razoável. E mesmo assim: dor no quadril, joelho ou lombar que não some.
 
-O corredor amador treina volume. Às vezes, velocidade. Raramente os três fundamentos acima com a especificidade que eles exigem.
+Esse é o retrato mais comum de quem aparece no meu consultório.
 
-Cadência sem força de base é ritmo sem sustentação — o corpo começa a compensar antes do que deveria.
+Não falta dedicação. Falta estrutura de movimento.
 
-Passada sem estabilidade de quadril é eficiência que desaparece com o cansaço — e você nem percebe quando a forma desmorona.
+Volume alto sobre padrão biomecânico deficiente não constrói performance — constrói lesão em câmera lenta. Cada passada com quadril instável, cada quilômetro com core que ativa fora do tempo, cada semana com carga que o tecido não está pronto para absorver.
 
-Força sem integração ao padrão de corrida é musculação que não transfere — você fica mais forte no treino e continua frágil na pista.
+O corpo aguenta por um tempo. Depois, avisa. E o aviso costuma doer mais do que o corredor esperava.
 
-O que resolve não é mais treino. É treino com leitura de movimento.
+A solução não é treinar menos. É treinar com mais inteligência sobre o que o movimento precisa — antes de o corpo pedir parada.
 
-Pilates contemporâneo aplicado à corrida trabalha os três — com avaliação individual como ponto de partida, não como bônus.
+O Curso Pilates para Corredores foi construído exatamente para isso: para quem quer entender o que está acontecendo em cada passada e corrigir antes que a lesão decida.
 
-Esse é o método. Essa é a diferença entre prescrever por protocolo e prescrever por leitura de corpo.
+Primeira turma: 21, 22 e 23 de agosto de 2026, em Belo Horizonte. Link da bio.</div><button class="copy-btn" data-src="c18" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">05</span></div><h3 class="card-title">Seu core forte não está te protegendo</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-05-educativo.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-05-educativo.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c19">Core forte é diferente de core funcional na corrida.
 
-Salva esse post — e na próxima vez que a passada desmoronar no km 25, você vai saber por onde começar.</div><button class="copy-btn" data-src="c22" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">09</span></div><h3 class="card-title">Por que decidi abrir esse curso — e para quem ele é</h3><div class="art-wrap"><div class="art-frame art-45"><div class="art-pend">Arte em produção</div></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c23">25 anos de clínica ensinam o que os livros não ensinam.
+O corredor que faz prancha, abdominal e exercícios de estabilização com consistência pode ainda assim ter core ineficiente durante a passada.
 
-Ensinam que o corredor amador entre 30 e 50 anos é o perfil mais subatendido no Pilates. Treina para provas, carrega lesões antigas, já buscou solução no ortopedista e na fisioterapia convencional — e continua no ciclo.
+Por quê? Porque a ativação que acontece num exercício estático não é automaticamente transferida para um padrão dinâmico de alta repetição como a corrida.
 
-O mercado tem Pilates genérico. Tem personal de corrida. Tem fisioterapia de consultório.
+O core precisa ativar no timing certo — antes do impacto do pé no solo, não depois. Precisa manter estabilidade enquanto o quadril gera propulsão. Precisa funcionar de forma integrada com a musculatura da cadeia posterior.
 
-Não tem, com a profundidade que esse corredor precisa, o cruzamento dos três — com avaliação individual, biomecânica aplicada e prescrição com intenção.
+Quando essa sequência não acontece, o corpo encontra compensações. Joelho em valgo. Hiperextensão de lombar. Quadril que cede lateralmente.
 
-O Curso Pilates para Corredores nasceu dessa lacuna.
+Não é falta de força. É falta de padrão motor adequado ao contexto da corrida.
 
-Três dias de imersão presencial em Belo Horizonte, nos dias 21, 22 e 23 de agosto de 2026. Força, estabilidade de quadril, core funcional, passada eficiente e prevenção de lesão — integrados ao Pilates contemporâneo do começo ao fim.
+O Pilates contemporâneo treina exatamente esse padrão — não o músculo isolado, mas a cadeia em movimento, no timing que a corrida exige.
 
-Para os 10 primeiros inscritos: 20% de desconto e uma avaliação individual do padrão de movimento como bônus.
+Esse é um dos pilares do Curso Pilates para Corredores. Link da bio para as informações completas.</div><button class="copy-btn" data-src="c19" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">06</span></div><h3 class="card-title">O que mudou depois de ajustar a passada</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-06-autoridade.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-06-autoridade.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c20">Corredor. 42 anos. Histórico de três anos com dor lateral de joelho recorrente.
 
-Não é protocolo. É método construído em consultório e validado em prática real.
+Já tinha passado por fisioterapia convencional duas vezes. Voltava a correr, aumentava o volume, a dor voltava. O ciclo se repetia.
 
-O link está na bio.</div><button class="copy-btn" data-src="c23" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">10</span></div><h3 class="card-title">O que não fazer na semana antes da prova</h3><div class="art-wrap"><div class="art-frame art-45"><div class="art-pend">Arte em produção</div></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c24">Semana de prova. O corpo está acumulado. A ansiedade está alta. E a vontade de fazer algo — qualquer coisa — para chegar melhor na largada é real.
+Na avaliação, o padrão era claro: instabilidade de quadril pronunciada, com queda do hemipelve contralateral em cada passada. O joelho pagava o preço de um problema que começava acima dele.
 
-Essa vontade é o maior risco dessa semana.
+O protocolo não focou no joelho. Focou no quadril — força, estabilidade dinâmica e controle motor integrado à cadência real da corrida.
 
-Nada de estímulo intenso. Nada de carga nova. Nada de movimento que o corpo não conhece.
+Em três meses de trabalho estruturado com o Sistema I-Cross, o padrão mudou. A dor não voltou. Ele correu a prova que havia desistido de tentar.
 
-O que a semana pré-prova exige é preservação — da potência acumulada em meses de treino, do sistema nervoso que precisa chegar calibrado, da biomecânica que garante a passada eficiente do km 1 ao km final.
+Dois anos depois, ainda corre. Sem interrupção forçada.
 
-O Pilates contemporâneo nessa semana tem uma função específica: ajustar, não acrescentar. Mobilidade funcional no lugar certo. Ativação sem fadiga. Consciência corporal que chega na largada, não que fica no studio.
+A lesão não era inevitável. Era previsível — e corrigível, quando se olha para o lugar certo.
 
-Prescrição certa nessa semana é aquela que sabe quando não atuar.
+Se você reconhece esse ciclo, o Curso Pilates para Corredores foi construído para te mostrar como sair dele. Link da bio.</div><button class="copy-btn" data-src="c20" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">07</span></div><h3 class="card-title">Primeira turma. Por que estou abrindo isso agora.</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-07-bastidor.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-07-bastidor.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c21">Durante muitos anos, eu apliquei o que hoje é o Sistema I-Cross no consultório, no studio, na docência.
 
-Compartilha esse post com o grupo de corrida — alguém vai agradecer antes do dia D.</div><button class="copy-btn" data-src="c24" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">11</span></div><h3 class="card-title">Faltam 10 dias para a primeira turma começar</h3><div class="art-wrap"><div class="art-frame art-45"><div class="art-pend">Arte em produção</div></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c25">10 dias para o Curso Pilates para Corredores começar.
+Vi corredores pararem de se machucar. Vi instrutores entenderem pela primeira vez o que estavam olhando quando avaliavam um corredor. Vi a diferença que a precisão clínica faz quando está integrada ao Pilates.
 
-Três dias — 21, 22 e 23 de agosto de 2026 — de imersão presencial em Belo Horizonte.
+A pergunta que ficou: por que isso não existe como formação estruturada?
 
-O que o programa entrega:
+Não existe porque a maioria das formações separa o que precisa estar junto. Pilates de um lado. Biomecânica da corrida do outro. Fisioterapia em outra gaveta.
 
-Dia 1 — Biomecânica da corrida e avaliação do corredor. Como ler a passada, identificar padrões de compensação e construir o raciocínio clínico que orienta toda a prescrição.
+O Curso Pilates para Corredores nasce para fechar esse vão — em três dias de imersão presencial em Belo Horizonte, com o Sistema I-Cross como fio condutor.
 
-Dia 2 — Força, estabilidade de quadril e core funcional aplicados à corrida. Não o abdominal isolado — a cadeia completa que sustenta a passada quando o cansaço chega.
+Estou abrindo a primeira turma em agosto de 2026 porque o método está maduro, o protocolo está documentado e chegou a hora de ensinar o que funciona na prática para quem atende corredores.
 
-Dia 3 — Protocolos de prevenção de lesão, mobilidade e retorno à corrida. O que prescrever, quando prescrever e como integrar o Pilates contemporâneo a cada fase do treino do corredor.
+Para os 10 primeiros inscritos: 20% de desconto e uma avaliação individual do padrão de movimento incluída.
 
-Para os 10 primeiros inscritos: 20% de desconto e avaliação individual do padrão de movimento como bônus.
+As informações completas estão no link da bio.</div><button class="copy-btn" data-src="c21" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">08</span></div><h3 class="card-title">Antes de colocar o tênis</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-08-educativo.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-08-educativo.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c22">A preparação para a corrida não começa na largada. Começa antes — no que o corpo consegue fazer antes de o pé tocar o solo.
 
-Se você quer correr mais, melhor e sem o ciclo de lesão que já conhece de perto — esse curso foi construído para você.
+Mobilidade de quadril é um dos pontos mais negligenciados por corredores que já têm volume alto de treino. Quanto mais se corre, mais o quadril tende a perder amplitude — e mais a passada paga o preço disso.
 
-Acessa o link na bio e garante a sua vaga.</div><button class="copy-btn" data-src="c25" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">12</span></div><h3 class="card-title">As vagas com desconto estão acabando</h3><div class="art-wrap"><div class="art-frame art-45"><div class="art-pend">Arte em produção</div></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c26">A condição de pré-matrícula existe para os 10 primeiros inscritos.
+Três movimentos que usamos no protocolo do Sistema I-Cross antes de sessões de corrida:
 
-20% de desconto e avaliação individual do padrão de movimento como bônus.
+1. Rotação interna e externa de quadril em posição supina — 10 repetições cada lado, movimento lento e com atenção à pelve neutra.
 
-Não é contagem regressiva inventada. É o número real de vagas disponíveis nessa condição — e elas têm prazo natural de encerramento à medida que as inscrições chegam.
+2. Mobilização em quatro apoios com círculos de quadril — 8 repetições em cada sentido, sem compensação de lombar.
 
-O curso começa em 21 de agosto de 2026. Presencial. Belo Horizonte. Três dias de imersão com método autoral construído em 25 anos de clínica.
+3. Passada longa com rotação de tronco — 6 repetições alternadas, mantendo o core ativo durante o movimento.
 
-Se você está no ciclo — dor que volta, tratamento que não resolve a causa, corrida interrompida mais vezes do que deveria — essa é a formação que endereça o problema de verdade.
+Não é aquecimento genérico. É preparação específica para o que a corrida vai exigir da articulação mais determinante da passada.
 
-Com avaliação individual. Com biomecânica da corrida. Com Pilates contemporâneo aplicado com intenção, não com protocolo genérico.
+Faz agora e me conta nos comentários como ficou o quadril depois.</div><button class="copy-btn" data-src="c22" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">09</span></div><h3 class="card-title">3 dias que mudam o atendimento</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-09-venda.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-09-venda.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c23">Três dias. Belo Horizonte. 21, 22 e 23 de agosto de 2026.
 
-Acessa o link na bio. O que ainda está disponível está lá.</div><button class="copy-btn" data-src="c26" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">13</span></div><h3 class="card-title">Começa hoje.</h3><div class="art-wrap"><div class="art-frame art-45"><div class="art-pend">Arte em produção</div></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c27">Começa hoje.
+Isso é o Curso Pilates para Corredores — não uma introdução ao tema, mas uma imersão com protocolo clínico completo.
 
-A primeira turma do Curso Pilates para Corredores está na sala.
+Dia 1: biomecânica da corrida aplicada. Como o corpo se organiza em cada fase da passada, onde falha e por quê. Avaliação do corredor na prática — o que observar, o que medir, o que registrar.
 
-Corredores com histórico de lesão recorrente. Com passada que compensa sem perceber. Com core que falha quando o quilômetro fica difícil. Com a pergunta que nenhum tratamento anterior soube responder: por que a dor volta?
+Dia 2: protocolos de força e estabilidade com o Sistema I-Cross. Cadeia posterior, estabilidade de quadril, ativação de core no timing da corrida. Do aparelho para a pista — como a transferência acontece.
 
-Três dias para construir o raciocínio que muda isso.
+Dia 3: prevenção e manejo de lesões recorrentes. Os padrões mais comuns, os protocolos mais eficientes, a lógica de progressão que sustenta performance sem abrir espaço para lesão.
 
-Não é protocolo entregue em apostila. É método aplicado em corpo real, com avaliação individual, biomecânica da corrida e prescrição com intenção.
+Para instrutor(a) de Pilates ou fisioterapeuta que atende corredores — ou quer começar a atender com qualidade clínica real —, esse é o formato certo.
 
-25 anos de clínica chegam aqui — não como título listado, mas como capacidade de leitura de movimento que só a prática real constrói.
+Condição inaugural: 20% de desconto e avaliação individual incluída para os 10 primeiros inscritos.
 
-Fica acompanhando. O bastidor dessa turma vai aparecer aqui.</div><button class="copy-btn" data-src="c27" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">14</span></div><h3 class="card-title">Correr não é o problema. O padrão é.</h3><div class="art-wrap"><div class="art-frame art-45"><div class="art-pend">Arte em produção</div></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c28">Correr não machuca.
+Informações completas no link da bio.</div><button class="copy-btn" data-src="c23" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">10</span></div><h3 class="card-title">O joelho não mente</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-10-dor.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-10-dor.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c24">A dor está no joelho. A origem, quase sempre, não.
 
-O padrão de movimento que se repete por meses, semana após semana, quilômetro após quilômetro — esse machuca.
+O joelho é a estrutura que paga — não a que falha primeiro. Ele recebe a sobrecarga que o quadril não segurou, o impacto que o core não amorteceu, a torção que a passada acumulou ao longo de semanas.
 
-O corredor amador que ama correr, que treina com consistência, que se cuida como consegue — esse não merece passar pelo ciclo de lesão, pausa, retorno e lesão de novo.
+Tratar o joelho sem avaliar o padrão de movimento é apagar o alarme sem resolver o incêndio. Melhora. Volta. Melhora. Volta.
 
-Merece uma leitura real do próprio corpo. Uma avaliação que enxergue o que o exame de imagem não mostra. Uma prescrição que resolva a causa, não que silencie o sintoma.
+O corredor que chega com dor lateral de joelho, síndrome da banda iliotibial ou condropatia patelar quase sempre tem um padrão biomecânico específico que está gerando essa sobrecarga. Identificar esse padrão é o ponto de partida de qualquer intervenção eficiente.
 
-Isso é o que 25 anos de clínica ensinam a fazer.
+É aí que o olho clínico faz diferença — e é exatamente isso que o Pilates contemporâneo, bem aplicado, consegue rastrear e corrigir.
 
-E é exatamente isso que o Pilates contemporâneo aplicado à corrida, com método, oferece.
+Com a prova de agosto se aproximando, esse é o momento de entender o que o seu joelho está tentando dizer.
 
-O corpo do corredor fala o tempo todo. Aprender a ouvir é parte do trabalho.
+Link da bio para as informações do Curso Pilates para Corredores.</div><button class="copy-btn" data-src="c24" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">11</span></div><h3 class="card-title">O que o Strava não mede</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-11-engajamento.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-11-engajamento.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c25">Pace. Distância. Frequência cardíaca. Elevação. O Strava mede tudo — exceto o que mais importa para a longevidade do corredor.
 
-Se essa frase faz sentido para você, comenta aqui. Quero saber onde você está nessa jornada.</div><button class="copy-btn" data-src="c28" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">15</span></div><h3 class="card-title">O Sistema I-Cross nasceu da prática clínica real</h3><div class="art-wrap"><div class="art-frame art-45"><div class="art-pend">Arte em produção</div></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c29">25 anos de clínica ensinam a distinguir o que funciona do que apenas parece funcionar.
+Não mede a instabilidade de quadril que aparece no quilômetro 8.
+Não mede o desvio de joelho que se intensifica quando a fadiga chega.
+Não mede o momento em que o core deixa de ativar e a lombar assume a carga.
+Não mede a passada que está, semana após semana, construindo a próxima lesão.
 
-O Sistema I-Cross nasceu dessa distinção.
+Os dados objetivos são importantes — mas são insuficientes sem a leitura qualitativa do movimento. E essa leitura exige avaliação, não aplicativo.
 
-Não é Pilates com nome novo. É uma construção autoral que integra os princípios do Pilates contemporâneo aos fundamentos do movimento humano — com avaliação individual como ponto de partida obrigatório.
+O corredor que combina os dois — métricas de treino e análise de padrão de movimento — tem uma vantagem real sobre quem depende só dos números.
 
-Amadureci esse sistema nos casos que o protocolo padrão não resolvia. Nos corredores que chegavam depois de três fisioterapias e a mesma dor no mesmo lugar. Nas passadas que compensavam de formas que a avaliação convencional não capturava.
+Me conta nos comentários: você já fez alguma avaliação de padrão de movimento ou de passada?</div><button class="copy-btn" data-src="c25" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">12</span></div><h3 class="card-title">A primeira turma fecha em agosto</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-12-venda.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-12-venda.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c26">Agosto de 2026. A primeira turma do Curso Pilates para Corredores acontece em Belo Horizonte — e não volta a existir com essa condição.
 
-A aplicação à corrida é uma das expressões mais precisas desse método — porque a corrida exige de cada estrutura exatamente aquilo que ela consegue ou não consegue entregar.
+Para os 10 primeiros inscritos: 20% de desconto sobre o valor da formação e uma avaliação individual do padrão de movimento incluída — presencial ou por vídeo.
 
-Não é sobre seguir protocolo. É sobre ler cada corpo e prescrever com intenção.
+Não é urgência artificial. É a lógica de uma turma inaugural: quando as vagas fecham, a condição fecha junto.
 
-Esse é o alicerce do Curso Pilates para Corredores. O link para saber mais está na bio.</div><button class="copy-btn" data-src="c29" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">01</span></div><h3 class="card-title">A dor voltou depois do tratamento?</h3><div class="art-wrap"><div class="art-frame art-916"><div class="art-pend">Arte em produção</div></div></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">02</span></div><h3 class="card-title">O joelho dói. O problema não é o joelho.</h3><div class="art-wrap"><div class="art-frame art-916"><div class="art-pend">Arte em produção</div></div></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">03</span></div><h3 class="card-title">Qual dói mais depois de correr?</h3><div class="art-wrap"><div class="art-frame art-916"><div class="art-pend">Arte em produção</div></div></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">04</span></div><h3 class="card-title">Core forte ≠ core funcional para corrida</h3><div class="art-wrap"><div class="art-frame art-916"><div class="art-pend">Arte em produção</div></div></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">05</span></div><h3 class="card-title">25 anos de clínica. Um método. Sua passada.</h3><div class="art-wrap"><div class="art-frame art-916"><div class="art-pend">Arte em produção</div></div></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">06</span></div><h3 class="card-title">10 vagas com 20% de desconto.</h3><div class="art-wrap"><div class="art-frame art-916"><div class="art-pend">Arte em produção</div></div></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">07</span></div><h3 class="card-title">Você já usou Pilates como parte do treino?</h3><div class="art-wrap"><div class="art-frame art-916"><div class="art-pend">Arte em produção</div></div></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">08</span></div><h3 class="card-title">Na semana da prova: menos é mais.</h3><div class="art-wrap"><div class="art-frame art-916"><div class="art-pend">Arte em produção</div></div></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">09</span></div><h3 class="card-title">Bastidor da primeira turma — começa hoje.</h3><div class="art-wrap"><div class="art-frame art-916"><div class="art-pend">Arte em produção</div></div></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">10</span></div><h3 class="card-title">Quantas vezes a lesão voltou?</h3><div class="art-wrap"><div class="art-frame art-916"><div class="art-pend">Arte em produção</div></div></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">11</span></div><h3 class="card-title">Sistema I-Cross: método, não protocolo.</h3><div class="art-wrap"><div class="art-frame art-916"><div class="art-pend">Arte em produção</div></div></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">12</span></div><h3 class="card-title">Belo Horizonte. 21, 22 e 23 de agosto.</h3><div class="art-wrap"><div class="art-frame art-916"><div class="art-pend">Arte em produção</div></div></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">13</span></div><h3 class="card-title">O corpo do corredor fala. Você ouve?</h3><div class="art-wrap"><div class="art-frame art-916"><div class="art-pend">Arte em produção</div></div></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">14</span></div><h3 class="card-title">Pilates para corredor não é alongamento.</h3><div class="art-wrap"><div class="art-frame art-916"><div class="art-pend">Arte em produção</div></div></div><div class="card-foot"></div></article>
-      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">15</span></div><h3 class="card-title">Últimas vagas com condição especial.</h3><div class="art-wrap"><div class="art-frame art-916"><div class="art-pend">Arte em produção</div></div></div><div class="card-foot"></div></article>
+Três dias de imersão com protocolo clínico completo — biomecânica da corrida, avaliação do corredor, protocolos de força, estabilidade e prevenção, com o Sistema I-Cross como método condutor.
+
+Para o instrutor(a) de Pilates ou fisioterapeuta que quer ser referência no atendimento a corredores — ou para o corredor que quer entender o próprio movimento com profundidade clínica —, esse é o caminho.
+
+A primeira turma não volta. A condição inaugural também não. O que fica é o que você aprende nos três dias — e o que muda no atendimento depois.
+
+As últimas vagas estão no link da bio.</div><button class="copy-btn" data-src="c26" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">13</span></div><h3 class="card-title">Por que escolhi a corrida como campo</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-13-conexao.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-13-conexao.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c27">Não foi uma escolha de mercado.
+
+Depois de 25 anos atendendo, ensinando e aprofundando o estudo do movimento humano, a corrida se tornou o campo mais revelador que conheço.
+
+Nenhuma atividade expõe tão rapidamente as falhas do padrão de movimento quanto a corrida. A repetição da passada é impiedosa — ela amplifica qualquer desequilíbrio, qualquer compensação, qualquer ponto fraco da cadeia.
+
+E ao mesmo tempo, quando o padrão está bem construído, a corrida é uma das expressões mais eficientes do movimento humano. Econômica, potente, sustentável.
+
+Esses dois lados me fascinam clinicamente — e foi observando esse campo por anos que o Sistema I-Cross ganhou a forma que tem hoje.
+
+Não é Pilates para corredores como complemento decorativo. É Pilates construído do avesso: parte da biomecânica da passada, mapeia onde o corpo falha e prescreve com precisão.
+
+Esse é o trabalho que faz sentido para mim. E é o que estou abrindo para quem quer aprender a fazer também.</div><button class="copy-btn" data-src="c27" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">14</span></div><h3 class="card-title">O que acontece na semana antes da prova</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-14-educativo.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-14-educativo.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c28">Semana de prova. O corpo acumulou meses de treino. A cabeça já está na largada.
+
+É exatamente nesse momento que a prescrição errada pode comprometer tudo que foi construído.
+
+O Pilates na semana da prova não é para ganhar força. Não é para testar nada novo. Não é para manter volume.
+
+É para três coisas específicas: ajustar biomecânica, reduzir fadiga residual e preservar a potência que foi construída ao longo dos meses.
+
+Estímulo forte fora de hora não soma. Subtrai. O tecido muscular precisa de condições para entregar no dia — e essas condições se constroem com inteligência na semana anterior, não com mais carga.
+
+Na prática: sessões mais curtas, foco em mobilidade e ativação sem sobrecarga, atenção à cadência e ao padrão de passada sem fadiga acumulada.
+
+A inteligência está em saber quando menos é exatamente o que o corredor precisa.
+
+Se você tem uma prova chegando em agosto e quer entender como estruturar essa semana, me conta nos comentários.</div><button class="copy-btn" data-src="c28" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">15</span></div><h3 class="card-title">Sistema I-Cross: método autoral com 25 anos de base</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-15-autoridade.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Post-15-autoridade.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c29">O Sistema I-Cross não nasceu de uma tendência de mercado.
+
+Nasceu da prática clínica — de anos atendendo corredores, observando padrões de lesão, testando intervenções, documentando o que funcionava e o que não funcionava.
+
+É a integração entre os princípios do Pilates e os fundamentos do movimento humano aplicados especificamente à corrida. Não como sobreposição de técnicas, mas como sistema — com lógica de avaliação, protocolo de prescrição e progressão individualizada.
+
+A base é sempre a mesma: partir de onde o corredor está, entender o que o padrão de movimento revela e construir do lugar certo.
+
+Não é Pilates genérico com corredor como público. É método construído a partir da biomecânica da passada, com Pilates contemporâneo como linguagem clínica.
+
+Esse é o sistema que está no centro do Curso Pilates para Corredores — e que estou abrindo para instrutores(as) e fisioterapeutas na primeira turma de agosto.
+
+Link da bio para as informações completas.</div><button class="copy-btn" data-src="c29" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">01</span></div><h3 class="card-title">25 anos de prática clínica</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-01.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-01.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">02</span></div><h3 class="card-title">Você já fez avaliação de passada?</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-02.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-02.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">03</span></div><h3 class="card-title">O joelho paga. O quadril falha.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-03.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-03.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">04</span></div><h3 class="card-title">Treina muito e ainda se machuca?</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-04.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-04.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">05</span></div><h3 class="card-title">Por que a primeira turma é em agosto</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-05.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-05.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">06</span></div><h3 class="card-title">20% de desconto — 10 vagas</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-06.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-06.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">07</span></div><h3 class="card-title">Core forte ≠ core funcional</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-07.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-07.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">08</span></div><h3 class="card-title">Qual parte do corpo avisa primeiro?</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-08.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-08.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">09</span></div><h3 class="card-title">Sistema I-Cross — método autoral</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-09.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-09.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">10</span></div><h3 class="card-title">Imersão presencial — BH — agosto</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-10.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-10.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">11</span></div><h3 class="card-title">O Strava não mede o que mais importa</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-11.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-11.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">12</span></div><h3 class="card-title">O ciclo que não para</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-12.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-12.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">13</span></div><h3 class="card-title">Por que escolhi a corrida</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-13.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-13.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">14</span></div><h3 class="card-title">Semana de prova chegando?</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-14.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-14.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">15</span></div><h3 class="card-title">Últimas vagas — condição inaugural</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-15.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/isleylauar-c7e412e5/artes/Story-15.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
     </div>
   </div>
   <section class="guia">
