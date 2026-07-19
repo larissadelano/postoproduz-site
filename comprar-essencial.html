@@ -6,8 +6,14 @@
 .r{width:56px;height:3px;background:#C9A84C;margin:18px auto}
 h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:28px;margin:8px 0 10px}
 p{font-size:15px;line-height:1.6;opacity:.85}a{color:#C9A84C}</style>
-<script>const CAKTO_URL="https://pay.cakto.com.br/38azrt8_968209";if(CAKTO_URL)location.replace(CAKTO_URL);</script></head>
+<script>
+/* URL oficial do POSTÔ Essencial · Cakto */
+const CAKTO_URL="https://pay.cakto.com.br/38azrt8_968209";
+if(CAKTO_URL){location.replace(CAKTO_URL);}
+</script></head>
 <body><div class="b"><div class="l">POSTÔ</div><div class="r"></div>
-<h1>Estamos te levando para a página de pagamento seguro da POSTÔ…</h1>
-<p>Se a página não abrir sozinha em alguns segundos, <a href="https://pay.cakto.com.br/38azrt8_968209">toque aqui para continuar</a>.</p>
-<p style="margin-top:26px;font-size:13px;opacity:.6">A POSTÔ produz. Você posta.</p></div></body></html>
+<h1 id="msg">Estamos te levando para a página de pagamento seguro da POSTÔ…</h1>
+<p id="fb">Se a página não abrir sozinha em alguns segundos, <a id="lk" href="https://pay.cakto.com.br/38azrt8_968209">toque aqui para continuar</a>.</p>
+<p style="margin-top:26px;font-size:13px;opacity:.6">A POSTÔ produz. Você posta.</p></div>
+<script>if(CAKTO_URL){document.getElementById('lk').href=CAKTO_URL;}else{document.getElementById('msg').textContent='POSTÔ Essencial: checkout em configuração.';document.getElementById('fb').style.display='none';}</script>
+</body></html>
