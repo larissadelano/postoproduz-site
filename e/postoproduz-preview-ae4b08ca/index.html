@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Edição Agosto · POSTÔ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--deep:#08080C;--deep-2:#07070A;--surface:#F5F0E8;--surface-2:#FFFFFF;--accent:#C9A84C;--accent-2:#111118;
+--ink:#08080C;--ink-soft:#15151F;--cream:#F3F1EA;--cream-soft:rgba(243,241,234,.62);--line:rgba(20,25,22,.12);
+--radius:18px;--shadow:0 1px 2px rgba(20,30,26,.04),0 8px 30px rgba(20,30,26,.07);
+--serif:'Playfair Display', 'Cormorant Garamond', Georgia, serif;--sans:'DM Sans', 'DM Sans', -apple-system, sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--deep);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+.app{max-width:460px;margin:0 auto;background:var(--deep);min-height:100vh;position:relative;overflow:hidden}
+.brandbar{background:var(--deep);display:flex;align-items:center;justify-content:center;padding:22px 26px 4px}
+.brandbar .wm{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.55rem;letter-spacing:.22em;color:var(--cream)}
+.brandbar .wm i{color:var(--accent);font-style:normal}
+.hero{padding:38px 26px 40px;position:relative;background:radial-gradient(120% 90% at 80% 0%, #0A0A0F 0%, var(--deep) 55%)}
+.hero .eyebrow{font-size:.66rem;letter-spacing:.34em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:22px}
+.hero .mark{width:30px;height:1px;background:var(--accent);opacity:.6;margin-bottom:22px}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:2.5rem;line-height:1.06;color:var(--cream)}
+.hero .positioning{margin-top:14px;font-family:var(--serif);font-weight:500;font-size:1.24rem;line-height:1.34;color:var(--cream);max-width:340px}
+.hero .role{margin-top:14px;font-size:.86rem;color:var(--cream-soft)}
+.hero .role b{color:var(--cream);font-weight:500}
+.hero .month{margin-top:26px;display:inline-flex;align-items:center;gap:10px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cream);border:1px solid rgba(255,255,255,.28);padding:9px 16px;border-radius:100px}
+.hero .month i{width:5px;height:5px;border-radius:50%;background:var(--accent)}
+.hero .welcome{margin-top:24px;font-family:var(--serif);font-style:italic;font-size:1.22rem;line-height:1.4;color:var(--cream);max-width:330px}
+.howto{background:var(--deep-2);padding:22px 26px;display:flex;flex-direction:column;gap:14px}
+.howto .step{display:flex;gap:13px}
+.howto .n{font-family:var(--serif);font-size:1.1rem;color:var(--accent);width:18px;flex-shrink:0;font-weight:600}
+.howto .t{font-size:.82rem;color:var(--cream-soft);line-height:1.45}
+.howto .t b{color:var(--cream);font-weight:600}
+.howto .dlpdf{margin-top:8px;display:flex;align-items:center;justify-content:center;gap:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.24);border-radius:12px;padding:14px;color:var(--cream);text-decoration:none;font-size:.82rem;font-weight:600}
+.howto .dlpdf svg{width:17px;height:17px;stroke:var(--accent)}
+.body{background:var(--surface);border-radius:26px 26px 0 0;padding:34px 0 0;margin-top:-12px;position:relative;z-index:2}
+.section-label{padding:0 26px;display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.section-label .bar{height:1px;flex:1;background:var(--line)}
+.section-label span{font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;white-space:nowrap}
+.agenda{padding:0 26px 6px}
+.agenda .row{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.agenda .row:last-child{border-bottom:none}
+.agenda .when{width:64px;flex-shrink:0}
+.agenda .when .d{font-family:var(--serif);font-size:1.5rem;font-weight:600;line-height:1}
+.agenda .when .m{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-top:3px}
+.agenda .what{flex:1}
+.agenda .what .tipo{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-2);font-weight:700;margin-bottom:3px}
+.agenda .what .ttl{font-size:.9rem;font-weight:500;line-height:1.3}
+.agenda .what .hr{font-size:.72rem;color:var(--ink-soft);margin-top:3px}
+.agenda-note{padding:14px 26px 0;color:var(--ink-soft);font-style:italic;font-family:var(--serif);font-size:.95rem}
+.feed{padding:30px 18px 10px;display:flex;flex-direction:column;gap:26px}
+.card{background:var(--surface-2);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.card-head{padding:18px 20px 0;display:flex;align-items:center;justify-content:space-between}
+.badge{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;padding:6px 11px;border-radius:100px}
+.badge.feed-b,.badge.story-b{background:rgba(0,0,0,.05);color:var(--deep)}
+.badge.carr-b{background:rgba(0,0,0,.05);color:var(--deep)}
+.badge.reel-b{background:rgba(0,0,0,.06);color:var(--deep)}
+.card-head .num{font-family:var(--serif);font-size:1rem;color:var(--ink-soft)}
+.card-title{padding:12px 20px 0;font-family:var(--serif);font-weight:600;font-size:1.42rem;line-height:1.18}
+.art-wrap{padding:16px 20px 4px}
+.art-frame{position:relative;border-radius:12px;overflow:hidden;box-shadow:0 6px 22px rgba(20,30,26,.16);background:var(--deep-2)}
+.art-45{aspect-ratio:4/5}
+.art-916{aspect-ratio:9/16;max-width:230px;margin:0 auto}
+.art-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.art-pend{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--cream-soft);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase}
+.save-hint{display:flex;align-items:center;gap:10px;justify-content:center;margin-top:11px;flex-wrap:wrap}
+.save-hint a{font-size:.72rem;color:var(--accent-2);font-weight:600;display:inline-flex;align-items:center;gap:6px;text-decoration:none;padding:6px}
+.save-hint svg{width:14px;height:14px}
+.save-hint span{font-size:.68rem;color:var(--ink-soft)}
+.slides-scroll{display:flex;gap:9px;overflow-x:auto;padding:12px 20px 2px;-webkit-overflow-scrolling:touch}
+.slides-scroll img{height:150px;border-radius:9px;box-shadow:0 4px 14px rgba(20,30,26,.14);display:block}
+.strip-note{padding:8px 20px 0;font-size:.7rem;color:var(--ink-soft)}
+.copy-block{padding:16px 20px 6px}
+.copy-block .cb-label{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);font-weight:700;margin-bottom:9px}
+.copy-text{font-size:.92rem;line-height:1.6;white-space:pre-line}
+.copy-text.roteiro{font-size:.86rem;line-height:1.7}
+.copy-btn{margin-top:13px;width:100%;display:flex;align-items:center;justify-content:center;gap:9px;background:var(--deep);color:var(--cream);border:none;border-radius:11px;padding:14px;font-family:var(--sans);font-size:.82rem;font-weight:600;cursor:pointer;transition:transform .12s ease}
+.copy-btn:active{transform:scale(.985)}
+.copy-btn.done{background:var(--accent-2)}
+.copy-btn svg{width:16px;height:16px;flex-shrink:0}
+.copy-block + .copy-block{padding-top:8px}
+.rl-meta{display:flex;flex-wrap:wrap;gap:8px;padding:14px 20px 2px}
+.rl-chip{font-size:.7rem;color:var(--ink-soft);background:var(--surface);border:1px solid var(--line);border-radius:100px;padding:6px 12px;line-height:1.3}
+.rl-chip b{color:var(--accent-2);font-weight:700;letter-spacing:.03em;margin-right:5px}
+.rl-tag{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);font-weight:700;margin-bottom:6px}
+.rl-gancho{margin:14px 20px 0;padding:14px 16px;background:var(--surface);border-left:3px solid var(--accent);border-radius:0 10px 10px 0}
+.rl-gancho p{font-family:var(--serif);font-size:1.06rem;line-height:1.35;color:var(--ink)}
+.rl-story{padding:16px 20px 4px}
+.rl-story-h{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:12px}
+.rl-cena{display:flex;gap:12px;padding:11px 0;border-top:1px solid var(--line)}
+.rl-cena:first-of-type{border-top:none;padding-top:2px}
+.rl-n{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--deep);color:var(--cream);font-family:var(--serif);font-weight:600;font-size:.92rem;display:flex;align-items:center;justify-content:center}
+.rl-cena-b{flex:1}
+.rl-cena-b p{font-size:.9rem;line-height:1.55}
+.rl-foto{margin-top:10px;display:flex;align-items:center;gap:10px}
+.rl-foto img{width:64px;height:84px;object-fit:cover;border-radius:8px;box-shadow:var(--shadow)}
+.rl-foto span{font-size:.68rem;color:var(--ink-soft);font-style:italic;font-family:var(--serif)}
+.rl-fech{margin:8px 20px 2px;padding:14px 16px;background:var(--surface);border-left:3px solid var(--accent-2);border-radius:0 10px 10px 0}
+.rl-fech p{font-size:.92rem;line-height:1.5;color:var(--ink)}
+.rl-video{padding:14px 20px 4px}
+.rl-video video{width:100%;border-radius:14px;display:block;background:#000;aspect-ratio:9/16;object-fit:cover;box-shadow:var(--shadow)}
+.rl-dl{display:inline-block;margin-top:10px;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-2);text-decoration:none;border:1px solid var(--line);border-radius:100px;padding:8px 16px}
+.card-foot{height:18px}
+.pro-bloco{padding:0 26px}
+.diag{font-size:.92rem;line-height:1.65;white-space:pre-line}
+.refs{margin-top:16px;display:flex;flex-direction:column;gap:10px}
+.ref{background:var(--surface-2);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)}
+.ref-n{font-weight:700;font-size:.88rem;color:var(--accent-2)}
+.ref-o{font-size:.8rem;color:var(--ink-soft);margin-top:4px;line-height:1.5}
+.ia-grid{padding:0 18px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ia-grid img{width:100%;border-radius:10px;display:block;box-shadow:var(--shadow)}
+.guia{background:var(--deep);padding:40px 26px 30px;margin-top:34px}
+.guia .gl{font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:8px}
+.guia h2{font-family:var(--serif);font-weight:600;font-size:1.85rem;color:var(--cream);line-height:1.1;margin-bottom:8px}
+.guia .gsub{font-size:.86rem;color:var(--cream-soft);line-height:1.6;margin-bottom:18px}
+.guia .pdf{margin-top:10px;display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:15px 16px;color:var(--cream);text-decoration:none}
+.guia .pdf svg{width:22px;height:22px;flex-shrink:0;stroke:var(--accent)}
+.guia .pdf .pt{font-size:.86rem;font-weight:600}
+.guia .pdf .ps{font-size:.72rem;color:var(--cream-soft);margin-top:2px}
+.foot{background:var(--deep-2);padding:34px 26px 46px;text-align:center}
+.foot .logo{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.3rem;letter-spacing:.06em;color:var(--cream)}
+.foot .tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.92rem;color:var(--cream-soft);margin-top:6px}
+.foot .ct{margin-top:18px;font-size:.72rem;color:var(--cream-soft);letter-spacing:.04em}
+.foot .gold{height:1px;width:36px;background:var(--accent);margin:20px auto 0}
+.toast{position:fixed;left:50%;bottom:30px;transform:translateX(-50%) translateY(20px);background:#14110D;color:#fff;padding:13px 22px;border-radius:100px;font-size:.84rem;font-weight:500;box-shadow:0 10px 34px rgba(0,0,0,.3);opacity:0;pointer-events:none;transition:all .3s cubic-bezier(.2,.8,.2,1);z-index:50;display:flex;align-items:center;gap:9px}
+.toast svg{width:16px;height:16px;stroke:var(--accent)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.card,.agenda,.guia,.howto{animation:rise .6s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@page{size:A4;margin:14mm 12mm}
+@media print{
+  html,body{background:#fff!important}
+  .app{max-width:none;box-shadow:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact;color-adjust:exact;animation:none!important;transition:none!important}
+  .copy-btn,.toast,.dlpdf,.save-hint,.rl-dl,.strip-note{display:none!important}
+  .card,.agenda .row,.rl-cena,.ref{break-inside:avoid;page-break-inside:avoid}
+  .card{box-shadow:none;border:1px solid var(--line)}
+  .section-label,.card-title,.rl-story-h,.rl-tag{break-after:avoid;page-break-after:avoid}
+  .guia{break-before:page;page-break-before:always}
+  .art-frame{max-height:78vh}
+  .slides-scroll{flex-wrap:wrap;overflow:visible}
+  .slides-scroll img{height:auto;width:31%}
+  img{max-width:100%}
+  .copy-text,.diag,.rl-cena-b p,.rl-gancho p{orphans:3;widows:3}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="brandbar"><span class="wm">POST<i>Ô</i></span></div>
+  <header class="hero">
+    <div class="eyebrow">Edição Agosto</div>
+    <div class="mark"></div>
+    <h1>POSTÔ</h1>
+    <p class="positioning">Um Instagram à altura do seu nome.</p>
+    <div class="role">Produtora editorial digital de conteúdo para Instagram · <b>@postoproduz</b></div>
+    <div class="month"><i></i>1 semana de conteúdo · 8 publicações + 2 stories</div>
+    <p class="welcome">A sua primeira semana está pronta. Copie, salve e publique no seu ritmo.</p>
+  </header>
+  <div class="howto">
+    <div class="step"><div class="n">1</div><div class="t"><b>Toque em copiar</b> e a legenda vai direto para a área de transferência. Cole no Instagram.</div></div>
+    <div class="step"><div class="n">2</div><div class="t"><b>Toque em salvar</b> (ou segure a imagem) para guardar a arte no seu celular.</div></div>
+    <div class="step"><div class="n">3</div><div class="t"><b>Siga a sequência</b> abaixo para publicar nos melhores dias.</div></div>
+  </div>
+  <div class="body">
+    <div class="section-label"><span>Sequência da semana</span><div class="bar"></div></div>
+    <div class="agenda">
+      <div class="row"><div class="when"><div class="d">22</div><div class="m">Qua</div></div><div class="what"><div class="tipo">Carrossel</div><div class="ttl">O Instagram parado não é falta de conteúdo.</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">22</div><div class="m">Qua</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Seu feed te representa?</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">23</div><div class="m">Qui</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Feed parado não é preguiça.</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">24</div><div class="m">Sex</div></div><div class="what"><div class="tipo">Carrossel</div><div class="ttl">Conteúdo genérico não representa ninguém.</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">25</div><div class="m">Sáb</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">O que seu cliente encontra?</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">26</div><div class="m">Dom</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Uma semana pronta para sentir.</div><div class="hr">Melhor horário · 19h</div></div></div>
+      <div class="row"><div class="when"><div class="d">27</div><div class="m">Seg</div></div><div class="what"><div class="tipo">Reel</div><div class="ttl">Seu conteúdo pronto em 72h</div><div class="hr">Melhor horário · 12h</div></div></div>
+      <div class="row"><div class="when"><div class="d">28</div><div class="m">Ter</div></div><div class="what"><div class="tipo">Feed</div><div class="ttl">Você já chegou. O feed ainda não.</div><div class="hr">Melhor horário · 19h</div></div></div>
+    </div>
+    <p class="agenda-note">Os Stories acompanham os dias entre as publicações: use um por intervalo. Horários e ordem detalhados no seu Guia de Uso.</p>
+    
+    
+    <div class="section-label" style="margin-top:34px"><span>O seu conteúdo</span><div class="bar"></div></div>
+    <div class="feed">
+      <article class="card"><div class="card-head"><span class="badge carr-b">Carrossel</span><span class="num">01</span></div><h3 class="card-title">O Instagram parado não é falta de conteúdo.</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Carrossel-01-1-Capa.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Carrossel-01-1-Capa.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="slides-scroll"><a href="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Carrossel-01-2-Slide.png" download><img src="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Carrossel-01-2-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Carrossel-01-3-Slide.png" download><img src="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Carrossel-01-3-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Carrossel-01-4-Slide.png" download><img src="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Carrossel-01-4-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Carrossel-01-5-Slide.png" download><img src="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Carrossel-01-5-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Carrossel-01-6-Slide.png" download><img src="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Carrossel-01-6-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Carrossel-01-Final-CTA.png" download><img src="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Carrossel-01-Final-CTA.png" loading="lazy" alt=""></a></div><p class="strip-note">Toque em cada lâmina para salvar · publique na ordem</p><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c1">Instagram parado não é sobre preguiça.
+
+É sobre não ter estrutura — e tentar resolver isso no improviso toda semana.
+
+Esse carrossel nomeia o que está no caminho.
+
+Salva aqui. Quando travar de novo, ele vai estar esperando.</div><button class="copy-btn" data-src="c1" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge carr-b">Carrossel</span><span class="num">02</span></div><h3 class="card-title">Conteúdo genérico não representa ninguém.</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Carrossel-02-1-Capa.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Carrossel-02-1-Capa.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="slides-scroll"><a href="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Carrossel-02-2-Slide.png" download><img src="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Carrossel-02-2-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Carrossel-02-3-Slide.png" download><img src="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Carrossel-02-3-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Carrossel-02-4-Slide.png" download><img src="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Carrossel-02-4-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Carrossel-02-5-Slide.png" download><img src="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Carrossel-02-5-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Carrossel-02-6-Slide.png" download><img src="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Carrossel-02-6-Slide.png" loading="lazy" alt=""></a><a href="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Carrossel-02-Final-CTA.png" download><img src="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Carrossel-02-Final-CTA.png" loading="lazy" alt=""></a></div><p class="strip-note">Toque em cada lâmina para salvar · publique na ordem</p><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c2">Há uma diferença entre ter o seu nome num post e ter a sua voz num post.
+
+A primeira qualquer um faz. A segunda exige leitura — de quem você é, do que você representa, do tom que é genuinamente seu.
+
+É assim que a POSTÔ trabalha.
+
+Salva esse carrossel. Compartilha com quem também lida com isso.</div><button class="copy-btn" data-src="c2" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel em vídeo</span><span class="num">01</span></div><div class="rl-video"><video controls playsinline preload="metadata" src="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/reel-01.mp4"></video><a class="rl-dl" href="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/reel-01.mp4" download>Salvar Reel</a></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel em vídeo</span><span class="num">02</span></div><div class="rl-video"><video controls playsinline preload="metadata" src="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/reel-02.mp4"></video><a class="rl-dl" href="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/reel-02.mp4" download>Salvar Reel</a></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge reel-b">Reel</span><span class="num">03</span></div><h3 class="card-title">Seu conteúdo pronto em 72h</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Reel-03-Capa.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Reel-03-Capa.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar capa</a><span>ou segure a imagem</span></div></div><div class="rl-gancho"><div class="rl-tag">Gancho · primeiros 3 segundos</div><p>Uma semana inteira de conteúdo para o seu Instagram. Pronta. Com a sua cara.</p></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c3">O POSTÔ Preview entrega a sua primeira semana de Instagram — pronta, com a sua voz, as suas fotos, a sua marca.
+
+Artes. Legendas. Stories. Roteiros de Reels.
+
+Tudo em até 72 horas.
+
+E o valor que você investe no Preview vira crédito integral na primeira Edição mensal.
+
+Você não paga para experimentar. Você começa.
+
+A POSTÔ produz. Você posta.
+
+Link na bio para conhecer o Preview.</div><button class="copy-btn" data-src="c3" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">01</span></div><h3 class="card-title">Feed parado não é preguiça.</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Post-01-dor.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Post-01-dor.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c4">Você sabe o que fazer. Sabe o que falar. Sabe o que representa.
+
+Só não tem tempo de transformar isso em post.
+
+E o Instagram fica parado. Semana após semana.
+
+Não por falta de conteúdo — por falta de quem organize e produza por você.
+
+É exatamente isso que a POSTÔ faz.
+
+Link na bio para conhecer.</div><button class="copy-btn" data-src="c4" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">02</span></div><h3 class="card-title">Uma semana pronta para sentir.</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Post-02-venda.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Post-02-venda.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c5">A POSTÔ produz uma semana inteira do seu Instagram — com a sua cara, a sua voz, a sua marca.
+
+Você recebe: posts, legendas, artes prontas para publicar.
+
+Se quiser continuar, o valor vira crédito integral na primeira Edição mensal.
+
+O Preview existe para você sentir como é — antes de qualquer compromisso.
+
+Conheça no link da bio.</div><button class="copy-btn" data-src="c5" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge feed-b">Feed</span><span class="num">03</span></div><h3 class="card-title">Você já chegou. O feed ainda não.</h3><div class="art-wrap"><div class="art-frame art-45"><img class="art-img" src="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Post-03-autoridade.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Post-03-autoridade.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar imagem</a><span>ou segure a imagem</span></div></div><div class="copy-block"><div class="cb-label">Legenda</div><div class="copy-text " id="c6">Clientes te indicam. Pacientes te recomendam. O nome já está estabelecido.
+
+Mas o Instagram — quando alguém pesquisa antes de te contratar — ainda não representa isso.
+
+Essa distância tem nome. E tem solução.
+
+A POSTÔ produz o conteúdo à altura do que você já construiu.
+
+Sob medida. Com curadoria humana. Em até 72 horas.
+
+Link na bio.</div><button class="copy-btn" data-src="c6" data-tipo="Legenda" onclick="copyFrom(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copiar legenda</button></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">01</span></div><h3 class="card-title">Qual parte trava mais?</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Story-01.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Story-01.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+      <article class="card"><div class="card-head"><span class="badge story-b">Story</span><span class="num">02</span></div><h3 class="card-title">Uma semana pronta. Sem compromisso.</h3><div class="art-wrap"><div class="art-frame art-916"><img class="art-img" src="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Story-02.png" alt="" loading="lazy"></div><div class="save-hint"><a href="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/artes/Story-02.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar story</a><span>ou segure a imagem</span></div></div><div class="card-foot"></div></article>
+    </div>
+  </div>
+  <section class="guia">
+    <div class="gl">Guia de Uso POSTÔ</div>
+    <h2>Como tirar o máximo da sua semana</h2>
+    <p class="gsub">Melhores horários do seu nicho, sequência ideal, frequência e como gravar os Reels com os roteiros: está tudo no seu Guia, entregue junto desta Edição.</p>
+    <a class="pdf" href="./guia/"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg><div><div class="pt">Guia de Uso POSTÔ</div><div class="ps">Abrir o guia completo · salvar em PDF</div></div></a>
+  </section>
+  <section class="guia">
+    <div class="gl">Bônus · Diagnóstico POSTÔ</div>
+    <h2>A leitura estratégica do seu perfil</h2>
+    <a class="pdf" href="https://postoproduz.com.br/e/postoproduz-preview-ae4b08ca/diagnostico.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg><div><div class="pt">Abrir o meu Diagnóstico POSTÔ</div><div class="ps">Cortesia da sua Edição</div></div></a>
+  </section>
+  <footer class="foot">
+    <div class="logo">POSTÔ</div>
+    <div class="tag">A POSTÔ produz. Você posta.</div>
+    <div class="gold"></div>
+    <div class="ct">Dúvidas? contato@postoproduz.com.br</div>
+  </footer>
+</div>
+<div class="toast" id="toast"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span id="toast-msg">Copiado</span></div>
+<script>
+function showToast(m){var t=document.getElementById('toast');document.getElementById('toast-msg').textContent=m;t.classList.add('show');clearTimeout(window._tt);window._tt=setTimeout(function(){t.classList.remove('show')},1900)}
+function selectText(el){try{var r=document.createRange();r.selectNodeContents(el);var s=window.getSelection();s.removeAllRanges();s.addRange(r)}catch(e){}}
+function doCopy(text){if(navigator.clipboard&&window.isSecureContext){return navigator.clipboard.writeText(text)}
+return new Promise(function(res,rej){try{var ta=document.createElement('textarea');ta.value=text;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.focus();ta.select();ta.setSelectionRange(0,text.length);var ok=document.execCommand('copy');document.body.removeChild(ta);ok?res():rej()}catch(e){rej(e)}})}
+function copyFrom(btn){var el=document.getElementById(btn.getAttribute('data-src'));var text=el.innerText.trim();var icon=btn.querySelector('svg').outerHTML;
+doCopy(text).then(function(){var o=btn.innerHTML;btn.classList.add('done');btn.innerHTML=icon+'Copiado ✓';showToast(btn.getAttribute('data-tipo')+' · cole no Instagram');setTimeout(function(){btn.classList.remove('done');btn.innerHTML=o},2100)}).catch(function(){selectText(el);showToast('Texto selecionado · toque, segure e escolha Copiar')})}
+</script>
+</body>
+</html>
