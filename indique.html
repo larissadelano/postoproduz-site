@@ -1,145 +1,150 @@
-<!doctype html>
-<html lang="pt-BR">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="dark">
-<title>Indique a POSTÔ</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    color-scheme:dark;
-    --preto:#08080C; --carbon:#111118; --card:#15151c; --linha:#23232c;
-    --creme:#F5F0E8; --corpo:#B7B0A2; --mute:#8C8474;
-    --gold:#C9A84C; --sage:#7A9E7E; --terra:#C4622D;
-    --serif:"Cormorant Garamond","Cormorant",Georgia,"Times New Roman",serif;
-    --sans:"DM Sans","Helvetica Neue",Arial,sans-serif;
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{background-color:#111118;background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAFElEQVR4nGMUFJRgwAaYsIoOWgkAM90ASmeZQ5oAAAAASUVORK5CYII=');}
-  body{
-    background-color:#111118;
-    background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAFElEQVR4nGMUFJRgwAaYsIoOWgkAM90ASmeZQ5oAAAAASUVORK5CYII=');
-    background-repeat:repeat;
-    background-attachment:fixed;
-    color:var(--corpo);font-family:var(--sans);line-height:1.6;padding:56px 24px 110px;-webkit-font-smoothing:antialiased;
-  }
-  .wrap{max-width:680px;margin:0 auto;}
-  .topbar{height:6px;background:var(--gold);border-radius:3px;margin-bottom:44px;}
+<!DOCTYPE html><html lang=pt-BR><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Indique a Postô</title><link rel=preconnect href='https://fonts.googleapis.com'><link rel=preconnect href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;700&display=swap' rel=stylesheet><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#F4EFE7;color:#1E3D43;
+font-family:'DM Sans',sans-serif;line-height:1.72;-webkit-font-smoothing:antialiased}
+.topo{background:radial-gradient(ellipse 130% 95% at 50% -20%,#28494F 0%,
+#1E3D43 60%,#152F35 100%);text-align:center;padding:56px 22px 48px}
+.topo .marca{font-family:'EB Garamond',serif;font-size:44px;letter-spacing:.02em;
+color:#F4EFE7}
+.topo .fio{width:86px;height:2px;background:#D9937E;margin:14px auto 0}
+.topo .ass{font-family:'EB Garamond',serif;font-style:italic;font-size:19px;
+color:#EFBFAF;margin-top:16px}
+.topo h1{font-family:'EB Garamond',serif;font-weight:600;font-size:34px;
+color:#F4EFE7;margin-top:22px;line-height:1.2}
+.wrap{max-width:760px;margin:0 auto;padding:52px 22px 72px}
+section{margin-bottom:52px}
+.kicker{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;
+color:#A05B4E;font-weight:700;margin-bottom:8px}
+h2{font-family:'EB Garamond',serif;font-weight:600;font-size:29px;
+line-height:1.22;margin-bottom:14px}
+h2::after{content:'';display:block;width:50px;height:2px;
+background:#D9937E;margin-top:11px}
+p{margin-bottom:14px;font-size:16.5px}
+b{color:#1E3D43}
+ul,ol{margin:0 0 14px 20px}
+li{margin-bottom:9px;font-size:16px}
+.check li{list-style:none;position:relative;padding-left:26px}
+.check li::before{content:'';position:absolute;left:0;top:9px;width:9px;height:9px;
+border-radius:50%;background:#D9937E}
+.destaque{background:#FBF9F5;border-left:4px solid #D9937E;
+border-radius:0 12px 12px 0;border-top:1px solid #E3DCD1;
+border-right:1px solid #E3DCD1;border-bottom:1px solid #E3DCD1;
+padding:20px 24px;margin:22px 0}
+.destaque b{color:#A05B4E}
+.rodape{background:#1E3D43;color:#EFBFAF;text-align:center;
+padding:34px 22px;font-size:13.5px}
+.rodape .s{font-family:'EB Garamond',serif;font-style:italic;font-size:18px;
+color:#F4EFE7;margin-bottom:8px}
+.rodape a{color:#EFBFAF}
+@media(max-width:640px){.topo h1{font-size:28px}h2{font-size:25px}}
 
-  .eyebrow{font-family:var(--sans);font-weight:600;font-size:14px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);}
-  h1{font-family:var(--serif);font-weight:600;font-size:60px;line-height:1.04;color:var(--creme);margin:16px 0 12px;letter-spacing:-.01em;}
-  .sub{font-family:var(--serif);font-style:italic;font-size:27px;color:var(--mute);margin-bottom:30px;line-height:1.3;}
-  .lead{font-family:var(--serif);font-size:24px;line-height:1.5;color:var(--creme);}
+.pac{background:#FBF9F5;border:1px solid #E3DCD1;border-radius:14px;
+padding:24px 26px;margin-bottom:18px}
+.pac h3{font-family:'EB Garamond',serif;font-weight:600;font-size:25px;
+color:#1E3D43}
+.pac .pr{font-family:'EB Garamond',serif;font-size:36px;color:#1E3D43;
+line-height:1;margin:8px 0 4px}
+.pac .pr small{font-family:'DM Sans';font-size:11px;letter-spacing:.14em;
+text-transform:uppercase;color:#7C8B8D;margin-left:10px}
+.pac .de{font-size:15.5px;color:#33454a;margin-bottom:14px}
+.pac table{width:100%;border-collapse:collapse;font-size:15.5px}
+.pac td{padding:8px 0;border-bottom:1px solid #E3DCD1}
+.pac td:last-child{text-align:right;font-weight:700;color:#A05B4E}
+.pac .tot td{border-bottom:0;padding-top:12px;font-weight:700;
+color:#1E3D43}
+.camp{background:#DCD6CA;border-radius:10px;padding:14px 18px;
+margin-top:14px;font-size:15px}
+.camp b{color:#A05B4E}
+.meta{margin-top:14px;font-size:14.5px;color:#7C8B8D}
+.meta span{display:block}
+.minimo{margin-top:14px;background:#F4EFE7;border-left:3px solid #D9937E;
+padding:12px 16px;font-size:15px;border-radius:0 8px 8px 0}
+.caixa{background:#DCD6CA;border-radius:16px;padding:24px 26px;margin-top:20px}
+.caixa h4{font-family:'EB Garamond',serif;font-weight:600;font-size:24px;
+margin-bottom:12px}
+.cta{margin-top:44px;background:radial-gradient(ellipse 130% 100% at 50% -10%,
+#28494F 0%,#1E3D43 58%,#152F35 100%);border-radius:16px;
+padding:44px 28px;text-align:center;color:#F4EFE7}
+.cta h2{font-family:'EB Garamond',serif;font-size:31px;color:#F4EFE7;
+margin-bottom:12px}
+.cta h2::after{display:none}
+.cta p{color:#EFBFAF;font-size:16px;max-width:480px;margin:0 auto 22px}
+.cta a{display:inline-block;background:#D9937E;color:#152F35;
+text-decoration:none;font-weight:700;font-size:17px;padding:16px 40px;
+border-radius:999px;box-shadow:0 12px 34px rgba(0,0,0,.26)}
 
-  section{margin-bottom:50px;}
-  h2{font-family:var(--serif);font-weight:600;font-size:36px;color:var(--creme);margin-bottom:6px;letter-spacing:-.005em;}
-  h2 .n{color:var(--gold);font-style:italic;margin-right:14px;}
-  .rule{height:2px;width:54px;background:var(--gold);border-radius:2px;margin:14px 0 26px;}
+.tabc{width:100%;border-collapse:collapse;font-size:16px;margin-top:8px}
+.tabc th{font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+color:#7C8B8D;text-align:left;padding:0 0 10px;font-weight:700}
+.tabc th:nth-child(n+2),.tabc td:nth-child(n+2){text-align:right}
+.tabc td{padding:13px 0;border-top:1px solid #E3DCD1}
+.tabc td:first-child{font-weight:700;color:#1E3D43}
+.tabc td:last-child{font-family:'EB Garamond',serif;font-size:22px;
+color:#A05B4E;font-weight:600;white-space:nowrap}
+.passo{display:flex;gap:18px;padding:16px 0;border-top:1px solid #E3DCD1}
+.passo .n{font-family:'EB Garamond',serif;font-style:italic;font-size:28px;
+color:#D9937E;line-height:1;min-width:26px}
+.passo b{display:block;font-family:'EB Garamond',serif;font-weight:600;
+font-size:21px}
+.passo p{font-size:15.5px;color:#33454a;margin:2px 0 0}
+</style></head><body><div class=topo><div class=marca>Postô</div><div class=fio></div><div class=ass>A Postô produz. Você posta.</div><h1>Indique a Postô</h1></div><div class=wrap>
+<section>
+<div class=kicker>Programa de indicação</div>
+<h2>Quem indica ganha. Quem entra, também.</h2>
+<p>A Postô produz o mês de conteúdo de quem você indica. Cada indicação que vira
+cliente gera <b>10% de comissão</b> para você e <b>10% de desconto</b> para quem
+entra.</p>
+</section>
 
-  ul{list-style:none;margin:6px 0 14px;}
-  li{position:relative;padding-left:28px;margin-bottom:16px;font-size:19px;line-height:1.5;color:var(--corpo);}
-  li::before{content:"";position:absolute;left:4px;top:11px;width:8px;height:8px;border-radius:50%;background:var(--gold);}
-  li b{color:var(--creme);font-weight:600;}
+<section>
+<div class=kicker>01</div>
+<h2>Como funciona</h2>
+<div class=passo><div class=n>1</div><div><b>Você se cadastra uma vez e recebe o
+seu link.</b><p>Conta gratuita na Cakto, aprovada na hora, válida para
+sempre.</p></div></div>
+<div class=passo><div class=n>2</div><div><b>Você compartilha o seu link.</b>
+<p>Com quem precisa de presença no Instagram. Quem entra por ele ganha 10% na
+primeira Edição.</p></div></div>
+<div class=passo><div class=n>3</div><div><b>A indicação vira cliente e a comissão
+entra na sua conta.</b><p>A Cakto faz o pagamento. Você não controla nada
+disso.</p></div></div>
+</section>
 
-  .num-list li{padding-left:46px;}
-  .num-list li .ord{position:absolute;left:0;top:-4px;font-family:var(--serif);font-style:italic;font-size:30px;color:var(--gold);}
-  .num-list li::before{display:none;}
+<section>
+<div class=kicker>02</div>
+<h2>O que cada lado ganha</h2>
+<table class=tabc>
+<thead><tr><th>Plano</th><th>Quem entra paga</th><th>Você recebe</th></tr></thead>
+<tbody><tr><td>Essencial</td><td>R$ 627,30</td><td>R$ 69,70</td></tr><tr><td>Profissional</td><td>R$ 1.077,30</td><td>R$ 119,70</td></tr><tr><td>Premium</td><td>R$ 1.617,30</td><td>R$ 179,70</td></tr></tbody></table>
+<p style="margin-top:16px;font-size:15px;color:#7C8B8D">A comissão acompanha o
+plano que a pessoa indicada contrata. Sem limite de indicações.</p>
+</section>
 
-  table{width:100%;border-collapse:collapse;font-size:17px;margin-top:6px;}
-  th{font-family:var(--sans);font-weight:600;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);text-align:left;padding:0 14px 12px;}
-  th.r,td.r{text-align:right;}
-  td{padding:15px 14px;border-top:1px solid var(--linha);vertical-align:middle;color:var(--corpo);}
-  td.k{color:var(--creme);font-weight:600;font-family:var(--sans);font-size:18px;}
-  td.v{color:var(--gold);font-family:var(--serif);font-size:23px;font-weight:600;white-space:nowrap;}
-  .note{font-size:15px;color:var(--mute);margin-top:16px;line-height:1.55;}
+<section>
+<div class=kicker>03</div>
+<h2>Como você recebe</h2>
+<ul class=check>
+<li>A Cakto registra cada venda no seu nome e faz o pagamento da comissão. Você
+acompanha tudo pelo painel.</li>
+<li>O valor é resgatável na sua <b>conta corrente</b> a partir de 30 dias da venda,
+conforme a política da Cakto.</li>
+</ul>
+</section>
 
-  .cta{margin:60px 0 0;text-align:center;}
-  .btn{display:inline-block;font-family:var(--sans);font-weight:600;font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--preto);background:var(--gold);padding:20px 44px;border-radius:3px;text-decoration:none;}
-  .cta .small{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--mute);margin-top:20px;}
+<section>
+<div class=kicker>04</div>
+<h2>Condições</h2>
+<ul class=check>
+<li>Indicar não exige ser cliente. Qualquer pessoa se cadastra e recebe.</li>
+<li>O seu link identifica cada indicação no seu nome.</li>
+<li>A comissão é liberada após o período que cobre a garantia de 7 dias.</li>
+<li>Sem prazo de validade e sem limite. Cada indicação que vira cliente conta.</li>
+</ul>
+</section>
 
-  .foot{margin-top:64px;padding-top:24px;border-top:1px solid var(--linha);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:14px;}
-  .foot .h{font-family:var(--sans);font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;}
-  .foot .s{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--mute);}
-
-  @media(max-width:640px){
-    h1{font-size:46px;}
-    .sub{font-size:23px;}
-    .lead{font-size:21px;}
-    h2{font-size:30px;}
-  }
-</style>
-</head>
-<body>
-<div class="wrap">
-  <div class="topbar"></div>
-
-  <div class="eyebrow">Programa de indicação</div>
-  <h1>Indique a POSTÔ</h1>
-  <div class="sub">Quem indica, ganha. Quem entra, também.</div>
-  <p class="lead">A POSTÔ produz o mês de conteúdo de quem você indica. Cada indicação que vira cliente gera 10% de comissão para você e 10% de desconto para quem entra.</p>
-
-  <section style="margin-top:50px;">
-    <h2><span class="n">01</span>Como funciona</h2>
-    <div class="rule"></div>
-    <ul class="num-list">
-      <li><span class="ord">1</span><b>Você se cadastra uma vez e recebe o seu link.</b> Conta gratuita na Cakto, aprovada na hora, válida para sempre.</li>
-      <li><span class="ord">2</span><b>Você compartilha o seu link.</b> Com quem precisa de presença no Instagram. Quem entra por ele ganha 10% na primeira Edição.</li>
-      <li><span class="ord">3</span><b>A indicação vira cliente e a comissão entra na sua conta.</b> A Cakto faz o pagamento. Você não controla nada disso.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2><span class="n">02</span>O que cada lado ganha</h2>
-    <div class="rule"></div>
-    <p class="lead" style="margin-bottom:26px;">O programa premia os dois lados de cada indicação: 10% de comissão para você, 10% de desconto para quem você indica.</p>
-    <table>
-      <thead>
-        <tr><th>Plano</th><th class="r">Quem entra paga</th><th class="r">Você recebe</th></tr>
-      </thead>
-      <tbody>
-        <tr><td class="k">Inicial</td><td class="r">R$402,30</td><td class="v r">R$44,70</td></tr>
-        <tr><td class="k">Essencial</td><td class="r">R$627,30</td><td class="v r">R$69,70</td></tr>
-        <tr><td class="k">Profissional</td><td class="r">R$897,30</td><td class="v r">R$99,70</td></tr>
-        <tr><td class="k">Premium</td><td class="r">R$1.167,30</td><td class="v r">R$129,70</td></tr>
-      </tbody>
-    </table>
-    <p class="note">A comissão acompanha o plano que a pessoa indicada contrata. Sem limite de indicações.</p>
-  </section>
-
-  <section>
-    <h2><span class="n">03</span>Como você recebe</h2>
-    <div class="rule"></div>
-    <ul>
-      <li>A Cakto registra cada venda no seu nome e faz o pagamento da comissão. Você acompanha tudo pelo painel.</li>
-      <li>O valor é resgatável na sua <b>conta corrente</b> a partir de 30 dias da venda, conforme a política da Cakto.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2><span class="n">04</span>Condições</h2>
-    <div class="rule"></div>
-    <ul>
-      <li>Indicar não exige ser cliente. Qualquer pessoa se cadastra e recebe.</li>
-      <li>O seu link identifica cada indicação no seu nome.</li>
-      <li>A comissão é liberada após o período que cobre a garantia de 7 dias.</li>
-      <li>Sem prazo de validade e sem limite. Cada indicação que vira cliente conta.</li>
-    </ul>
-  </section>
-
-  <div class="cta">
-    <!-- TROCAR o href pelo link de afiliação do produto na Cakto -->
-    <a class="btn" href="https://wa.me/5531995708609?text=Quero%20o%20meu%20link%20de%20indica%C3%A7%C3%A3o%20POST%C3%94">Quero meu link de indicação</a>
-    <div class="small">O cadastro é gratuito e leva poucos minutos.</div>
-  </div>
-
-  <div class="foot">
-    <span class="h">@postoproduz</span>
-    <span class="s">A POSTÔ produz. Você posta.</span>
-  </div>
-
+<div class=cta>
+<h2>Quero o meu link de indicação</h2>
+<p>O cadastro é gratuito e leva poucos minutos.</p>
+<a href="https://wa.me/5531995708609?text=Quero%20o%20meu%20link%20de%20indica%C3%A7%C3%A3o%20Post%C3%B4">Falar com a Postô</a>
 </div>
-</body>
-</html>
+</div><div class=rodape><div class=s>A Postô produz. Você posta.</div><div>contato@postoproduz.com.br · (31) 99570-8609 · <a href='https://postoproduz.com.br'>postoproduz.com.br</a></div></div></body></html>

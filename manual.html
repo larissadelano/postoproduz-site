@@ -1,161 +1,194 @@
-<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Manual do Cliente POSTÔ</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--preto:#08080C;--carbon:#111118;--dourado:#C9A84C;--dourado-deep:#8A6820;--creme:#F5F0E8;--soft:#9E9880;}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'DM Sans',sans-serif;color:#2a2a2a;background:#fff;line-height:1.6}
-.hero{background:var(--preto);color:var(--creme);padding:64px 32px;text-align:center}
-.hero .logo{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:700;letter-spacing:.06em}
-.hero .slogan{color:var(--dourado);font-style:italic;font-size:17px;margin-top:8px}
-.hero h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:30px;margin-top:26px}
-.wrap{max-width:760px;margin:0 auto;padding:48px 28px}
+<!DOCTYPE html><html lang=pt-BR><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Manual do Cliente Postô</title><link rel=preconnect href='https://fonts.googleapis.com'><link rel=preconnect href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;700&display=swap' rel=stylesheet><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#F4EFE7;color:#1E3D43;
+font-family:'DM Sans',sans-serif;line-height:1.72;-webkit-font-smoothing:antialiased}
+.topo{background:radial-gradient(ellipse 130% 95% at 50% -20%,#28494F 0%,
+#1E3D43 60%,#152F35 100%);text-align:center;padding:56px 22px 48px}
+.topo .marca{font-family:'EB Garamond',serif;font-size:44px;letter-spacing:.02em;
+color:#F4EFE7}
+.topo .fio{width:86px;height:2px;background:#D9937E;margin:14px auto 0}
+.topo .ass{font-family:'EB Garamond',serif;font-style:italic;font-size:19px;
+color:#EFBFAF;margin-top:16px}
+.topo h1{font-family:'EB Garamond',serif;font-weight:600;font-size:34px;
+color:#F4EFE7;margin-top:22px;line-height:1.2}
+.wrap{max-width:760px;margin:0 auto;padding:52px 22px 72px}
 section{margin-bottom:52px}
-.eyebrow{color:var(--dourado-deep);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;margin-bottom:8px}
-h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:27px;color:var(--preto);margin-bottom:16px}
-h2::after{content:'';display:block;width:48px;height:2px;background:var(--dourado);margin-top:10px}
-p{margin-bottom:14px;font-size:15.5px}
-.pac{border:1px solid #e6ddcb;border-radius:12px;padding:22px 24px;margin-bottom:18px}
-.pac h3{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--preto);margin-bottom:12px}
-.pac table{width:100%;border-collapse:collapse;font-size:14.5px}
-.pac td{padding:7px 0;border-bottom:1px solid #f0e9dc}
-.pac td:last-child{text-align:right;font-weight:700;color:var(--dourado-deep)}
-.minimo{margin-top:14px;background:#f6f0e6;border-left:3px solid var(--dourado);padding:12px 16px;font-size:14.5px;border-radius:0 8px 8px 0}
-ol,ul{margin:0 0 14px 20px}
-li{margin-bottom:9px;font-size:15px}
-.destaque{background:var(--carbon);color:var(--creme);border-radius:12px;padding:22px 26px;margin:22px 0}
-.destaque b{color:var(--dourado)}
+.kicker{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;
+color:#A05B4E;font-weight:700;margin-bottom:8px}
+h2{font-family:'EB Garamond',serif;font-weight:600;font-size:29px;
+line-height:1.22;margin-bottom:14px}
+h2::after{content:'';display:block;width:50px;height:2px;
+background:#D9937E;margin-top:11px}
+p{margin-bottom:14px;font-size:16.5px}
+b{color:#1E3D43}
+ul,ol{margin:0 0 14px 20px}
+li{margin-bottom:9px;font-size:16px}
 .check li{list-style:none;position:relative;padding-left:26px}
-.check li::before{content:'';position:absolute;left:0;top:8px;width:12px;height:12px;border:2px solid var(--dourado);border-radius:3px}
-.foot{background:var(--preto);color:var(--soft);text-align:center;padding:32px;font-size:13px}
-.foot .s{color:var(--dourado);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px}
-</style></head>
-<body>
-<div class="hero">
-<div class="logo">POSTÔ</div>
-<div class="slogan">A POSTÔ produz. Você posta.</div>
-<h1>Manual do Cliente POSTÔ</h1>
-</div>
-<div class="wrap">
+.check li::before{content:'';position:absolute;left:0;top:9px;width:9px;height:9px;
+border-radius:50%;background:#D9937E}
+.destaque{background:#FBF9F5;border-left:4px solid #D9937E;
+border-radius:0 12px 12px 0;border-top:1px solid #E3DCD1;
+border-right:1px solid #E3DCD1;border-bottom:1px solid #E3DCD1;
+padding:20px 24px;margin:22px 0}
+.destaque b{color:#A05B4E}
+.rodape{background:#1E3D43;color:#EFBFAF;text-align:center;
+padding:34px 22px;font-size:13.5px}
+.rodape .s{font-family:'EB Garamond',serif;font-style:italic;font-size:18px;
+color:#F4EFE7;margin-bottom:8px}
+.rodape a{color:#EFBFAF}
+@media(max-width:640px){.topo h1{font-size:28px}h2{font-size:25px}}
 
+.pac{background:#FBF9F5;border:1px solid #E3DCD1;border-radius:14px;
+padding:24px 26px;margin-bottom:18px}
+.pac h3{font-family:'EB Garamond',serif;font-weight:600;font-size:25px;
+color:#1E3D43}
+.pac .pr{font-family:'EB Garamond',serif;font-size:36px;color:#1E3D43;
+line-height:1;margin:8px 0 4px}
+.pac .pr small{font-family:'DM Sans';font-size:11px;letter-spacing:.14em;
+text-transform:uppercase;color:#7C8B8D;margin-left:10px}
+.pac .de{font-size:15.5px;color:#33454a;margin-bottom:14px}
+.pac table{width:100%;border-collapse:collapse;font-size:15.5px}
+.pac td{padding:8px 0;border-bottom:1px solid #E3DCD1}
+.pac td:last-child{text-align:right;font-weight:700;color:#A05B4E}
+.pac .tot td{border-bottom:0;padding-top:12px;font-weight:700;
+color:#1E3D43}
+.camp{background:#DCD6CA;border-radius:10px;padding:14px 18px;
+margin-top:14px;font-size:15px}
+.camp b{color:#A05B4E}
+.meta{margin-top:14px;font-size:14.5px;color:#7C8B8D}
+.meta span{display:block}
+.minimo{margin-top:14px;background:#F4EFE7;border-left:3px solid #D9937E;
+padding:12px 16px;font-size:15px;border-radius:0 8px 8px 0}
+.caixa{background:#DCD6CA;border-radius:16px;padding:24px 26px;margin-top:20px}
+.caixa h4{font-family:'EB Garamond',serif;font-weight:600;font-size:24px;
+margin-bottom:12px}
+.cta{margin-top:44px;background:radial-gradient(ellipse 130% 100% at 50% -10%,
+#28494F 0%,#1E3D43 58%,#152F35 100%);border-radius:16px;
+padding:44px 28px;text-align:center;color:#F4EFE7}
+.cta h2{font-family:'EB Garamond',serif;font-size:31px;color:#F4EFE7;
+margin-bottom:12px}
+.cta h2::after{display:none}
+.cta p{color:#EFBFAF;font-size:16px;max-width:480px;margin:0 auto 22px}
+.cta a{display:inline-block;background:#D9937E;color:#152F35;
+text-decoration:none;font-weight:700;font-size:17px;padding:16px 40px;
+border-radius:999px;box-shadow:0 12px 34px rgba(0,0,0,.26)}
+</style></head><body><div class=topo><div class=marca>Postô</div><div class=fio></div><div class=ass>A Postô produz. Você posta.</div><h1>Manual do Cliente</h1></div><div class=wrap>
 <section>
-<div class="eyebrow">Bem-vinda</div>
-<h2>Como a POSTÔ funciona</h2>
-<p>Você conta sobre a sua marca. A partir das suas respostas, a POSTÔ produz a sua Edição completa do mês, com a sua voz, as suas cores e as suas fotos. Em até 72 horas, tudo chega pronto para você postar.</p>
-<p>Este manual explica o que enviar, como contar sobre você e como usar a sua Edição. Guarde-o: quanto melhor o seu material, mais extraordinária a sua Edição.</p>
+<div class=kicker>Bem-vinda</div>
+<h2>Como a Postô funciona</h2>
+<p>Você conta sobre a sua marca. A partir das suas respostas, a Postô produz a sua
+Edição completa do mês, com a sua voz, as suas cores e as suas fotos. Em até 72
+horas, tudo chega pronto para você postar.</p>
+<p>Este manual explica o que enviar, como contar sobre você e como usar a sua
+Edição. Guarde-o: quanto melhor o seu material, mais extraordinária a sua Edição.</p>
 </section>
 
 <section>
-<div class="eyebrow">O que você recebe</div>
-<h2>A sua Edição, por pacote</h2>
-<div class="pac">
-<h3>Studio Essencial · R$ 697</h3>
-<table>
-<tr><td>Posts de feed</td><td>15</td></tr>
-<tr><td>Carrosséis completos</td><td>4</td></tr>
-<tr><td>Stories</td><td>15</td></tr>
-<tr><td>Reels com roteiro e capa (você grava)</td><td>10</td></tr>
-<tr><td>Reels em vídeo com as suas fotos</td><td>6</td></tr>
-<tr><td>Reels em vídeo com os seus vídeos</td><td>4</td></tr>
-
-</table>
-<div class="minimo"><b>Para a sua Edição ficar impecável, envie no mínimo:</b> 25 fotos e 12 vídeos curtos.</div>
-</div><div class="pac">
-<h3>Studio Profissional · R$ 997</h3>
-<table>
-<tr><td>Posts de feed</td><td>20</td></tr>
-<tr><td>Carrosséis completos</td><td>8</td></tr>
-<tr><td>Stories</td><td>25</td></tr>
-<tr><td>Reels com roteiro e capa (você grava)</td><td>15</td></tr>
-<tr><td>Reels em vídeo com as suas fotos</td><td>8</td></tr>
-<tr><td>Reels em vídeo com os seus vídeos</td><td>5</td></tr>
-
-</table>
-<div class="minimo"><b>Para a sua Edição ficar impecável, envie no mínimo:</b> 35 fotos e 18 vídeos curtos.</div>
-</div><div class="pac">
-<h3>Studio Premium · R$ 1.297</h3>
-<table>
-<tr><td>Posts de feed</td><td>30</td></tr>
-<tr><td>Carrosséis completos</td><td>12</td></tr>
-<tr><td>Stories</td><td>35</td></tr>
-<tr><td>Reels com roteiro e capa (você grava)</td><td>20</td></tr>
-<tr><td>Reels em vídeo com as suas fotos</td><td>10</td></tr>
-<tr><td>Reels em vídeo com os seus vídeos</td><td>6</td></tr>
-
-</table>
-<div class="minimo"><b>Para a sua Edição ficar impecável, envie no mínimo:</b> 50 fotos e 25 vídeos curtos.</div>
-</div>
+<div class=kicker>O que você recebe</div>
+<h2>A sua Edição, plano a plano</h2>
+<div class=pac><h3>Postô Essencial</h3><div class=pr>R$ 697<small>por Edição</small></div><div class=de>A Postô produz o mês. Você conduz.</div><table><tbody><tr><td>Posts de feed</td><td>15</td></tr><tr><td>Carrosséis completos</td><td>4</td></tr><tr><td>Stories</td><td>15</td></tr><tr><td>Reels com roteiro e capa (você grava)</td><td>10</td></tr><tr><td>Reels em vídeo, montados com as suas fotos</td><td>6</td></tr><tr class=tot><td>Total de peças</td><td>50 · R$ 13,94 cada</td></tr></tbody></table><div class=meta><span>Um lote, em até 72 horas</span><span>Até 5 peças refeitas por Edição</span></div><div class=minimo><b>Para a sua Edição ficar impecável, envie no mínimo:</b> 25 fotos e 12 vídeos curtos.</div></div><div class=pac><h3>Postô Profissional</h3><div class=pr>R$ 1.197<small>por Edição</small></div><div class=de>O mês maior, com uma data sua em campanha própria.</div><table><tbody><tr><td>Posts de feed</td><td>20</td></tr><tr><td>Carrosséis completos</td><td>10</td></tr><tr><td>Stories</td><td>25</td></tr><tr><td>Reels com roteiro e capa (você grava)</td><td>15</td></tr><tr><td>Reels em vídeo, montados com as suas fotos</td><td>10</td></tr><tr class=tot><td>Total de peças</td><td>90 · R$ 13,30 cada</td></tr></tbody></table><div class=camp><b>1 campanha de data</b> — 2 posts de feed, 1 carrossel, 1 Reel com roteiro e 6 stories, com calendário próprio em torno da data. As peças da campanha já estão somadas no total.</div><div class=meta><span>Um lote mensal</span><span>Até 15 peças refeitas por Edição</span></div><div class=minimo><b>Para a sua Edição ficar impecável, envie no mínimo:</b> 45 fotos e 20 vídeos curtos.</div></div><div class=pac><h3>Postô Premium</h3><div class=pr>R$ 1.797<small>por Edição</small></div><div class=de>O maior mês da Postô, com duas datas em campanha e entrega a cada quinze dias.</div><table><tbody><tr><td>Posts de feed</td><td>30</td></tr><tr><td>Carrosséis completos</td><td>14</td></tr><tr><td>Stories</td><td>44</td></tr><tr><td>Reels com roteiro e capa (você grava)</td><td>20</td></tr><tr><td>Reels em vídeo, montados com as suas fotos</td><td>12</td></tr><tr class=tot><td>Total de peças</td><td>140 · R$ 12,84 cada</td></tr></tbody></table><div class=camp><b>2 campanhas de data</b> — cada uma com 2 posts de feed, 1 carrossel, 1 Reel com roteiro e 6 stories. As peças da campanha já estão somadas no total.</div><div class=meta><span>Dois lotes, um a cada quinze dias</span><span>Até 30 peças refeitas por Edição</span></div><div class=minimo><b>Para a sua Edição ficar impecável, envie no mínimo:</b> 70 fotos e 30 vídeos curtos.</div></div>
+<div class=caixa style="background:#DCD6CA;border-radius:16px;padding:24px 26px;margin-top:20px">
+<h4 style="font-family:'EB Garamond',serif;font-weight:600;font-size:24px;margin-bottom:12px">O que vem em toda Edição, em qualquer um dos planos</h4>
+<ul class=check><li>A leitura estratégica do seu perfil, refeita a cada mês</li><li>Cada arte com <b>botão de baixar</b>, para salvar no celular, no notebook ou no tablet com um toque, em resolução cheia</li><li>A legenda escrita para cada peça, com botão de copiar</li><li>O plano de postagem de 30 dias, com o dia e a hora de cada publicação</li><li>O Guia de Uso Postô</li><li>Uma página exclusiva da sua marca, que abre no celular, e tudo organizado também no Google Drive</li></ul></div>
 </section>
 
 <section>
-<div class="eyebrow">O mais importante</div>
+<div class=kicker>O mais importante</div>
 <h2>O material que você envia é a base de tudo</h2>
-<div class="destaque"><b>Uma verdade honesta:</b> a POSTÔ é tão boa quanto o material que recebe. Fotos nítidas e vídeos bem gravados viram uma Edição de tirar o fôlego. Material apressado ou escasso limita o resultado. Vale cada minuto que você investir.</div>
-<p>Por isso cada pacote tem um <b>mínimo de fotos e vídeos</b> (nas tabelas acima). Esse mínimo existe para garantir variedade: sem material suficiente, os reels e posts sairiam repetidos. Envie o mínimo ou mais: quanto mais rico o acervo, mais a POSTÔ tem com o que trabalhar.</p>
+<div class=destaque><b>Uma verdade honesta:</b> a Postô é tão boa quanto o material
+que recebe. Fotos nítidas e vídeos bem gravados viram uma Edição de tirar o fôlego.
+Material apressado ou escasso limita o resultado. Vale cada minuto que você
+investir.</div>
+<p>Por isso cada plano tem um <b>mínimo de fotos e vídeos</b> (nas tabelas acima).
+Esse mínimo existe para garantir variedade: sem material suficiente, os Reels e os
+posts sairiam repetidos. Envie o mínimo ou mais: quanto mais rico o acervo, mais a
+Postô tem com o que trabalhar.</p>
 </section>
 
 <section>
-<div class="eyebrow">Guia de qualidade</div>
+<div class=kicker>Guia de qualidade</div>
 <h2>Como enviar fotos que rendem</h2>
-<ul class="check">
-<li><b>Na vertical, sempre que possível.</b> O Instagram é vertical; fotos na vertical se encaixam melhor nas artes.</li>
-<li><b>Nítidas e bem iluminadas.</b> Luz natural é a melhor amiga. Evite fotos escuras, tremidas ou desfocadas.</li>
-<li><b>Variadas.</b> Misture: você, os seus produtos, os bastidores, os detalhes, o ambiente. Variedade evita repetição.</li>
-<li><b>Sem marca d'água de outros apps</b> e sem texto por cima. A POSTÔ adiciona o texto na identidade da sua marca.</li>
-<li><b>As suas melhores.</b> Na dúvida entre duas, mande as duas. A curadoria escolhe.</li>
+<ul class=check>
+<li><b>Na vertical, sempre que possível.</b> O Instagram é vertical; fotos na
+vertical se encaixam melhor nas artes.</li>
+<li><b>Nítidas e bem iluminadas.</b> Luz natural é a melhor amiga. Evite fotos
+escuras, tremidas ou desfocadas.</li>
+<li><b>Variadas.</b> Misture: você, os seus produtos, os bastidores, os detalhes,
+o ambiente. Variedade evita repetição.</li>
+<li><b>Sem marca d'água de outros aplicativos</b> e sem texto por cima. A Postô
+adiciona o texto na identidade da sua marca.</li>
+<li><b>As suas melhores.</b> Na dúvida entre duas, mande as duas. A curadoria
+escolhe.</li>
 </ul>
 </section>
 
 <section>
-<div class="eyebrow">Guia de qualidade</div>
+<div class=kicker>Guia de qualidade</div>
 <h2>Como gravar vídeos que rendem</h2>
-<ul class="check">
-<li><b>Curtos: de 5 a 15 segundos cada.</b> Vários clipes curtos rendem mais que um vídeo longo.</li>
+<ul class=check>
+<li><b>Curtos: de 5 a 15 segundos cada.</b> Vários clipes curtos rendem mais que um
+vídeo longo.</li>
 <li><b>Na vertical e bem iluminados.</b> Grave com o celular em pé, com boa luz.</li>
 <li><b>Estáveis.</b> Apoie o celular ou segure firme. Movimento suave, sem tremer.</li>
-<li><b>Mostrando o que importa:</b> você em ação, o produto sendo feito, o resultado, o dia a dia.</li>
-<li><b>Sem música.</b> A POSTÔ entrega o reel montado; você adiciona o áudio do momento no app.</li>
+<li><b>Mostrando o que importa:</b> você em ação, o produto sendo feito, o
+resultado, o dia a dia.</li>
+<li><b>Sem música.</b> A Postô entrega o Reel montado; você adiciona o áudio do
+momento no aplicativo.</li>
 </ul>
-<p>É com esses clipes que a POSTÔ edita os seus <b>reels em vídeo</b>: cortados, ritmados, na sua identidade.</p>
+<p>É com esses clipes que a Postô edita os seus <b>Reels em vídeo</b>: cortados,
+ritmados, na sua identidade.</p>
 </section>
 
 <section>
-<div class="eyebrow">O briefing</div>
+<div class=kicker>O briefing</div>
 <h2>Como preencher o briefing</h2>
 <ol>
 <li><b>Reserve 20 minutos.</b> Responda com calma, num momento tranquilo.</li>
-<li><b>Seja específica.</b> "Confeitaria artesanal de bolos vintage para festas" rende muito mais que "vendo bolos". Cada resposta é uma instrução para a produção.</li>
-<li><b>Escolha o seu estilo com carinho.</b> São 10 estilos visuais. Veja todos com exemplos reais antes de decidir: é a cara da sua marca no mês inteiro.</li>
-<li><b>Envie o logo, se tiver.</b> Ele entra nas capas e no fechamento. Se não tiver, sem problema.</li>
-<li><b>Capriche nas fotos e vídeos.</b> Respeite o mínimo do seu pacote. É a parte que mais define o resultado.</li>
+<li><b>Seja específica.</b> "Confeitaria artesanal de bolos vintage para festas"
+rende muito mais que "vendo bolos". Cada resposta é uma instrução para a
+produção.</li>
+<li><b>Escolha o seu estilo com carinho.</b> São dez estilos visuais. Veja todos
+com exemplos reais em
+<a href="https://postoproduz.com.br/estilos.html" style="color:#A05B4E;font-weight:600">postoproduz.com.br/estilos.html</a>
+antes de decidir: é a cara da sua marca no mês inteiro.</li>
+<li><b>Envie o logo, se tiver.</b> Ele entra nas capas e no fechamento. Se não
+tiver, sem problema.</li>
+<li><b>Capriche nas fotos e nos vídeos.</b> Respeite o mínimo do seu plano. É a
+parte que mais define o resultado.</li>
 </ol>
 </section>
 
 <section>
-<div class="eyebrow">Quando chega</div>
+<div class=kicker>Quando chega</div>
 <h2>Como usar a sua Edição</h2>
-<p>Em até 72 horas você recebe a sua Edição POSTÔ: uma página exclusiva com tudo organizado, mais as artes no Google Drive.</p>
-<ul class="check">
-<li><b>Posts, carrosséis e stories:</b> baixe a arte, copie a legenda pronta e publique.</li>
-<li><b>Reels com roteiro:</b> grave seguindo o roteiro e use a capa que a POSTÔ preparou.</li>
-<li><b>Reels em vídeo:</b> já vêm montados. Baixe, adicione o áudio em alta do momento e publique.</li>
-<li><b>Plano de Postagem:</b> a sequência dos 30 dias, dizendo o que postar e quando.</li>
+<p>Você recebe a sua Edição Postô numa página exclusiva da sua marca, que abre no
+celular, com tudo organizado também no Google Drive.</p>
+<ul class=check>
+<li><b>Posts, carrosséis e stories:</b> toque no botão de baixar para salvar a arte
+no celular, no notebook ou no tablet, copie a legenda pronta e publique.</li>
+<li><b>Reels com roteiro:</b> grave seguindo o roteiro e use a capa que a Postô
+preparou.</li>
+<li><b>Reels em vídeo:</b> já vêm montados. Baixe, adicione o áudio em alta do
+momento e publique.</li>
+<li><b>Plano de postagem:</b> a sequência dos 30 dias, dizendo o que postar, em que
+dia e a que hora.</li>
 </ul>
-<div class="destaque">Cada peça passou pela <b>curadoria humana</b> da POSTÔ antes de chegar até você. Se algo precisar de ajuste, é só entrar em contato.</div>
+<div class=destaque>Cada peça passou pela <b>curadoria humana</b> da Postô antes de
+chegar até você. Se algo precisar de ajuste, é só entrar em contato: o seu plano
+tem um número de peças refeitas por Edição.</div>
 </section>
 
 <section>
-<div class="eyebrow">Dúvidas</div>
+<div class=kicker>Dúvidas</div>
 <h2>Perguntas frequentes</h2>
-<p><b>E se eu não gostar de algo?</b> Você tem 7 dias de garantia. E pode pedir ajustes na sua Edição, e a POSTÔ refina para você.</p>
-<p><b>Preciso saber design ou edição?</b> Não. A POSTÔ produz tudo. Você só posta.</p>
-<p><b>Posso indicar a POSTÔ?</b> Sim! Quem indica ganha 10% de comissão em dinheiro por cada venda, e quem chega pela sua indicação ganha 10% de desconto.</p>
+<p><b>E se eu não gostar de algo?</b> Você tem 7 dias de garantia. E pode pedir
+ajustes na sua Edição, dentro do número de peças refeitas do seu plano.</p>
+<p><b>Preciso saber design ou edição?</b> Não. A Postô produz tudo. Você só
+posta.</p>
+<p><b>A Postô pode postar por mim?</b> Pode: chama-se Postô no Ar e pode ser somado
+a qualquer plano.</p>
+<p><b>Posso indicar a Postô?</b> Sim. Quem indica ganha 10% de comissão em dinheiro
+por cada venda, e quem chega pela sua indicação ganha 10% de desconto.</p>
 <p><b>Quando recebo?</b> Em até 72 horas depois de você enviar tudo.</p>
 </section>
-
-</div>
-<div class="foot">
-<div class="s">A POSTÔ produz. Você posta.</div>
-<div style="margin-top:8px">contato@postoproduz.com.br · (31) 99570-8609</div>
-</div>
-</body></html>
+</div><div class=rodape><div class=s>A Postô produz. Você posta.</div><div>contato@postoproduz.com.br · (31) 99570-8609 · <a href='https://postoproduz.com.br'>postoproduz.com.br</a></div></div></body></html>
