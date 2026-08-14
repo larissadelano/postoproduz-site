@@ -1,154 +1,228 @@
-<!doctype html><html lang="pt-BR"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!doctype html><html lang=pt-BR><head>
+<meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">
 <title>Os 10 estilos da Postô · escolha o seu</title>
-<meta name="description" content="A mesma frase, dez sistemas visuais diferentes. Você escolhe o estilo da sua Edição antes de qualquer peça existir.">
+<meta name=description content="A mesma frase, dez sistemas visuais diferentes. Você escolhe o estilo da sua Edição antes de qualquer peça existir.">
+<link rel=preconnect href="https://fonts.googleapis.com">
+<link rel=preconnect href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel=stylesheet>
 <style>
-
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'DM Sans',system-ui,sans-serif;background:#FBF9F5;color:#0F2125;
-line-height:1.62;-webkit-font-smoothing:antialiased}
-.pt{text-transform:none;letter-spacing:0}
-em{font-family:'EB Garamond',serif;font-style:italic}
-.w{max-width:1120px;margin:0 auto;padding:0 28px}
-
-header{background:#1E3D43;color:#F4EFE7;padding:92px 0 78px}
-header .k{font-size:11.5px;letter-spacing:.26em;text-transform:uppercase;
-color:#EFBFAF;margin-bottom:22px}
-header h1{font-family:'EB Garamond',serif;font-weight:500;font-size:66px;line-height:1.02;
+body{font-family:'DM Sans',sans-serif;background:#FBF9F5;color:#0F2125;line-height:1.62;
+-webkit-font-smoothing:antialiased}
+.w{max-width:1120px;margin:0 auto;padding:0 24px}
+header{background:radial-gradient(ellipse 130% 95% at 50% -20%,#28494F 0%,#1E3D43 60%,#152F35 100%);
+color:#F4EFE7;padding:76px 0 64px}
+header .k{font-size:11.5px;letter-spacing:.26em;text-transform:uppercase;color:#EFBFAF;
+margin-bottom:20px;font-weight:700}
+header h1{font-family:'EB Garamond',serif;font-weight:500;font-size:60px;line-height:1.02;
 letter-spacing:-.015em;max-width:15ch}
-header p{margin-top:26px;max-width:60ch;color:#C9D6D2;font-size:18px}
-
-.regra{background:#DCD6CA;padding:38px 0}
-.regra p{font-family:'EB Garamond',serif;font-size:26px;line-height:1.42;
-color:#1E3D43;max-width:74ch}
-.regra b{font-weight:500}
-
-.grid{padding:74px 0 40px;display:grid;grid-template-columns:1fr 1fr;gap:56px 44px}
+header p{margin-top:22px;max-width:58ch;color:#C9D6D2;font-size:17.5px}
+.regra{background:#DCD6CA;padding:34px 0}
+.regra p{font-family:'EB Garamond',serif;font-size:24px;line-height:1.42;color:#1E3D43;max-width:74ch}
+.grid{padding:64px 0 32px;display:grid;grid-template-columns:1fr 1fr;gap:52px 40px}
 .e{display:flex;flex-direction:column}
-.e .img{border-radius:14px;overflow:hidden;box-shadow:0 18px 46px rgba(15,33,37,.13);
-background:#fff}
-.e .img img{width:100%;display:block}
-.e .txt{padding-top:22px;position:relative}
-.e .n{font-family:'EB Garamond',serif;font-size:22px;color:#A05B4E;
-letter-spacing:.06em;margin-bottom:2px}
-.e h3{font-family:'EB Garamond',serif;font-weight:500;font-size:33px;line-height:1.1}
-.e .sub{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;
-color:#7C8B8D;margin:7px 0 12px}
-.e p{font-size:16px;color:#3a4a4d;max-width:46ch}
-
-.fecho{background:#1E3D43;color:#F4EFE7;padding:82px 0;margin-top:56px}
-.fecho h2{font-family:'EB Garamond',serif;font-weight:500;font-size:44px;line-height:1.08;
-max-width:18ch}
-.fecho p{margin-top:20px;color:#C9D6D2;font-size:18px;max-width:56ch}
-.btn{display:inline-block;margin-top:34px;background:#D9937E;color:#152F35;
-text-decoration:none;padding:20px 40px;border-radius:999px;font-size:17px;
-letter-spacing:.03em;font-weight:500}
-.fecho .obs{margin-top:26px;font-size:15px;color:#C9D6D2;opacity:.85}
-
-footer{padding:44px 0 64px;font-size:14px;color:#7C8B8D}
+.amostra{border-radius:14px;padding:44px 34px;min-height:300px;display:flex;
+flex-direction:column;justify-content:center;box-shadow:0 16px 42px rgba(15,33,37,.13)}
+.amostra .marca{font-size:10.5px;letter-spacing:.3em;font-weight:700;margin-bottom:20px;
+font-family:'DM Sans',sans-serif}
+.amostra h4{font-size:34px;line-height:1.14}
+.amostra .fio{width:54px;height:2px;margin:20px 0 14px;opacity:.9}
+.amostra p{font-size:14.5px;font-style:italic;font-family:'EB Garamond',serif}
+.txt{padding-top:20px}
+.n{font-family:'EB Garamond',serif;font-size:21px;color:#A05B4E;letter-spacing:.06em}
+.txt h3{font-family:'EB Garamond',serif;font-weight:500;font-size:32px;line-height:1.1}
+.sub{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#7C8B8D;margin:6px 0 11px}
+.txt p{font-size:15.5px;color:#3a4a4d;max-width:46ch}
+.fecho{background:#1E3D43;color:#F4EFE7;padding:78px 0;margin-top:48px}
+.fecho h2{font-family:'EB Garamond',serif;font-weight:500;font-size:42px;line-height:1.08;max-width:18ch}
+.fecho p{margin-top:18px;color:#C9D6D2;font-size:17.5px;max-width:56ch}
+.btn{display:inline-block;margin-top:32px;background:#D9937E;color:#152F35;
+text-decoration:none;padding:19px 38px;border-radius:999px;font-size:17px;font-weight:600}
+.obs{margin-top:22px;font-size:14.5px;color:#C9D6D2;opacity:.85}
+footer{padding:42px 0 62px;font-size:14px;color:#7C8B8D}
 footer a{color:#A05B4E;text-decoration:none}
-@media(max-width:860px){.grid{grid-template-columns:1fr;gap:48px}
-header h1{font-size:42px} .regra p{font-size:21px} .fecho h2{font-size:33px}}
-</style><link rel=preconnect href='https://fonts.googleapis.com'><link rel=preconnect href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;700&display=swap' rel=stylesheet></head><body>
+@media(max-width:860px){.grid{grid-template-columns:1fr;gap:44px}
+header h1{font-size:38px} .regra p{font-size:20px} .fecho h2{font-size:31px}
+.amostra{min-height:250px;padding:36px 26px} .amostra h4{font-size:28px}}
+</style></head><body>
 
-<header><div class="w">
-<div class="k">a sua Edição, do seu jeito</div>
+<header><div class=w>
+<div class=k>a sua Edição, do seu jeito</div>
 <h1>Dez estilos.<br>Nenhum modelo pronto.</h1>
-<p>Você escolhe o estilo antes de qualquer peça existir. Se preferir, a
-<span class="pt">Postô</span> lê o seu perfil e recomenda o que combina com você.</p>
+<p>Você escolhe o estilo da sua peça antes de qualquer peça existir. Se preferir,
+a Postô lê o seu perfil e recomenda o que combina com você.</p>
 </div></header>
 
-<div class="regra"><div class="w"><p>Para você comparar de verdade, as dez peças abaixo
-dizem <b>exatamente a mesma frase</b>. O que muda de uma para a outra é só o sistema
-visual: a tipografia, a cor, o ritmo e a composição. <b>A sua foto entra em qualquer
-um dos dez</b>, porque foto não é estilo, é elemento.</p></div></div>
+<div class=regra><div class=w><p>Para você comparar de verdade, as dez amostras
+abaixo dizem <b>exatamente a mesma frase</b>. O que muda de uma para a outra é só o
+sistema visual: a tipografia, a cor, o ritmo e a composição. <b>A sua foto entra em
+qualquer um dos dez</b>, porque foto não é estilo, é elemento.</p></div></div>
 
-<div class="w"><div class="grid"><article class="e">
-<div class="img"><img src="estilos/e01.jpg" alt="Estilo Sereno" loading="lazy"></div>
-<div class="txt">
-<div class="n">01</div>
-<h3>Sereno</h3>
-<div class="sub">confiante e pausado</div>
-<p>Para quem vende consulta, escuta ou cuidado, e não precisa levantar a voz.</p>
-</div></article><article class="e">
-<div class="img"><img src="estilos/e02.jpg" alt="Estilo Bold" loading="lazy"></div>
-<div class="txt">
-<div class="n">02</div>
-<h3>Bold</h3>
-<div class="sub">impactante e direto</div>
-<p>Para quem precisa parar o dedo de quem passa e não tem medo de ocupar espaço.</p>
-</div></article><article class="e">
-<div class="img"><img src="estilos/e03.jpg" alt="Estilo Magazine" loading="lazy"></div>
-<div class="txt">
-<div class="n">03</div>
-<h3>Magazine</h3>
-<div class="sub">editorial e sofisticado</div>
-<p>Para quem quer parecer publicação, não anúncio. Alto padrão, arquitetura, moda.</p>
-</div></article><article class="e">
-<div class="img"><img src="estilos/e04.jpg" alt="Estilo Botânico" loading="lazy"></div>
-<div class="txt">
-<div class="n">04</div>
-<h3>Botânico</h3>
-<div class="sub">orgânico e acolhedor</div>
-<p>Para nutrição, terapia, bem-estar e tudo que precisa parecer natural sem parecer amador.</p>
-</div></article><article class="e">
-<div class="img"><img src="estilos/e05.jpg" alt="Estilo Clínico" loading="lazy"></div>
-<div class="txt">
-<div class="n">05</div>
-<h3>Clínico</h3>
-<div class="sub">preciso e limpo</div>
-<p>Para dermatologia, odontologia, laboratório e qualquer serviço em que erro não é uma opção.</p>
-</div></article><article class="e">
-<div class="img"><img src="estilos/e06.jpg" alt="Estilo Solar" loading="lazy"></div>
-<div class="txt">
-<div class="n">06</div>
-<h3>Solar</h3>
-<div class="sub">vibrante e caloroso</div>
-<p>Para confeitaria, festa, turismo, treino em grupo. Onde a energia é o produto.</p>
-</div></article><article class="e">
-<div class="img"><img src="estilos/e07.jpg" alt="Estilo Arquitetura" loading="lazy"></div>
-<div class="txt">
-<div class="n">07</div>
-<h3>Arquitetura</h3>
-<div class="sub">estruturado e elegante</div>
-<p>Para engenharia, arquitetura, marcenaria, reforma. Onde a linha reta já é o argumento.</p>
-</div></article><article class="e">
-<div class="img"><img src="estilos/e08.jpg" alt="Estilo Romântico" loading="lazy"></div>
-<div class="txt">
-<div class="n">08</div>
-<h3>Romântico</h3>
-<div class="sub">suave e delicado</div>
-<p>Para noivas, joalheria, maternidade, fotografia afetiva. Onde a delicadeza é o serviço.</p>
-</div></article><article class="e">
-<div class="img"><img src="estilos/e09.jpg" alt="Estilo Executivo" loading="lazy"></div>
-<div class="txt">
-<div class="n">09</div>
-<h3>Executivo</h3>
-<div class="sub">sóbrio e preciso</div>
-<p>Para advocacia, contabilidade, consultoria e todo serviço comprado com a razão.</p>
-</div></article><article class="e">
-<div class="img"><img src="estilos/e10.jpg" alt="Estilo Noturno" loading="lazy"></div>
-<div class="txt">
-<div class="n">10</div>
-<h3>Noturno</h3>
-<div class="sub">escuro e sofisticado</div>
-<p>Para estética avançada, odontologia premium, joalheria e gastronomia. Onde o fundo escuro é o luxo.</p>
-</div></article></div></div>
+<div class=w><div class=grid>
+<article class=e>
+  <div class=amostra style="background:#F2EFE9;color:#26403F">
+    <div class=marca style="color:#8FA69C">SERENO</div>
+    <h4 style="font-family:'EB Garamond',serif;text-transform:none;letter-spacing:.01em;
+      font-weight:400;color:#26403F">Quem procura você decide em segundos.</h4>
+    <div class=fio style="background:#8FA69C"></div>
+    <p style="color:#8FA69C">E decide olhando o seu perfil.</p>
+  </div>
+  <div class=txt>
+    <div class=n>01</div>
+    <h3>Sereno</h3>
+    <div class=sub>confiante e pausado</div>
+    <p>Para quem vende consulta, escuta ou cuidado, e não precisa levantar a voz.</p>
+  </div>
+</article>
+<article class=e>
+  <div class=amostra style="background:#111111;color:#FFFFFF">
+    <div class=marca style="color:#FF5A2B">BOLD</div>
+    <h4 style="font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:-.02em;
+      font-weight:800;color:#FFFFFF">Quem procura você decide em segundos.</h4>
+    <div class=fio style="background:#FF5A2B"></div>
+    <p style="color:#FF5A2B">E decide olhando o seu perfil.</p>
+  </div>
+  <div class=txt>
+    <div class=n>02</div>
+    <h3>Bold</h3>
+    <div class=sub>impactante e direto</div>
+    <p>Para quem precisa parar o dedo de quem passa e não tem medo de ocupar espaço.</p>
+  </div>
+</article>
+<article class=e>
+  <div class=amostra style="background:#FBF8F3;color:#141414">
+    <div class=marca style="color:#B08D57">MAGAZINE</div>
+    <h4 style="font-family:'EB Garamond',serif;text-transform:none;letter-spacing:.06em;
+      font-weight:500;color:#141414">Quem procura você decide em segundos.</h4>
+    <div class=fio style="background:#B08D57"></div>
+    <p style="color:#B08D57">E decide olhando o seu perfil.</p>
+  </div>
+  <div class=txt>
+    <div class=n>03</div>
+    <h3>Magazine</h3>
+    <div class=sub>editorial e sofisticado</div>
+    <p>Para quem quer parecer publicação, não anúncio. Alto padrão, arquitetura, moda.</p>
+  </div>
+</article>
+<article class=e>
+  <div class=amostra style="background:#EDF1E7;color:#33472F">
+    <div class=marca style="color:#7E9B6B">BOTÂNICO</div>
+    <h4 style="font-family:'EB Garamond',serif;text-transform:none;letter-spacing:.01em;
+      font-weight:400;color:#33472F">Quem procura você decide em segundos.</h4>
+    <div class=fio style="background:#7E9B6B"></div>
+    <p style="color:#7E9B6B">E decide olhando o seu perfil.</p>
+  </div>
+  <div class=txt>
+    <div class=n>04</div>
+    <h3>Botânico</h3>
+    <div class=sub>orgânico e acolhedor</div>
+    <p>Para nutrição, terapia, bem-estar e tudo que precisa parecer natural sem parecer amador.</p>
+  </div>
+</article>
+<article class=e>
+  <div class=amostra style="background:#FFFFFF;color:#0E2A3A">
+    <div class=marca style="color:#2E86AB">CLÍNICO</div>
+    <h4 style="font-family:'DM Sans',sans-serif;text-transform:none;letter-spacing:-.01em;
+      font-weight:500;color:#0E2A3A">Quem procura você decide em segundos.</h4>
+    <div class=fio style="background:#2E86AB"></div>
+    <p style="color:#2E86AB">E decide olhando o seu perfil.</p>
+  </div>
+  <div class=txt>
+    <div class=n>05</div>
+    <h3>Clínico</h3>
+    <div class=sub>preciso e limpo</div>
+    <p>Para dermatologia, odontologia, laboratório e qualquer serviço em que erro não é opção.</p>
+  </div>
+</article>
+<article class=e>
+  <div class=amostra style="background:#FFF3E0;color:#7A3E12">
+    <div class=marca style="color:#E8871E">SOLAR</div>
+    <h4 style="font-family:'DM Sans',sans-serif;text-transform:none;letter-spacing:-.01em;
+      font-weight:700;color:#7A3E12">Quem procura você decide em segundos.</h4>
+    <div class=fio style="background:#E8871E"></div>
+    <p style="color:#E8871E">E decide olhando o seu perfil.</p>
+  </div>
+  <div class=txt>
+    <div class=n>06</div>
+    <h3>Solar</h3>
+    <div class=sub>vibrante e caloroso</div>
+    <p>Para confeitaria, festa, turismo, treino em grupo. Onde a energia é o produto.</p>
+  </div>
+</article>
+<article class=e>
+  <div class=amostra style="background:#E8E6E1;color:#1C1C1C">
+    <div class=marca style="color:#8A8579">ARQUITETURA</div>
+    <h4 style="font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.14em;
+      font-weight:500;color:#1C1C1C">Quem procura você decide em segundos.</h4>
+    <div class=fio style="background:#8A8579"></div>
+    <p style="color:#8A8579">E decide olhando o seu perfil.</p>
+  </div>
+  <div class=txt>
+    <div class=n>07</div>
+    <h3>Arquitetura</h3>
+    <div class=sub>estruturado e elegante</div>
+    <p>Para engenharia, arquitetura, marcenaria, reforma. Onde a linha reta já é o argumento.</p>
+  </div>
+</article>
+<article class=e>
+  <div class=amostra style="background:#FBF1F0;color:#5C3B3F">
+    <div class=marca style="color:#D9A0A6">ROMÂNTICO</div>
+    <h4 style="font-family:'EB Garamond',serif;text-transform:none;letter-spacing:.02em;
+      font-weight:400;color:#5C3B3F">Quem procura você decide em segundos.</h4>
+    <div class=fio style="background:#D9A0A6"></div>
+    <p style="color:#D9A0A6">E decide olhando o seu perfil.</p>
+  </div>
+  <div class=txt>
+    <div class=n>08</div>
+    <h3>Romântico</h3>
+    <div class=sub>suave e delicado</div>
+    <p>Para noivas, joalheria, maternidade, fotografia afetiva. Onde a delicadeza é o serviço.</p>
+  </div>
+</article>
+<article class=e>
+  <div class=amostra style="background:#F4F5F6;color:#16233A">
+    <div class=marca style="color:#4A6FA5">EXECUTIVO</div>
+    <h4 style="font-family:'DM Sans',sans-serif;text-transform:none;letter-spacing:-.01em;
+      font-weight:600;color:#16233A">Quem procura você decide em segundos.</h4>
+    <div class=fio style="background:#4A6FA5"></div>
+    <p style="color:#4A6FA5">E decide olhando o seu perfil.</p>
+  </div>
+  <div class=txt>
+    <div class=n>09</div>
+    <h3>Executivo</h3>
+    <div class=sub>sóbrio e preciso</div>
+    <p>Para advocacia, contabilidade, consultoria e todo serviço comprado com a razão.</p>
+  </div>
+</article>
+<article class=e>
+  <div class=amostra style="background:#131417;color:#F1EDE6">
+    <div class=marca style="color:#C9A227">NOTURNO</div>
+    <h4 style="font-family:'EB Garamond',serif;text-transform:none;letter-spacing:.03em;
+      font-weight:500;color:#F1EDE6">Quem procura você decide em segundos.</h4>
+    <div class=fio style="background:#C9A227"></div>
+    <p style="color:#C9A227">E decide olhando o seu perfil.</p>
+  </div>
+  <div class=txt>
+    <div class=n>10</div>
+    <h3>Noturno</h3>
+    <div class=sub>escuro e sofisticado</div>
+    <p>Para estética avançada, odontologia premium, joalheria e gastronomia. Onde o fundo escuro é o luxo.</p>
+  </div>
+</article></div></div>
 
-<div class="fecho"><div class="w">
+<div class=fecho><div class=w>
 <h2>A sua peça, no estilo que você escolher.</h2>
 <p>A leitura do seu perfil é gratuita. Você escolhe o estilo e as suas cores no
-formulário, e recebe uma peça de verdade feita com a sua identidade, para postar
-se quiser.</p>
-<a class="btn" href="https://formulario.postoproduz.com.br/diagnostico">Quero a leitura do meu perfil</a>
-<div class="obs">Dez minutos respondendo doze perguntas. Sem compromisso depois.</div>
+formulário, e em até 24 horas recebe uma peça de verdade feita com a sua identidade.</p>
+<a class=btn href="https://formulario.postoproduz.com.br/diagnostico">Quero a leitura do meu perfil</a>
+<div class=obs>Leva menos de dois minutos. Sem compromisso depois.</div>
 </div></div>
 
-<footer><div class="w">
-<span class="pt">Postô</span> · produtora editorial ·
+<footer><div class=w>
+Postô · produtora editorial ·
 <a href="https://postoproduz.com.br">postoproduz.com.br</a> ·
 <a href="https://instagram.com/postoproduz">@postoproduz</a><br>
-As peças desta página são demonstrações produzidas pela <span class="pt">Postô</span>,
-com a mesma frase em cada estilo.
+As amostras desta página são demonstrações produzidas pela Postô, com a mesma frase
+em cada estilo.
 </div></footer>
 </body></html>
