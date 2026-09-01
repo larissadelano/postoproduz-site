@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Guia de Uso Postô · Isley Lauar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--deep:#2E2E2A;--deep-2:#262622;--surface:#F5F2EC;--accent:#8A9B72;--accent-2:#5C6B4A;--ink:#2E2E2A;--ink-soft:#78786D;--cream:#F3F1EA;--cream-soft:rgba(243,241,234,.62);
+--serif:'Cormorant Garamond','Cormorant Garamond',Georgia,serif;--sans:'DM Sans','DM Sans',-apple-system,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--sans);background:var(--deep);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+.app{max-width:460px;margin:0 auto;background:var(--surface);min-height:100vh}
+.hero{background:radial-gradient(120% 90% at 80% 0%, #3B3B36 0%, var(--deep) 55%);padding:50px 26px 38px}
+.hero .eyebrow{font-size:.66rem;letter-spacing:.34em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:20px}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:2.15rem;line-height:1.08;color:var(--cream)}
+.hero .who{margin-top:12px;font-size:.85rem;color:var(--cream-soft)}
+.hero .who b{color:var(--cream);font-weight:500}
+.hero .pdfbtn{margin-top:24px;display:inline-flex;align-items:center;gap:9px;background:var(--accent);color:#FCFAF5;border:none;border-radius:100px;padding:13px 24px;font-family:var(--sans);font-size:.8rem;font-weight:700;letter-spacing:.04em;cursor:pointer}
+.hero .pdfbtn svg{width:16px;height:16px}
+.sec{padding:32px 26px 4px}
+.sec .lbl{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.sec .lbl span{font-size:.64rem;letter-spacing:.28em;text-transform:uppercase;color:var(--ink-soft);font-weight:700;white-space:nowrap}
+.sec .lbl .bar{height:1px;flex:1;background:rgba(20,25,22,.12)}
+.sec h2{font-family:var(--serif);font-weight:600;font-size:1.55rem;line-height:1.12;margin-bottom:14px}
+.sec p{font-size:.92rem;line-height:1.65;color:var(--ink)}
+.hcard{background:#fff;border-radius:14px;padding:16px 18px;box-shadow:0 1px 2px rgba(20,30,26,.04),0 8px 30px rgba(20,30,26,.07);margin-bottom:12px;display:flex;gap:16px;align-items:baseline}
+.hcard .fx{font-family:var(--serif);font-weight:700;font-size:1.5rem;color:var(--accent-2);white-space:nowrap}
+.hcard .dd{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);font-weight:700;margin-bottom:3px}
+.hcard .mm{font-size:.84rem;color:var(--ink);line-height:1.5}
+.passos{counter-reset:p;display:flex;flex-direction:column;gap:0}
+.passo{display:flex;gap:16px;padding:15px 0;border-bottom:1px solid rgba(20,25,22,.1)}
+.passo:last-child{border-bottom:none}
+.passo::before{counter-increment:p;content:counter(p);font-family:var(--serif);font-weight:700;font-size:1.35rem;color:var(--accent);width:22px;flex-shrink:0;line-height:1.2}
+.passo div{font-size:.9rem;line-height:1.6}
+.dica{background:#fff;border-radius:14px;padding:18px;box-shadow:0 1px 2px rgba(20,30,26,.04),0 8px 30px rgba(20,30,26,.07);margin-bottom:12px;border-top:3px solid var(--accent)}
+.dica .dt{font-family:var(--serif);font-weight:600;font-size:1.18rem;margin-bottom:7px}
+.dica .dx{font-size:.86rem;color:var(--ink);line-height:1.6}
+.volta{display:block;margin:34px 26px 0;text-align:center;background:var(--deep);color:var(--cream);text-decoration:none;border-radius:12px;padding:15px;font-size:.84rem;font-weight:600}
+.foot{background:var(--deep);margin-top:36px;padding:32px 26px 44px;text-align:center}
+.foot .logo{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.25rem;color:var(--cream);letter-spacing:.06em}
+.foot .tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.9rem;color:var(--cream-soft);margin-top:6px}
+.foot .gold{height:1px;width:36px;background:var(--accent);margin:18px auto 0}
+@media print{
+  @page{size:A4;margin:16mm}
+  body{background:#fff}
+  .app{max-width:100%;background:#fff}
+  .hero{background:#fff !important;color:var(--ink);padding:0 0 18px;border-bottom:2px solid var(--accent)}
+  .hero h1{color:var(--ink)}
+  .hero .who{color:var(--ink-soft)}.hero .who b{color:var(--ink)}
+  .hero .pdfbtn,.volta{display:none !important}
+  .sec{padding:22px 0 0;break-inside:avoid}
+  .hcard,.dica{box-shadow:none;border:1px solid #ddd}
+  .foot{background:#fff;color:var(--ink);padding:26px 0 0}
+  .foot .logo,.foot .tag{color:var(--ink)}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="hero">
+    <div class="eyebrow">Guia de Uso Postô</div>
+    <h1>Como tirar o máximo<br>da sua semana</h1>
+    <div class="who">Semana Postô · <b>Isley Lauar</b> · Pilates e fisioterapia</div>
+    <button class="pdfbtn" onclick="window.print()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Salvar em PDF</button>
+  </header>
+
+  <section class="sec">
+    <div class="lbl"><span>Melhores horários</span><div class="bar"></div></div>
+    <h2>Quando o seu público está no Instagram</h2>
+    <div class="hcard"><div class="fx">6h às 8h</div><div><div class="dd">terça, quinta e sábado</div><div class="mm">Mulheres acima dos 35 anos costumam verificar o celular antes de começar o dia, tornando esse horário ideal para alcançar a audiência de Isley enquanto ela ainda está receptiva e atenta.</div></div></div>
+    <div class="hcard"><div class="fx">12h às 13h</div><div><div class="dd">segunda e quarta</div><div class="mm">O intervalo do almoço concentra um segundo pico de engajamento para esse público, que aproveita a pausa para consumir conteúdo relacionado a saúde e bem-estar.</div></div></div>
+    <div class="hcard"><div class="fx">19h às 20h30</div><div><div class="dd">sexta</div><div class="mm">No fim da semana, mulheres com rotina intensa tendem a relaxar à noite e se engajar com conteúdo que conecta cuidado com o corpo e qualidade de vida, aumentando o tempo de visualização e o alcance do post.</div></div></div>
+  </section>
+
+  <section class="sec">
+    <div class="lbl"><span>Ritmo</span><div class="bar"></div></div>
+    <h2>Constância vale mais do que volume</h2>
+    <p>Com dez peças distribuídas ao longo de sete dias, Isley mantém presença consistente sem sobrecarregar a audiência. Publicar uma vez por dia nos dias planejados é suficiente para construir autoridade e manter o perfil ativo dentro do algoritmo. A consistência semanal, mesmo que modesta, gera mais resultado do que publicações em rajada seguidas de silêncio. O público de Isley, que busca acompanhamento técnico e próximo, responde melhor a uma voz que aparece com regularidade e previsibilidade.</p>
+  </section>
+
+  <section class="sec">
+    <div class="lbl"><span>Sequência</span><div class="bar"></div></div>
+    <h2>A ordem das suas peças tem lógica</h2>
+    <p>A semana começa com um post de posicionamento na segunda-feira, que estabelece a autoridade de Isley logo de início. Na terça e na quarta, os carrosséis entram para educar e aprofundar temas de interesse direto do público. Os Reels ficam distribuídos entre quarta ou quinta e o fim de semana, aproveitando o maior alcance orgânico que esse formato entrega. Os stories são usados ao longo da semana para manter o contato diário com quem já segue o perfil, e a capa de Reel com roteiro acompanha a publicação do vídeo correspondente, garantindo coerência visual entre a miniatura e o conteúdo.</p>
+  </section>
+
+  <section class="sec">
+    <div class="lbl"><span>Reels</span><div class="bar"></div></div>
+    <h2>Como gravar com os roteiros</h2>
+    <div class="passos">
+      <div class="passo"><div>Antes de gravar, leia o roteiro entregue pelo menos duas vezes em voz alta para que a fala soe natural na frente da câmera, sem precisar ler durante a gravação.</div></div>
+      <div class="passo"><div>Grave em ambiente com boa iluminação natural, preferencialmente de frente para uma janela, com fundo organizado e relacionado ao contexto de Pilates ou fisioterapia, como o espaço de atendimento ou uma parede limpa.</div></div>
+      <div class="passo"><div>Posicione o celular na altura dos olhos, apoiado em um suporte ou tripé, e fale diretamente para a câmera com tom de conversa técnica e acolhedora, sem formalidade excessiva e sem leitura visível.</div></div>
+      <div class="passo"><div>Grave o Reel em pequenos blocos seguindo a divisão do roteiro; se errar em um trecho, recomece apenas aquele bloco, pois isso facilita a edição e reduz o cansaço durante a gravação.</div></div>
+      <div class="passo"><div>Após gravar, assista ao vídeo com o som ligado para verificar se o áudio está limpo e se a mensagem principal está clara nos primeiros três segundos, que são decisivos para manter a atenção de quem assiste.</div></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="lbl"><span>Dicas para Pilates e fisioterapia</span><div class="bar"></div></div>
+    <div class="dica"><div class="dt">Mostre o antes e o processo</div><div class="dx">O público de Isley, formado por mulheres com dores crônicas e histórico de lesões, se identifica profundamente com relatos reais de evolução. Sempre que possível, as legendas e os vídeos devem ancorar o conteúdo em situações concretas vividas pelas pacientes, sem expor dados pessoais, para gerar reconhecimento imediato.</div></div>
+    <div class="dica"><div class="dt">Linguagem técnica com clareza</div><div class="dx">Termos de fisioterapia e Pilates reforçam a autoridade de Isley, desde que venham acompanhados de uma explicação simples na mesma frase. As legendas já foram preparadas com esse equilíbrio, por isso é importante mantê-las sem cortes que eliminem as explicações.</div></div>
+    <div class="dica"><div class="dt">Chamada para ação direta ao atendimento</div><div class="dx">O público desta especialidade já chegou ao perfil com uma dor ou necessidade específica, por isso a chamada para ação deve sempre apontar para o contato direto, seja por mensagem ou agendamento, sem etapas intermediárias que dispersem o interesse.</div></div>
+  </section>
+
+  <a class="volta" href="../">← Voltar para a sua página</a>
+
+  <footer class="foot">
+    <div class="logo">POSTÔ</div>
+    <div class="tag">A Postô produz. Você posta.</div>
+    <div class="gold"></div>
+  </footer>
+</div>
+</body>
+</html>
